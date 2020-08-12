@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.2
--- Dumped by pg_dump version 12.2
+-- Dumped from database version 12.2 (Debian 12.2-2.pgdg100+1)
+-- Dumped by pg_dump version 12.3
 
--- Started on 2020-04-23 09:57:07
+-- Started on 2020-08-10 19:18:54
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -19,7 +19,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 2978 (class 0 OID 16685)
+-- TOC entry 3151 (class 0 OID 16430)
 -- Dependencies: 210
 -- Data for Name: pattern_language; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -29,7 +29,47 @@ INSERT INTO public.pattern_language VALUES ('f6b807aa-5905-4435-aec6-324355a0483
 
 
 --
--- TOC entry 2977 (class 0 OID 16677)
+-- TOC entry 3163 (class 0 OID 16659)
+-- Dependencies: 222
+-- Data for Name: candidate; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3171 (class 0 OID 16705)
+-- Dependencies: 230
+-- Data for Name: user_entity; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3164 (class 0 OID 16667)
+-- Dependencies: 223
+-- Data for Name: candidate_comment; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3165 (class 0 OID 16672)
+-- Dependencies: 224
+-- Data for Name: candidate_comment_rating; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3166 (class 0 OID 16677)
+-- Dependencies: 225
+-- Data for Name: candidate_rating; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3150 (class 0 OID 16424)
 -- Dependencies: 209
 -- Data for Name: pattern; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -176,8 +216,8 @@ INSERT INTO public.pattern VALUES ('9fee292c-8c59-4a99-a3c2-467717a22c70', 'Mess
 
 
 --
--- TOC entry 2973 (class 0 OID 16651)
--- Dependencies: 205
+-- TOC entry 3145 (class 0 OID 16404)
+-- Dependencies: 204
 -- Data for Name: directed_edge; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -188,12 +228,9 @@ INSERT INTO public.directed_edge VALUES ('7c3bfe89-7a0a-42a8-9988-c55e0b981440',
 INSERT INTO public.directed_edge VALUES ('e69f0c4a-9559-48f0-975d-2883f5fb2037', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '7116be12-b724-456f-ac3d-0a1ab6e85b9a', 'ce95634f-69e0-4f97-a9b6-10bc8364849f');
 INSERT INTO public.directed_edge VALUES ('a9993ec4-7352-4445-af71-9cc635a17922', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '7116be12-b724-456f-ac3d-0a1ab6e85b9a', '3b090377-8703-4cf7-9ce8-a432dce76335');
 INSERT INTO public.directed_edge VALUES ('c519040a-2160-45eb-9471-9ff4e7b01d58', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '7116be12-b724-456f-ac3d-0a1ab6e85b9a', '155933df-9d41-4b2d-bdf8-11291fb7084c');
-INSERT INTO public.directed_edge VALUES ('70d6b856-af0a-47e5-a10a-5ba2611646b2', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '7f488cff-525f-4e50-a6c6-219b4ab4854d', '7f488cff-525f-4e50-a6c6-219b4ab4854d');
 INSERT INTO public.directed_edge VALUES ('5ff87ab7-03e0-4c96-9784-27b83e376f66', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '7f488cff-525f-4e50-a6c6-219b4ab4854d', 'b8e826e0-dc07-4515-ae10-87b402e3d52c');
 INSERT INTO public.directed_edge VALUES ('a8968a7e-1dbc-47c2-b9b2-448ae1289f0a', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '7f488cff-525f-4e50-a6c6-219b4ab4854d', '4710c428-a004-4da1-98a8-58205e051ec2');
-INSERT INTO public.directed_edge VALUES ('08403dd7-d41c-4540-9f6d-5ae122845fe0', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '9b50b4bf-4b5c-4d52-a7d3-1b0e6a0f53f9', '9b50b4bf-4b5c-4d52-a7d3-1b0e6a0f53f9');
 INSERT INTO public.directed_edge VALUES ('2572c09e-b85a-46c7-b38e-fc444ef782fa', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '9b50b4bf-4b5c-4d52-a7d3-1b0e6a0f53f9', '358bf776-378f-465e-a9e6-e8a1c7716825');
-INSERT INTO public.directed_edge VALUES ('ee71cd21-8d83-4516-a2c7-1275af041999', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '35de7456-fced-4c23-bca5-8777984bf731', '35de7456-fced-4c23-bca5-8777984bf731');
 INSERT INTO public.directed_edge VALUES ('93ee235d-91c9-4678-8d03-b3a3debd2d62', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '3baad63c-42d2-46cb-b7a5-ab394b4e012c', 'e6106e4d-46a4-4557-8c2d-009ff7159464');
 INSERT INTO public.directed_edge VALUES ('352220bc-1b15-4c6a-94f3-d4e0fecae5bc', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '3baad63c-42d2-46cb-b7a5-ab394b4e012c', '386a4d90-1a3d-427c-96a6-6f1a433daae6');
 INSERT INTO public.directed_edge VALUES ('af61ecf7-42e6-4d10-a2f8-f734fa42636e', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'd285eda8-41ee-4ba2-879d-52acec6a1416', '2ee3eb24-165d-46d5-976c-9eb052a1912b');
@@ -224,7 +261,6 @@ INSERT INTO public.directed_edge VALUES ('185a4ef6-dd9c-4ae3-aced-84a6601d9fbc',
 INSERT INTO public.directed_edge VALUES ('50bd7404-fbc7-4c52-b81e-e59350fc4d8c', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '35de7456-fced-4c23-bca5-8777984bf731', '358bf776-378f-465e-a9e6-e8a1c7716825');
 INSERT INTO public.directed_edge VALUES ('f4424ca7-9235-40eb-b460-69644e610ac9', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '35de7456-fced-4c23-bca5-8777984bf731', 'ce95634f-69e0-4f97-a9b6-10bc8364849f');
 INSERT INTO public.directed_edge VALUES ('e0be69a1-7e34-48e9-8831-a008e4f542ff', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '35de7456-fced-4c23-bca5-8777984bf731', '4710c428-a004-4da1-98a8-58205e051ec2');
-INSERT INTO public.directed_edge VALUES ('e80631f7-88d3-4f85-94b4-21360282a888', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '35de7456-fced-4c23-bca5-8777984bf731', '4710c428-a004-4da1-98a8-58205e051ec2');
 INSERT INTO public.directed_edge VALUES ('1f4a9f20-4d88-40ab-9628-ef5a39dde857', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '35de7456-fced-4c23-bca5-8777984bf731', 'f675060d-34cd-4af7-abb7-864a8b9adef6');
 INSERT INTO public.directed_edge VALUES ('526fb699-7d47-4062-92fe-d0d12e5f18b2', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'b7602673-7825-48e2-829e-b9df269071fc', '358bf776-378f-465e-a9e6-e8a1c7716825');
 INSERT INTO public.directed_edge VALUES ('a063086c-8def-46c2-aaf2-3b9c97e858a0', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'b7602673-7825-48e2-829e-b9df269071fc', 'ce95634f-69e0-4f97-a9b6-10bc8364849f');
@@ -248,8 +284,6 @@ INSERT INTO public.directed_edge VALUES ('9c6469f9-befe-4a87-b6ee-3992e9994a82',
 INSERT INTO public.directed_edge VALUES ('df69d44c-d289-4001-a88a-207cbde9f28d', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'a81eb2c5-84ce-4a14-8242-e9ce19532423', '7d2e969e-c266-4a83-85a5-5a07d528c6ef');
 INSERT INTO public.directed_edge VALUES ('4338f8e8-8fb5-4905-b4be-f43f5fc27532', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'a81eb2c5-84ce-4a14-8242-e9ce19532423', '5d7a8af7-94fb-4c63-958c-403d845d4107');
 INSERT INTO public.directed_edge VALUES ('72f35b91-8c45-47d6-80b4-ee757c8f1977', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'a81eb2c5-84ce-4a14-8242-e9ce19532423', '7c8849ee-26ad-4910-b798-902367e617d6');
-INSERT INTO public.directed_edge VALUES ('893806df-ab0b-44f9-a7ed-9af654a54846', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'a81eb2c5-84ce-4a14-8242-e9ce19532423', '7d2e969e-c266-4a83-85a5-5a07d528c6ef');
-INSERT INTO public.directed_edge VALUES ('9a455fd8-a85c-4f26-968a-f9b1f3589133', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'a81eb2c5-84ce-4a14-8242-e9ce19532423', '5d7a8af7-94fb-4c63-958c-403d845d4107');
 INSERT INTO public.directed_edge VALUES ('8ac5c79f-ba3d-4107-a04b-9350d18665ae', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'a81eb2c5-84ce-4a14-8242-e9ce19532423', '10a46ac6-1420-41ad-9d3a-ab244d959062');
 INSERT INTO public.directed_edge VALUES ('aded138a-dd4a-4769-a443-71a21f9679ec', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'a81eb2c5-84ce-4a14-8242-e9ce19532423', 'cbc6fe12-4a7d-4de5-b709-b20dd0cacbbf');
 INSERT INTO public.directed_edge VALUES ('db85a6ae-b5fa-435b-adfa-fa4f3ed2a95f', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '7c8849ee-26ad-4910-b798-902367e617d6', '3b090377-8703-4cf7-9ce8-a432dce76335');
@@ -257,20 +291,15 @@ INSERT INTO public.directed_edge VALUES ('6a701a0d-2a1f-4948-9a25-8974a588fbf0',
 INSERT INTO public.directed_edge VALUES ('e88e4592-9cca-43dd-8c09-838e82666ecc', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '10a46ac6-1420-41ad-9d3a-ab244d959062', '358bf776-378f-465e-a9e6-e8a1c7716825');
 INSERT INTO public.directed_edge VALUES ('44afb89a-33d2-48dc-b910-8f25b330461d', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '10a46ac6-1420-41ad-9d3a-ab244d959062', '3b090377-8703-4cf7-9ce8-a432dce76335');
 INSERT INTO public.directed_edge VALUES ('7e39a218-6077-4b2f-b87c-3bf60d32e0b1', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '10a46ac6-1420-41ad-9d3a-ab244d959062', '3d6ef3c9-28dd-4d2f-b006-e3427e24c0b0');
-INSERT INTO public.directed_edge VALUES ('abd75a83-1f5d-4697-8fc1-e8f5e3af40f3', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '10a46ac6-1420-41ad-9d3a-ab244d959062', 'ce95634f-69e0-4f97-a9b6-10bc8364849f');
-INSERT INTO public.directed_edge VALUES ('1ea2e1d3-5a3c-4f97-94dc-a2e3f8da8df2', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '10a46ac6-1420-41ad-9d3a-ab244d959062', 'a81eb2c5-84ce-4a14-8242-e9ce19532423');
 INSERT INTO public.directed_edge VALUES ('702c7aee-466e-453e-a9b3-239683ce7335', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '2ee3eb24-165d-46d5-976c-9eb052a1912b', 'e6e239af-3d3a-4dfb-8c84-cbe268ca90d4');
-INSERT INTO public.directed_edge VALUES ('ecf7b195-7b7a-43ae-ae2b-e5e7b22b2f74', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'cbc6fe12-4a7d-4de5-b709-b20dd0cacbbf', 'e6e239af-3d3a-4dfb-8c84-cbe268ca90d4');
 INSERT INTO public.directed_edge VALUES ('12b5af32-c3e8-4f8e-b555-50fdd5d3dc63', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'cbc6fe12-4a7d-4de5-b709-b20dd0cacbbf', 'c12b3086-5fa4-4140-915b-330fbffdfc43');
 INSERT INTO public.directed_edge VALUES ('942c48fe-8477-40b2-a2ac-c22d88a7dbe9', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'cbc6fe12-4a7d-4de5-b709-b20dd0cacbbf', 'b9484449-18bd-4667-a9e5-1f6bf66d442d');
 INSERT INTO public.directed_edge VALUES ('e7789dc0-1488-487d-bb5a-0ab5b2fa3fbb', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'e6106e4d-46a4-4557-8c2d-009ff7159464', '10a46ac6-1420-41ad-9d3a-ab244d959062');
 INSERT INTO public.directed_edge VALUES ('97311343-490b-4ea8-862d-5812b5fe1ce2', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '407ae0d5-e5be-4151-900b-041ed5dfcdbe', '7d2e969e-c266-4a83-85a5-5a07d528c6ef');
 INSERT INTO public.directed_edge VALUES ('391c6262-5c8d-4be8-8c0c-c00234917132', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'ecb7d0a0-72d0-44c3-90dd-5b9af536ebca', 'cbc6fe12-4a7d-4de5-b709-b20dd0cacbbf');
 INSERT INTO public.directed_edge VALUES ('15d53b14-f627-4fc0-906c-8a6cfb17b422', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'ecb7d0a0-72d0-44c3-90dd-5b9af536ebca', 'b228d692-009d-4122-b617-1a3799a68766');
-INSERT INTO public.directed_edge VALUES ('454dbe00-335a-4187-8035-254439efd1d9', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'ecb7d0a0-72d0-44c3-90dd-5b9af536ebca', 'f69638dc-6844-415c-a679-d3982c691f38');
 INSERT INTO public.directed_edge VALUES ('c347658e-0967-48a2-b0a2-28faedea0fad', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '386a4d90-1a3d-427c-96a6-6f1a433daae6', 'e6e239af-3d3a-4dfb-8c84-cbe268ca90d4');
 INSERT INTO public.directed_edge VALUES ('4455edd9-6f59-4735-ab42-cd89bf727206', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'c12b3086-5fa4-4140-915b-330fbffdfc43', 'd53673f0-fc52-48c8-8893-f8f244cf6ee3');
-INSERT INTO public.directed_edge VALUES ('b147b230-6f89-4abc-b441-542b8d5bff7c', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'c12b3086-5fa4-4140-915b-330fbffdfc43', 'b9484449-18bd-4667-a9e5-1f6bf66d442d');
 INSERT INTO public.directed_edge VALUES ('b9501b4f-e6c1-46c1-91a2-d96f554cc257', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'c12b3086-5fa4-4140-915b-330fbffdfc43', '3a1fb1cd-1078-4616-b603-a22c8f9449b2');
 INSERT INTO public.directed_edge VALUES ('483c9882-1671-4697-a306-05a105f276df', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '4d153210-05d9-43f0-8560-3c3bd722d8bd', '3a1fb1cd-1078-4616-b603-a22c8f9449b2');
 INSERT INTO public.directed_edge VALUES ('24876409-b056-46d4-b88d-d5dd3647c873', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'd53673f0-fc52-48c8-8893-f8f244cf6ee3', '5d7a8af7-94fb-4c63-958c-403d845d4107');
@@ -827,34 +856,121 @@ INSERT INTO public.directed_edge VALUES ('37b138d6-0c51-43f1-ad9a-0fbc57858872',
 INSERT INTO public.directed_edge VALUES ('097d1f8d-d3ad-4a76-9337-3652fee7ac65', 'null', 'isRelatedTo', 'f6b807aa-5905-4435-aec6-324355a0483f', '38b1dd17-c3ff-46c4-b300-2e1c7d542abe', '9fee292c-8c59-4a99-a3c2-467717a22c70');
 INSERT INTO public.directed_edge VALUES ('53ceca29-6234-4dfa-8279-84ece0dcfaad', 'null', 'isRelatedTo', 'f6b807aa-5905-4435-aec6-324355a0483f', '38b1dd17-c3ff-46c4-b300-2e1c7d542abe', '26c8f1cb-a592-415e-846e-22f2ee761c8f');
 INSERT INTO public.directed_edge VALUES ('b7a9c4a9-74bd-43f4-a770-059c2d08236f', 'null', 'isRelatedTo', 'f6b807aa-5905-4435-aec6-324355a0483f', '38b1dd17-c3ff-46c4-b300-2e1c7d542abe', '3b3a9b48-63aa-4523-be3a-6a39fdf4bda7');
+INSERT INTO public.directed_edge VALUES ('b9222f88-de63-4bc1-a782-85b9debed750', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'e6e239af-3d3a-4dfb-8c84-cbe268ca90d4', 'a81eb2c5-84ce-4a14-8242-e9ce19532423');
+INSERT INTO public.directed_edge VALUES ('f277d52a-c115-4fcc-8b75-1ee3d400e4d0', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'b8e826e0-dc07-4515-ae10-87b402e3d52c', '68a4bbc9-2535-4cfc-a4f4-b149adfb674a');
+INSERT INTO public.directed_edge VALUES ('b66c77fe-e071-4f1f-bce9-f345b800b51e', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'b8e826e0-dc07-4515-ae10-87b402e3d52c', 'd8c99d65-8950-4b83-aa1d-549a88e28339');
+INSERT INTO public.directed_edge VALUES ('51f8d013-a99a-444c-a45a-e46f49aa7ceb', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '7f488cff-525f-4e50-a6c6-219b4ab4854d', '358bf776-378f-465e-a9e6-e8a1c7716825');
+INSERT INTO public.directed_edge VALUES ('16ff179b-8a8b-4d7a-80c8-5196c6c560e9', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'cbc6fe12-4a7d-4de5-b709-b20dd0cacbbf', '3b090377-8703-4cf7-9ce8-a432dce76335');
+INSERT INTO public.directed_edge VALUES ('07fb7b6b-1ea9-401c-bd97-2ef6897c3f59', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'c12b3086-5fa4-4140-915b-330fbffdfc43', '80d829b6-d1ed-40a3-95ea-7e0b34de8eba');
+INSERT INTO public.directed_edge VALUES ('6712a17d-ad13-42a5-a062-b9e9165e770b', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '55f886b3-4fe0-4bc8-8bde-d0b7004a70ee', '467cae27-d8be-4509-af26-64ed0a809028');
+INSERT INTO public.directed_edge VALUES ('3d21bd90-58f0-4be4-82e4-4e6ee29b6b63', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '55f886b3-4fe0-4bc8-8bde-d0b7004a70ee', 'f53f1daa-1eda-4fd9-966f-3f14c107930a');
+INSERT INTO public.directed_edge VALUES ('545bc329-9e44-45f4-a6d2-00f85048104f', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '55f886b3-4fe0-4bc8-8bde-d0b7004a70ee', 'e6e239af-3d3a-4dfb-8c84-cbe268ca90d4');
+INSERT INTO public.directed_edge VALUES ('8d384048-ebe7-45f8-9578-2335ecd70700', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '55f886b3-4fe0-4bc8-8bde-d0b7004a70ee', '81dba31f-e19a-4a8b-a07f-e1561fc2ce06');
+INSERT INTO public.directed_edge VALUES ('115bdc13-e083-4d03-84dc-e53a0ab2155d', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '55f886b3-4fe0-4bc8-8bde-d0b7004a70ee', 'c12b3086-5fa4-4140-915b-330fbffdfc43');
+INSERT INTO public.directed_edge VALUES ('b61c6ce3-7d4e-44ef-aa39-4d2e1f5e7aa7', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '55f886b3-4fe0-4bc8-8bde-d0b7004a70ee', '3b090377-8703-4cf7-9ce8-a432dce76335');
+INSERT INTO public.directed_edge VALUES ('e97fe313-6764-4088-afd9-f9dbc19e6f4a', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '467cae27-d8be-4509-af26-64ed0a809028', '358bf776-378f-465e-a9e6-e8a1c7716825');
+INSERT INTO public.directed_edge VALUES ('c1b0433f-f1cc-4a6a-a319-c528d2218b33', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '467cae27-d8be-4509-af26-64ed0a809028', 'b8e826e0-dc07-4515-ae10-87b402e3d52c');
+INSERT INTO public.directed_edge VALUES ('11867493-1025-4b26-aa9a-77b6dc63ea67', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '467cae27-d8be-4509-af26-64ed0a809028', '61130a8b-68ad-4281-80ad-a62d44bc4090');
+INSERT INTO public.directed_edge VALUES ('6dfcb025-c063-4ba3-bc7e-7ea8f727dfae', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '467cae27-d8be-4509-af26-64ed0a809028', 'b6436fe2-9e3f-49ac-9e09-5cce86e480e1');
+INSERT INTO public.directed_edge VALUES ('8e58dcdd-b74b-46d2-9db6-b5e0c4367bc8', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '467cae27-d8be-4509-af26-64ed0a809028', 'ce95634f-69e0-4f97-a9b6-10bc8364849f');
+INSERT INTO public.directed_edge VALUES ('f7480043-247e-40ab-b646-aed700a267b4', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '467cae27-d8be-4509-af26-64ed0a809028', '3b090377-8703-4cf7-9ce8-a432dce76335');
+INSERT INTO public.directed_edge VALUES ('4456da36-d0b1-4d96-ac08-7cf2cf486958', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '467cae27-d8be-4509-af26-64ed0a809028', '155933df-9d41-4b2d-bdf8-11291fb7084c');
+INSERT INTO public.directed_edge VALUES ('678fbd31-8605-41b0-9592-bd34fb2fa88b', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'b86f6da4-3c9e-4146-8161-9c806b50b923', '9bcced52-edb3-44a2-a86d-43499ea61289');
+INSERT INTO public.directed_edge VALUES ('f10d0972-0951-4932-99b6-cdd5f3c84c3c', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'b86f6da4-3c9e-4146-8161-9c806b50b923', 'f69638dc-6844-415c-a679-d3982c691f38');
+INSERT INTO public.directed_edge VALUES ('1bd7a661-bd31-43ed-888f-bb492b07a314', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'b86f6da4-3c9e-4146-8161-9c806b50b923', '81dba31f-e19a-4a8b-a07f-e1561fc2ce06');
+INSERT INTO public.directed_edge VALUES ('4ef47ebd-7090-4df5-aacc-426c5212b464', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '7d2e969e-c266-4a83-85a5-5a07d528c6ef', 'ecb7d0a0-72d0-44c3-90dd-5b9af536ebca');
+INSERT INTO public.directed_edge VALUES ('242b9b64-197e-434f-882c-06f62923fa04', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '7d2e969e-c266-4a83-85a5-5a07d528c6ef', 'c12b3086-5fa4-4140-915b-330fbffdfc43');
+INSERT INTO public.directed_edge VALUES ('4727007e-c3ee-42e3-9bc3-ba5c6466b8f1', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '6d763f90-d7d4-4d58-a82c-09bb68ac6b82', 'bace6e02-1e3f-4ddc-9e9a-eb04933fa226');
+INSERT INTO public.directed_edge VALUES ('135607aa-08d4-429c-b9d2-5ed5afba6a25', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '6d763f90-d7d4-4d58-a82c-09bb68ac6b82', '9bcced52-edb3-44a2-a86d-43499ea61289');
+INSERT INTO public.directed_edge VALUES ('1a173f72-ac5b-48fb-ad73-2c4d9c7b0bf0', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '6d763f90-d7d4-4d58-a82c-09bb68ac6b82', '94331ad5-4f67-4183-8fbe-55fe9c542789');
+INSERT INTO public.directed_edge VALUES ('68d64494-4e3f-4923-8b1b-a769fb5f5b70', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '6d763f90-d7d4-4d58-a82c-09bb68ac6b82', 'da2bd135-4ba2-4b98-bb77-c60607402094');
+INSERT INTO public.directed_edge VALUES ('018c157b-7f1a-4804-af23-9447f174f25f', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '6d763f90-d7d4-4d58-a82c-09bb68ac6b82', '5d7a8af7-94fb-4c63-958c-403d845d4107');
+INSERT INTO public.directed_edge VALUES ('93367959-99c2-42ac-897b-63665b3e05ef', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '6d763f90-d7d4-4d58-a82c-09bb68ac6b82', 'b9484449-18bd-4667-a9e5-1f6bf66d442d');
+INSERT INTO public.directed_edge VALUES ('31e8b479-fb3a-4e12-ba70-bdb12f5bda98', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '6d763f90-d7d4-4d58-a82c-09bb68ac6b82', 'cd686d46-c77f-4c35-8016-f9819282f8a5');
+INSERT INTO public.directed_edge VALUES ('2232ba03-b57e-40be-994d-aa58f8d88660', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '0b5ba218-dcb1-4841-a517-b6010b8a2951', '0a4ffca5-3b28-4897-9842-295f9bb6bea8');
+INSERT INTO public.directed_edge VALUES ('6fce8697-25b8-46d6-ad45-846972662261', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '0b5ba218-dcb1-4841-a517-b6010b8a2951', 'ecb7d0a0-72d0-44c3-90dd-5b9af536ebca');
+INSERT INTO public.directed_edge VALUES ('ddaf2f44-a28b-4f80-b2dd-3430c622a112', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '0b5ba218-dcb1-4841-a517-b6010b8a2951', 'b228d692-009d-4122-b617-1a3799a68766');
+INSERT INTO public.directed_edge VALUES ('5d489c9f-7c78-4880-bacd-c7d79181b1c8', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '0b5ba218-dcb1-4841-a517-b6010b8a2951', '9bcced52-edb3-44a2-a86d-43499ea61289');
+INSERT INTO public.directed_edge VALUES ('01c4554f-ed6a-44cc-a5e5-fb72da83aa6c', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '0b5ba218-dcb1-4841-a517-b6010b8a2951', 'd8c99d65-8950-4b83-aa1d-549a88e28339');
+INSERT INTO public.directed_edge VALUES ('1b2216f0-b945-4fec-b5a9-8413f2aaa185', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '0b5ba218-dcb1-4841-a517-b6010b8a2951', 'da2bd135-4ba2-4b98-bb77-c60607402094');
+INSERT INTO public.directed_edge VALUES ('2b8faa47-e41d-432a-8191-838e4b7a9b00', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '0b5ba218-dcb1-4841-a517-b6010b8a2951', '5d7a8af7-94fb-4c63-958c-403d845d4107');
+INSERT INTO public.directed_edge VALUES ('9c259098-390e-43a6-a36c-a5956ba2f85a', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '0b5ba218-dcb1-4841-a517-b6010b8a2951', 'b9484449-18bd-4667-a9e5-1f6bf66d442d');
+INSERT INTO public.directed_edge VALUES ('e85e16df-0e6a-4f10-8bf2-b10ccb365a6c', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '0b5ba218-dcb1-4841-a517-b6010b8a2951', 'cd686d46-c77f-4c35-8016-f9819282f8a5');
+INSERT INTO public.directed_edge VALUES ('3baf103d-5885-4afe-a5d6-0b63fb0ecf27', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'd8c99d65-8950-4b83-aa1d-549a88e28339', 'c12b3086-5fa4-4140-915b-330fbffdfc43');
+INSERT INTO public.directed_edge VALUES ('f27e3a9b-073e-4a0c-a0f1-cdb07b477d44', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'd8c99d65-8950-4b83-aa1d-549a88e28339', '801d44ab-fc18-4cc0-8e10-49f2e73b229a');
+INSERT INTO public.directed_edge VALUES ('3b5761b4-6c0c-4d3a-945e-8750727da9d0', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'd8c99d65-8950-4b83-aa1d-549a88e28339', 'da2bd135-4ba2-4b98-bb77-c60607402094');
+INSERT INTO public.directed_edge VALUES ('63f4f1ad-6256-4a2c-a926-138427c3f3ca', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'd8c99d65-8950-4b83-aa1d-549a88e28339', '5d7a8af7-94fb-4c63-958c-403d845d4107');
+INSERT INTO public.directed_edge VALUES ('ed219c86-0e9e-4447-bb50-6248e78c42b3', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'd8c99d65-8950-4b83-aa1d-549a88e28339', 'b9484449-18bd-4667-a9e5-1f6bf66d442d');
+INSERT INTO public.directed_edge VALUES ('9d3ae39c-bd1a-4ffb-8724-a404a7a34e1f', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'd8c99d65-8950-4b83-aa1d-549a88e28339', 'cd686d46-c77f-4c35-8016-f9819282f8a5');
+INSERT INTO public.directed_edge VALUES ('243ba99c-d240-41f1-97ec-fccafb5b14fd', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '94331ad5-4f67-4183-8fbe-55fe9c542789', '55f886b3-4fe0-4bc8-8bde-d0b7004a70ee');
+INSERT INTO public.directed_edge VALUES ('5b73a257-df52-42d3-bf2e-2d34f4a5ba12', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '94331ad5-4f67-4183-8fbe-55fe9c542789', '55f886b3-4fe0-4bc8-8bde-d0b7004a70ee');
+INSERT INTO public.directed_edge VALUES ('d5729565-9e4d-4ff3-90e7-9476d054f7bf', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '94331ad5-4f67-4183-8fbe-55fe9c542789', 'b86f6da4-3c9e-4146-8161-9c806b50b923');
+INSERT INTO public.directed_edge VALUES ('7fa44360-7c75-48b6-9eee-b6cc6af75ac7', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '94331ad5-4f67-4183-8fbe-55fe9c542789', '7d2e969e-c266-4a83-85a5-5a07d528c6ef');
+INSERT INTO public.directed_edge VALUES ('5dd6e2eb-d47e-44bb-8a88-59a1cfe73306', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '5d7a8af7-94fb-4c63-958c-403d845d4107', '4d153210-05d9-43f0-8560-3c3bd722d8bd');
+INSERT INTO public.directed_edge VALUES ('7871e270-69b7-495b-a14f-9bcc547499be', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '5d7a8af7-94fb-4c63-958c-403d845d4107', '80d829b6-d1ed-40a3-95ea-7e0b34de8eba');
+INSERT INTO public.directed_edge VALUES ('8e265171-cb72-4313-a34f-7332056f54bb', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '5d7a8af7-94fb-4c63-958c-403d845d4107', '81dba31f-e19a-4a8b-a07f-e1561fc2ce06');
+INSERT INTO public.directed_edge VALUES ('6c30a570-67f6-48c7-8d31-504b8f3e10dc', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', '5d7a8af7-94fb-4c63-958c-403d845d4107', 'b228d692-009d-4122-b617-1a3799a68766');
+INSERT INTO public.directed_edge VALUES ('1bea86a4-6644-492a-b6d1-58c0bf96d573', 'null', 'isRelatedTo', 'efdc1625-6445-4662-a37e-5f1fd37a542b', 'b9484449-18bd-4667-a9e5-1f6bf66d442d', '3a1fb1cd-1078-4616-b603-a22c8f9449b2');
 
 
 --
--- TOC entry 2974 (class 0 OID 16659)
--- Dependencies: 206
+-- TOC entry 3146 (class 0 OID 16410)
+-- Dependencies: 205
 -- Data for Name: directed_hyperedge; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 2975 (class 0 OID 16667)
--- Dependencies: 207
+-- TOC entry 3147 (class 0 OID 16416)
+-- Dependencies: 206
 -- Data for Name: directed_hyperedge_source_set; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 2976 (class 0 OID 16672)
--- Dependencies: 208
+-- TOC entry 3148 (class 0 OID 16419)
+-- Dependencies: 207
 -- Data for Name: directed_hyperedge_target_set; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 2979 (class 0 OID 16693)
+-- TOC entry 3167 (class 0 OID 16682)
+-- Dependencies: 226
+-- Data for Name: issue; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3168 (class 0 OID 16690)
+-- Dependencies: 227
+-- Data for Name: issue_comment; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3169 (class 0 OID 16695)
+-- Dependencies: 228
+-- Data for Name: issue_comment_rating; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3170 (class 0 OID 16700)
+-- Dependencies: 229
+-- Data for Name: issue_rating; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3152 (class 0 OID 16436)
 -- Dependencies: 211
 -- Data for Name: pattern_schema; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -864,7 +980,7 @@ INSERT INTO public.pattern_schema VALUES ('f6b807aa-5905-4435-aec6-324355a0483f'
 
 
 --
--- TOC entry 2981 (class 0 OID 16706)
+-- TOC entry 3154 (class 0 OID 16445)
 -- Dependencies: 213
 -- Data for Name: pattern_section_schema; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -880,7 +996,7 @@ INSERT INTO public.pattern_section_schema VALUES ('3ce9b308-6bf8-4445-9e82-b52a7
 
 
 --
--- TOC entry 2980 (class 0 OID 16698)
+-- TOC entry 3153 (class 0 OID 16439)
 -- Dependencies: 212
 -- Data for Name: pattern_section; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -888,7 +1004,7 @@ INSERT INTO public.pattern_section_schema VALUES ('3ce9b308-6bf8-4445-9e82-b52a7
 
 
 --
--- TOC entry 2982 (class 0 OID 16714)
+-- TOC entry 3155 (class 0 OID 16451)
 -- Dependencies: 214
 -- Data for Name: pattern_section_schema_pattern_sections; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -896,7 +1012,7 @@ INSERT INTO public.pattern_section_schema VALUES ('3ce9b308-6bf8-4445-9e82-b52a7
 
 
 --
--- TOC entry 2983 (class 0 OID 16717)
+-- TOC entry 3156 (class 0 OID 16454)
 -- Dependencies: 215
 -- Data for Name: pattern_view; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -904,7 +1020,7 @@ INSERT INTO public.pattern_section_schema VALUES ('3ce9b308-6bf8-4445-9e82-b52a7
 
 
 --
--- TOC entry 2984 (class 0 OID 16725)
+-- TOC entry 3157 (class 0 OID 16460)
 -- Dependencies: 216
 -- Data for Name: pattern_view_directed_edge; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -912,7 +1028,7 @@ INSERT INTO public.pattern_section_schema VALUES ('3ce9b308-6bf8-4445-9e82-b52a7
 
 
 --
--- TOC entry 2985 (class 0 OID 16730)
+-- TOC entry 3158 (class 0 OID 16463)
 -- Dependencies: 217
 -- Data for Name: pattern_view_pattern; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -920,7 +1036,7 @@ INSERT INTO public.pattern_section_schema VALUES ('3ce9b308-6bf8-4445-9e82-b52a7
 
 
 --
--- TOC entry 2987 (class 0 OID 16740)
+-- TOC entry 3160 (class 0 OID 16469)
 -- Dependencies: 219
 -- Data for Name: undirected_edge; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -937,10 +1053,36 @@ INSERT INTO public.undirected_edge VALUES ('27d7431d-9310-499e-86e3-3ba8d5004e9d
 INSERT INTO public.undirected_edge VALUES ('badc0d91-f34f-41bf-ad23-aaa48865e286', 'null', 'isRelatedTo', 'f53f1daa-1eda-4fd9-966f-3f14c107930a', 'a7bc398e-972a-481f-8c63-b4c5a1b946d9', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
 INSERT INTO public.undirected_edge VALUES ('930152a6-fd5c-4b71-8bb2-1cec3908262e', 'null', 'isRelatedTo', 'f53f1daa-1eda-4fd9-966f-3f14c107930a', '47e05a38-2201-49f2-80e6-17d618ed260f', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
 INSERT INTO public.undirected_edge VALUES ('1b9a15e3-55d9-4cc7-81c0-55f00c1bf161', 'null', 'isRelatedTo', 'd6db370c-42eb-414b-80b7-af50c14fb7e4', 'f53f1daa-1eda-4fd9-966f-3f14c107930a', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('d1fd664b-9821-441e-bdb9-08a8dea448a5', 'null', 'isRelatedTo', 'c12b3086-5fa4-4140-915b-330fbffdfc43', '4d153210-05d9-43f0-8560-3c3bd722d8bd', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('a5197092-18cf-4044-8f29-ecbfd8dbb7a8', 'null', 'isRelatedTo', 'a81eb2c5-84ce-4a14-8242-e9ce19532423', '2ee3eb24-165d-46d5-976c-9eb052a1912b', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('a988535c-a6b0-425b-9ccc-195f52000b2b', 'null', 'isRelatedTo', 'b9484449-18bd-4667-a9e5-1f6bf66d442d', '3a1fb1cd-1078-4616-b603-a22c8f9449b2', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('cf3c5ffe-ffeb-4796-8286-dfc50b2d269d', 'null', 'isRelatedTo', '4d153210-05d9-43f0-8560-3c3bd722d8bd', '3a1fb1cd-1078-4616-b603-a22c8f9449b2', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('89458123-000c-4b5b-87d3-97e780fb68a8', 'null', 'isRelatedTo', 'ce95634f-69e0-4f97-a9b6-10bc8364849f', 'e6e239af-3d3a-4dfb-8c84-cbe268ca90d4', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('b899bd56-1cea-4ddd-b3bd-866d6dd0413f', 'null', 'isRelatedTo', '386a4d90-1a3d-427c-96a6-6f1a433daae6', 'ce95634f-69e0-4f97-a9b6-10bc8364849f', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('67e86ec5-d40e-4244-b390-14954d2b4d2f', 'null', 'isRelatedTo', '81dba31f-e19a-4a8b-a07f-e1561fc2ce06', 'ecb7d0a0-72d0-44c3-90dd-5b9af536ebca', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('273b801e-dbc3-48e9-a1c6-249e877b6874', 'null', 'isRelatedTo', '7d2e969e-c266-4a83-85a5-5a07d528c6ef', '0a4ffca5-3b28-4897-9842-295f9bb6bea8', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('1bdbba49-cf89-4029-a1b1-bd650a4dd82e', 'null', 'isRelatedTo', 'b228d692-009d-4122-b617-1a3799a68766', '0a4ffca5-3b28-4897-9842-295f9bb6bea8', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('33ce266d-6877-49ad-a717-0ffbcbbd790a', 'null', 'isRelatedTo', 'f69638dc-6844-415c-a679-d3982c691f38', '0a4ffca5-3b28-4897-9842-295f9bb6bea8', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('029c2b01-b8cd-41e4-a053-9ee1f8a89290', 'null', 'isRelatedTo', '81dba31f-e19a-4a8b-a07f-e1561fc2ce06', '0a4ffca5-3b28-4897-9842-295f9bb6bea8', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('cd67255f-ba2a-4138-86fa-81e100152159', 'null', 'isRelatedTo', 'e6106e4d-46a4-4557-8c2d-009ff7159464', '407ae0d5-e5be-4151-900b-041ed5dfcdbe', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('08833d89-5e88-4d4e-b91b-a1cd3dbc0273', 'null', 'isRelatedTo', '0b5ba218-dcb1-4841-a517-b6010b8a2951', '407ae0d5-e5be-4151-900b-041ed5dfcdbe', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('6a3d8ed4-ac42-4955-ae0e-3fff31e39220', 'null', 'isRelatedTo', 'b228d692-009d-4122-b617-1a3799a68766', '407ae0d5-e5be-4151-900b-041ed5dfcdbe', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('41102771-2520-4103-b284-ae985efd714b', 'null', 'isRelatedTo', 'f69638dc-6844-415c-a679-d3982c691f38', '407ae0d5-e5be-4151-900b-041ed5dfcdbe', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('515e1f6c-1ca7-4e24-a389-8775490741a0', 'null', 'isRelatedTo', '81dba31f-e19a-4a8b-a07f-e1561fc2ce06', '407ae0d5-e5be-4151-900b-041ed5dfcdbe', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('97f657b5-ff97-43ef-b23d-4372a48c1b7c', 'null', 'isRelatedTo', 'e6106e4d-46a4-4557-8c2d-009ff7159464', '81dba31f-e19a-4a8b-a07f-e1561fc2ce06', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('ff9d47de-0237-47fa-8981-7e500101c6df', 'null', 'isRelatedTo', 'e6106e4d-46a4-4557-8c2d-009ff7159464', 'f69638dc-6844-415c-a679-d3982c691f38', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('4476cce4-5925-457d-94a2-098a9d264b0f', 'null', 'isRelatedTo', 'f69638dc-6844-415c-a679-d3982c691f38', 'ecb7d0a0-72d0-44c3-90dd-5b9af536ebca', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('29246825-7454-4fad-93fb-81d844aaf39e', 'null', 'isRelatedTo', '0b5ba218-dcb1-4841-a517-b6010b8a2951', '6d763f90-d7d4-4d58-a82c-09bb68ac6b82', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('986bf6f6-b4fc-4fde-9c01-c937d1b70977', 'null', 'isRelatedTo', '1dafcbc7-f048-4867-ad7f-2d0b40e096e1', 'b228d692-009d-4122-b617-1a3799a68766', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('c68bd118-937a-48dc-9a7f-7e852748dce7', 'null', 'isRelatedTo', '94331ad5-4f67-4183-8fbe-55fe9c542789', 'b228d692-009d-4122-b617-1a3799a68766', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('79a4970d-8fa1-41d1-a0a2-83a8e38d9d26', 'null', 'isRelatedTo', '50d0b397-d2df-4797-8975-d2526c8cdd63', 'b228d692-009d-4122-b617-1a3799a68766', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('e415f150-8b28-4a1c-afb9-28e9d455dd84', 'null', 'isRelatedTo', 'e35d735c-f724-4946-aad9-7fa520d5a843', 'b228d692-009d-4122-b617-1a3799a68766', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('850060ec-484c-46ce-9991-dfd2a018f307', 'null', 'isRelatedTo', 'cd686d46-c77f-4c35-8016-f9819282f8a5', 'b9484449-18bd-4667-a9e5-1f6bf66d442d', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
+INSERT INTO public.undirected_edge VALUES ('633d69d5-16f5-4155-96f4-db01949b2e8e', 'null', 'isRelatedTo', '80d829b6-d1ed-40a3-95ea-7e0b34de8eba', 'cd686d46-c77f-4c35-8016-f9819282f8a5', 'efdc1625-6445-4662-a37e-5f1fd37a542b');
 
 
 --
--- TOC entry 2986 (class 0 OID 16735)
+-- TOC entry 3159 (class 0 OID 16466)
 -- Dependencies: 218
 -- Data for Name: pattern_view_undirected_edge; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -948,7 +1090,7 @@ INSERT INTO public.undirected_edge VALUES ('1b9a15e3-55d9-4cc7-81c0-55f00c1bf161
 
 
 --
--- TOC entry 2988 (class 0 OID 16748)
+-- TOC entry 3161 (class 0 OID 16475)
 -- Dependencies: 220
 -- Data for Name: undirected_hyperedge; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -956,7 +1098,7 @@ INSERT INTO public.undirected_edge VALUES ('1b9a15e3-55d9-4cc7-81c0-55f00c1bf161
 
 
 --
--- TOC entry 2989 (class 0 OID 16756)
+-- TOC entry 3162 (class 0 OID 16481)
 -- Dependencies: 221
 -- Data for Name: undirected_hyperedge_patterns; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -964,15 +1106,23 @@ INSERT INTO public.undirected_edge VALUES ('1b9a15e3-55d9-4cc7-81c0-55f00c1bf161
 
 
 --
--- TOC entry 2995 (class 0 OID 0)
--- Dependencies: 204
+-- TOC entry 3172 (class 0 OID 16713)
+-- Dependencies: 231
+-- Data for Name: user_entity_roles; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3178 (class 0 OID 0)
+-- Dependencies: 208
 -- Name: hibernate_sequence; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.hibernate_sequence', 1, false);
 
 
--- Completed on 2020-04-23 09:57:07
+-- Completed on 2020-08-10 19:18:54
 
 --
 -- PostgreSQL database dump complete
