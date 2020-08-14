@@ -40,6 +40,6 @@ If the schema changed, you should backup a new version of the schema as well.
     - To back up the data, choose the following setup: 
 ![backup](docs/pictures/backup_data.PNG)
 
- - Replace the appropriate file, whether you update data or sheme, found in the [pattern-atlas-content repository](https://github.com/PatternAtlas/pattern-atlas-content) located under pattern-atlas-content/db-backup-files/
+ - Replace the appropriate file, whether you update data or scheme, found in the [pattern-atlas-content repository](https://github.com/PatternAtlas/pattern-atlas-content) located under pattern-atlas-content/db-backup-files/
 
   
