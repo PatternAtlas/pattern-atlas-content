@@ -5,7 +5,7 @@
 -- Dumped from database version 12.2 (Debian 12.2-2.pgdg100+1)
 -- Dumped by pg_dump version 12.3
 
--- Started on 2020-08-12 12:36:39
+-- Started on 2020-08-27 16:37:58
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1160,7 +1160,7 @@ INSERT INTO public.undirected_edge VALUES ('0a867dc3-829f-4972-b492-83d1b8560612
 SELECT pg_catalog.setval('public.hibernate_sequence', 1, false);
 
 
--- Completed on 2020-08-12 12:36:39
+-- Completed on 2020-08-27 16:37:58
 
 --
 -- PostgreSQL database dump complete
