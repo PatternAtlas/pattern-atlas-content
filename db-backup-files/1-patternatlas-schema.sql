@@ -5,7 +5,7 @@
 -- Dumped from database version 12.2 (Debian 12.2-2.pgdg100+1)
 -- Dumped by pg_dump version 12.3
 
--- Started on 2020-08-27 16:36:51
+-- Started on 2020-08-27 17:05:38
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1195,7 +1195,7 @@ ALTER TABLE ONLY public.undirected_edge
     ADD CONSTRAINT fkt73wgqcqh5u6ro109oq15dh9v FOREIGN KEY (pattern_language_id) REFERENCES public.pattern_language(id);
 
 
--- Completed on 2020-08-27 16:36:51
+-- Completed on 2020-08-27 17:05:39
 
 --
 -- PostgreSQL database dump complete
