@@ -57,6 +57,31 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
+-- Name: concrete_solution; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.concrete_solution (
+    id uuid NOT NULL PRIMARY KEY,
+    aggregator_type character varying(255) NOT NULL,
+    name character varying(255) NOT NULL,
+    pattern_uri character varying(255) NOT NULL,
+    template_uri character varying(255) NOT NULL
+);
+
+ALTER TABLE public.concrete_solution OWNER TO postgres;
+
+--
+-- Name: design_model_edge_type; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.design_model_edge_type (
+    name character varying(255) NOT NULL PRIMARY KEY,
+    swap boolean NOT NULL
+);
+
+ALTER TABLE public.design_model_edge_type OWNER TO postgres;
+
+--
 -- TOC entry 204 (class 1259 OID 16404)
 -- Name: candidate; Type: TABLE; Schema: public; Owner: postgres
 --
