@@ -30,6 +30,44 @@ INSERT INTO public.pattern_language (id, name, uri, graph, creative_commons_refe
 
 
 --
+-- Data for Name: concrete_solution; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.concrete_solution (id,aggregator_type,"name",pattern_uri,template_uri) VALUES 
+('59d19d48-e20b-4702-b5ea-df9d36dd4e7b','ActiveMQ-Java','ActiveMQ (Java DSL)','https://patternpedia.org/patternLanguages/eip/recipientList','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-activemq-java/recipient-list.st')
+,('f362bb07-48a3-4ed0-be45-f315684e4651','ActiveMQ-XML','ActiveMQ (XML Configuration)','https://patternpedia.org/patternLanguages/eip/recipientList','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-activemq-xml/recipient-list.st')
+,('f863121b-22a9-4904-872d-cab915477c13','ActiveMQ-XML','ActiveMQ (XML Configuration)','https://patternpedia.org/patternLanguages/eip/content-basedRouter','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-activemq-xml/content-based-router.st')
+,('d95c8837-4a66-45e7-85fd-cfc64bc0ee61','ActiveMQ-XML','ActiveMQ (XML Configuration)','https://patternpedia.org/patternLanguages/eip/publish-subscribeChannel','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-activemq-xml/publish-subscribe-channel.st')
+,('887e5cd5-1905-48bb-8ce9-f68c271901ab','ActiveMQ-XML','ActiveMQ (XML Configuration)','https://patternpedia.org/patternLanguages/eip/point-to-pointChannel','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-activemq-xml/point-to-point-channel.st')
+,('67a12c23-a353-4090-bce1-89d3df6081e2','ActiveMQ-Java','ActiveMQ (Java DSL)','https://patternpedia.org/patternLanguages/eip/content-basedRouter','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-activemq-java/content-based-router.st')
+,('24ff6fc8-e943-41b7-9740-cc4eadb2df94','ActiveMQ-Java','ActiveMQ (Java DSL)','https://patternpedia.org/patternLanguages/eip/contentEnricher','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-activemq-java/content-enricher.st')
+,('e8ea39b5-88cb-42c2-a240-ec5e6e1c29b2','ActiveMQ-Java','ActiveMQ (Java DSL)','https://patternpedia.org/patternLanguages/eip/messageFilter','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-activemq-java/message-filter.st')
+,('e0f45ca7-31e9-4a3b-9868-bf44bf13563a','ActiveMQ-Java','ActiveMQ (Java DSL)','https://patternpedia.org/patternLanguages/eip/normalizer','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-activemq-java/normalizer.st')
+,('055db4ff-2856-4aae-8bef-ffc5a43c65ee','ActiveMQ-XML','ActiveMQ (XML Configuration)','https://patternpedia.org/patternLanguages/eip/contentEnricher','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-activemq-xml/content-enricher.st')
+,('5b2e22f5-2779-461d-a6cc-8f21f41b211e','ActiveMQ-XML','ActiveMQ (XML Configuration)','https://patternpedia.org/patternLanguages/eip/messageFilter','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-activemq-xml/message-filter.st')
+,('21a8e985-a0c3-48c8-bfd6-36fe49f414a0','ActiveMQ-XML','ActiveMQ (XML Configuration)','https://patternpedia.org/patternLanguages/eip/normalizer','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-activemq-xml/normalizer.st')
+,('e78f38ce-9a52-49f7-a3f7-04f722a22654','AWS-CloudFormation-JSON','Amazon MQ (AWS CloudFormation)','https://patternpedia.org/patternLanguages/cloudComputingPatterns/message-orientedMiddleware','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/aws-cloudformation-json/message-oriented-middleware.st')
+,('81ee94a9-1630-48be-a60d-ccee4572ae61','ActiveMQ-XML','ActiveMQ (XML Configuration)','https://patternpedia.org/patternLanguages/eip/aggregator','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-activemq-xml/aggregator.st')
+,('ee01abb8-c829-441a-8b02-13645ca668b8','MessageEndpoint','Message Endpoint (JMS async)','https://patternpedia.org/patternLanguages/eip/messageEndpoint','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-java/message-endpoint-async.st')
+,('a80c00dc-d358-44f0-978b-3ac24bbfd48f','MessageEndpoint','Message Endpoint (JMS sync)','https://patternpedia.org/patternLanguages/eip/messageEndpoint','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-java/message-endpoint-sync.st')
+,('582ff88e-d1f9-4699-8d96-abb7bccb856f','AWS-CloudFormation-JSON','Amazon MQ (AWS CloudFormation)','https://patternpedia.org/patternLanguages/cloudComputingPatterns/publicCloud','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/aws-cloudformation-json/public-cloud.st')
+,('c965352d-1bf7-49ea-8395-5afb35c94a6e','AWS-CloudFormation-JSON','Amazon MQ (AWS CloudFormation)','https://patternpedia.org/patternLanguages/cloudComputingPatterns/platformAsAService(paas)','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/aws-cloudformation-json/paas.st')
+;
+
+
+--
+-- Data for Name: design_model_edge_type; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.design_model_edge_type ("name",swap) VALUES
+	 ('hostedOn',false),
+	 ('send',true),
+	 ('receive',false),
+	 ('publish',true),
+	 ('subscribe',false);
+
+
+--
 -- TOC entry 3172 (class 0 OID 16404)
 -- Dependencies: 204
 -- Data for Name: candidate; Type: TABLE DATA; Schema: public; Owner: postgres
