@@ -51,7 +51,7 @@ INSERT INTO public.concrete_solution (id,aggregator_type,"name",pattern_uri,temp
 ,('ee01abb8-c829-441a-8b02-13645ca668b8','MessageEndpoint','Message Endpoint (JMS async)','https://patternpedia.org/patternLanguages/eip/messageEndpoint','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-java/message-endpoint-async.st')
 ,('a80c00dc-d358-44f0-978b-3ac24bbfd48f','MessageEndpoint','Message Endpoint (JMS sync)','https://patternpedia.org/patternLanguages/eip/messageEndpoint','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/eip-java/message-endpoint-sync.st')
 ,('582ff88e-d1f9-4699-8d96-abb7bccb856f','AWS-CloudFormation-JSON','Amazon MQ (AWS CloudFormation)','https://patternpedia.org/patternLanguages/cloudComputingPatterns/publicCloud','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/aws-cloudformation-json/public-cloud.st')
-,('c965352d-1bf7-49ea-8395-5afb35c94a6e','AWS-CloudFormation-JSON','Amazon MQ (AWS CloudFormation)','https://patternpedia.org/patternLanguages/cloudComputingPatterns/platformAsAService(paas)','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/aws-cloudformation-json/paas.st')
+,('c965352d-1bf7-49ea-8395-5afb35c94a6e','AWS-CloudFormation-JSON','Amazon MQ (AWS CloudFormation)','https://patternpedia.org/patternLanguages/cloudComputingPatterns/elasticPlatform','https://raw.githubusercontent.com/marzn/pattern-atlas-pattern-implementations/main/aws-cloudformation-json/elastic-platform.st')
 ;
 
 
