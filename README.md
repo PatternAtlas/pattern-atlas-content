@@ -1,17 +1,5 @@
 # Pattern Atlas Content
 
-### Add example data to the data base in the right order:
-
-Before adding a **qpu**:
-  * add related *provider*
-  * add related *sdk*
-  
-Before adding an **implementation**:
-  * add related *algorithm*
-  * add related *sdk*
-  
-**Hint:** *Required IDs of the related entities in the JSONs are marked with* "..." *and must be set accordingly.*
-
 ## Creating a new Data Set with PgAdmin
 [PgAdmin](https://www.pgadmin.org/) can be used to inspect and backup postgres database. With the following steps, a backup .sql file can be created: 
 
