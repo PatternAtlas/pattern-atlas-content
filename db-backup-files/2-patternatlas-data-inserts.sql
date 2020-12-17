@@ -68,6 +68,42 @@ INSERT INTO public.design_model_edge_type ("name",swap) VALUES
 
 
 --
+-- Data for Name: design_model; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.design_model (id,name,uri,logo) VALUES ('31694712-1496-4efb-9992-6c8ebebadfa4','Example','https://patternpedia.org/designModels/example','https://share.nerdsupport.de/pattern-atlas/design-model-example.png');
+
+
+INSERT INTO public.design_model_pattern_edge (description,is_directed_edge,"type",pattern_instance1_pattern_instance_id,pattern_instance2_pattern_instance_id,design_model_id) VALUES
+	 (NULL,true,'send','e5e37e9b-5db9-4105-b7f6-40389b7b4e4e','a5675128-a8b6-486b-b0e0-106c8a4796d1','31694712-1496-4efb-9992-6c8ebebadfa4'),
+	 (NULL,true,'receive','45c1239f-f6c9-4960-b313-a75f47fc964d','a5675128-a8b6-486b-b0e0-106c8a4796d1','31694712-1496-4efb-9992-6c8ebebadfa4'),
+	 (NULL,true,'send','45c1239f-f6c9-4960-b313-a75f47fc964d','8867a184-68f5-4c04-a2ce-801c3d898fef','31694712-1496-4efb-9992-6c8ebebadfa4'),
+	 (NULL,true,'receive','08c86128-c3e6-49ac-ab95-4599af87ef3d','8867a184-68f5-4c04-a2ce-801c3d898fef','31694712-1496-4efb-9992-6c8ebebadfa4'),
+	 (NULL,true,'publish','08c86128-c3e6-49ac-ab95-4599af87ef3d','ed67648b-9fa5-4147-8f2a-6c082d72b60a','31694712-1496-4efb-9992-6c8ebebadfa4'),
+	 (NULL,true,'subscribe','567764eb-641a-4d0c-abaa-80f67591ac3f','ed67648b-9fa5-4147-8f2a-6c082d72b60a','31694712-1496-4efb-9992-6c8ebebadfa4'),
+	 (NULL,true,'subscribe','057355c9-c130-4aff-bf45-42ef09c811e7','ed67648b-9fa5-4147-8f2a-6c082d72b60a','31694712-1496-4efb-9992-6c8ebebadfa4'),
+	 (NULL,true,'hostedOn','a5675128-a8b6-486b-b0e0-106c8a4796d1','cd9873ee-ebd6-47a3-b596-ab023f64b213','31694712-1496-4efb-9992-6c8ebebadfa4'),
+	 (NULL,true,'hostedOn','45c1239f-f6c9-4960-b313-a75f47fc964d','cd9873ee-ebd6-47a3-b596-ab023f64b213','31694712-1496-4efb-9992-6c8ebebadfa4'),
+	 (NULL,true,'hostedOn','8867a184-68f5-4c04-a2ce-801c3d898fef','cd9873ee-ebd6-47a3-b596-ab023f64b213','31694712-1496-4efb-9992-6c8ebebadfa4'),
+	 (NULL,true,'hostedOn','08c86128-c3e6-49ac-ab95-4599af87ef3d','cd9873ee-ebd6-47a3-b596-ab023f64b213','31694712-1496-4efb-9992-6c8ebebadfa4'),
+	 (NULL,true,'hostedOn','ed67648b-9fa5-4147-8f2a-6c082d72b60a','cd9873ee-ebd6-47a3-b596-ab023f64b213','31694712-1496-4efb-9992-6c8ebebadfa4'),
+	 (NULL,true,'hostedOn','e5e37e9b-5db9-4105-b7f6-40389b7b4e4e','64aeaaa1-8bcf-410b-8bf6-db7616745a09','31694712-1496-4efb-9992-6c8ebebadfa4');
+
+
+INSERT INTO public.design_model_pattern_instance (pattern_instance_id,"index","type",vx,vy,x,y,design_model_id,pattern_id) VALUES
+	 ('45c1239f-f6c9-4960-b313-a75f47fc964d',NULL,NULL,NULL,NULL,-80.84001505374908,-71.88192176818848,'31694712-1496-4efb-9992-6c8ebebadfa4','89dd6672-dd42-470b-8e84-129e4ec7540c'),
+	 ('08c86128-c3e6-49ac-ab95-4599af87ef3d',NULL,NULL,NULL,NULL,338.3240604400635,-72.30349206924438,'31694712-1496-4efb-9992-6c8ebebadfa4','9c49472d-47fc-417e-b75a-512d57e76870'),
+	 ('ed67648b-9fa5-4147-8f2a-6c082d72b60a',NULL,NULL,NULL,NULL,554.8635559082031,-0.7007060050964355,'31694712-1496-4efb-9992-6c8ebebadfa4','28343b10-ce82-4c1f-aef2-f7d95316b48e'),
+	 ('e5e37e9b-5db9-4105-b7f6-40389b7b4e4e',NULL,NULL,NULL,NULL,-275.5931625366211,-218.92538452148438,'31694712-1496-4efb-9992-6c8ebebadfa4','3953e924-30f6-4561-8e02-e761b417c1d4'),
+	 ('057355c9-c130-4aff-bf45-42ef09c811e7',NULL,NULL,NULL,NULL,563.5260901451111,-218.31475067138672,'31694712-1496-4efb-9992-6c8ebebadfa4','3953e924-30f6-4561-8e02-e761b417c1d4'),
+	 ('567764eb-641a-4d0c-abaa-80f67591ac3f',NULL,NULL,NULL,NULL,476.14769744873047,-161.95494854450226,'31694712-1496-4efb-9992-6c8ebebadfa4','3953e924-30f6-4561-8e02-e761b417c1d4'),
+	 ('cd9873ee-ebd6-47a3-b596-ab023f64b213',NULL,NULL,NULL,NULL,128.60872872918844,161.00473737716675,'31694712-1496-4efb-9992-6c8ebebadfa4','c12b3086-5fa4-4140-915b-330fbffdfc43'),
+	 ('a5675128-a8b6-486b-b0e0-106c8a4796d1',NULL,NULL,NULL,NULL,-276.6285734176636,-0.6399638652801514,'31694712-1496-4efb-9992-6c8ebebadfa4','3b3a9b48-63aa-4523-be3a-6a39fdf4bda7'),
+	 ('64aeaaa1-8bcf-410b-8bf6-db7616745a09',NULL,NULL,NULL,NULL,38.47888660430908,-218.96317100524902,'31694712-1496-4efb-9992-6c8ebebadfa4','a81eb2c5-84ce-4a14-8242-e9ce19532423'),
+	 ('8867a184-68f5-4c04-a2ce-801c3d898fef',NULL,NULL,NULL,NULL,128.3186912536621,-0.7441442012786865,'31694712-1496-4efb-9992-6c8ebebadfa4','3b3a9b48-63aa-4523-be3a-6a39fdf4bda7');
+
+
+--
 -- TOC entry 3172 (class 0 OID 16404)
 -- Dependencies: 204
 -- Data for Name: candidate; Type: TABLE DATA; Schema: public; Owner: postgres

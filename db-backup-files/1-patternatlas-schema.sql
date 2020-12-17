@@ -48,6 +48,53 @@ CREATE TABLE public.design_model_edge_type (
 ALTER TABLE public.design_model_edge_type OWNER TO postgres;
 
 --
+-- Name: design_model; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.design_model (
+    id uuid NOT NULL PRIMARY KEY,
+    name character varying(255),
+    uri character varying(255),
+    logo character varying(255)
+);
+
+ALTER TABLE public.design_model OWNER TO postgres;
+
+--
+-- Name: design_model_pattern_edge; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.design_model_pattern_edge (
+    pattern_instance1_pattern_instance_id uuid NOT NULL,
+    pattern_instance2_pattern_instance_id uuid NOT NULL,
+    design_model_id uuid,
+    type character varying(255),
+    description character varying(255),
+    is_directed_edge boolean,
+    CONSTRAINT design_model_pattern_edge_pkey PRIMARY KEY (pattern_instance1_pattern_instance_id, pattern_instance2_pattern_instance_id)
+);
+
+ALTER TABLE public.design_model_pattern_edge OWNER TO postgres;
+
+--
+-- Name: design_model_pattern_instance; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.design_model_pattern_instance (
+    pattern_instance_id uuid NOT NULL PRIMARY KEY,
+    pattern_id uuid,
+    design_model_id uuid,
+    type varchar(255),
+    "index" int4,
+    x float8,
+    y float8,
+    vx float8,
+    vy float8
+);
+
+ALTER TABLE public.design_model_pattern_instance OWNER TO postgres;
+
+--
 -- TOC entry 202 (class 1259 OID 16384)
 -- Name: candidate; Type: TABLE; Schema: public; Owner: postgres
 --
