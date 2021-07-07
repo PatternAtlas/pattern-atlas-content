@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.4 (Debian 12.4-1.pgdg100+1)
--- Dumped by pg_dump version 13.0
+-- Dumped from database version 12.5 (Debian 12.5-1.pgdg100+1)
+-- Dumped by pg_dump version 13.3
 
--- Started on 2020-11-04 14:39:37
+-- Started on 2021-07-07 15:42:06 CEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,79 +23,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: concrete_solution; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.concrete_solution (
-    id uuid NOT NULL PRIMARY KEY,
-    aggregator_type character varying(255) NOT NULL,
-    name character varying(255) NOT NULL,
-    pattern_uri character varying(255) NOT NULL,
-    template_uri character varying(255) NOT NULL
-);
-
-ALTER TABLE public.concrete_solution OWNER TO postgres;
-
---
--- Name: design_model_edge_type; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.design_model_edge_type (
-    name character varying(255) NOT NULL PRIMARY KEY,
-    swap boolean NOT NULL
-);
-
-ALTER TABLE public.design_model_edge_type OWNER TO postgres;
-
---
--- Name: design_model; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.design_model (
-    id uuid NOT NULL PRIMARY KEY,
-    name character varying(255),
-    uri character varying(255),
-    logo character varying(255)
-);
-
-ALTER TABLE public.design_model OWNER TO postgres;
-
---
--- Name: design_model_pattern_edge; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.design_model_pattern_edge (
-    pattern_instance1_pattern_instance_id uuid NOT NULL,
-    pattern_instance2_pattern_instance_id uuid NOT NULL,
-    design_model_id uuid,
-    type character varying(255),
-    description character varying(255),
-    is_directed_edge boolean,
-    CONSTRAINT design_model_pattern_edge_pkey PRIMARY KEY (pattern_instance1_pattern_instance_id, pattern_instance2_pattern_instance_id)
-);
-
-ALTER TABLE public.design_model_pattern_edge OWNER TO postgres;
-
---
--- Name: design_model_pattern_instance; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.design_model_pattern_instance (
-    pattern_instance_id uuid NOT NULL PRIMARY KEY,
-    pattern_id uuid,
-    design_model_id uuid,
-    type varchar(255),
-    "index" int4,
-    x float8,
-    y float8,
-    vx float8,
-    vy float8
-);
-
-ALTER TABLE public.design_model_pattern_instance OWNER TO postgres;
-
---
--- TOC entry 202 (class 1259 OID 16384)
+-- TOC entry 207 (class 1259 OID 16418)
 -- Name: candidate; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -114,7 +42,7 @@ CREATE TABLE public.candidate (
 ALTER TABLE public.candidate OWNER TO postgres;
 
 --
--- TOC entry 203 (class 1259 OID 16392)
+-- TOC entry 208 (class 1259 OID 16424)
 -- Name: candidate_comment; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -130,7 +58,7 @@ CREATE TABLE public.candidate_comment (
 ALTER TABLE public.candidate_comment OWNER TO postgres;
 
 --
--- TOC entry 204 (class 1259 OID 16397)
+-- TOC entry 209 (class 1259 OID 16427)
 -- Name: candidate_comment_rating; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -144,7 +72,7 @@ CREATE TABLE public.candidate_comment_rating (
 ALTER TABLE public.candidate_comment_rating OWNER TO postgres;
 
 --
--- TOC entry 205 (class 1259 OID 16402)
+-- TOC entry 210 (class 1259 OID 16430)
 -- Name: candidate_rating; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -158,7 +86,101 @@ CREATE TABLE public.candidate_rating (
 ALTER TABLE public.candidate_rating OWNER TO postgres;
 
 --
--- TOC entry 206 (class 1259 OID 16407)
+-- TOC entry 202 (class 1259 OID 16384)
+-- Name: concrete_solution; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.concrete_solution (
+    id uuid NOT NULL,
+    aggregator_type character varying(255) NOT NULL,
+    name character varying(255) NOT NULL,
+    pattern_uri character varying(255) NOT NULL,
+    template_uri character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.concrete_solution OWNER TO postgres;
+
+--
+-- TOC entry 204 (class 1259 OID 16397)
+-- Name: design_model; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.design_model (
+    id uuid NOT NULL,
+    name character varying(255),
+    uri character varying(255),
+    logo character varying(255)
+);
+
+
+ALTER TABLE public.design_model OWNER TO postgres;
+
+--
+-- TOC entry 203 (class 1259 OID 16392)
+-- Name: design_model_edge_type; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.design_model_edge_type (
+    name character varying(255) NOT NULL,
+    swap boolean NOT NULL
+);
+
+
+ALTER TABLE public.design_model_edge_type OWNER TO postgres;
+
+--
+-- TOC entry 205 (class 1259 OID 16405)
+-- Name: design_model_pattern_edge; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.design_model_pattern_edge (
+    pattern_instance1_pattern_instance_id uuid NOT NULL,
+    pattern_instance2_pattern_instance_id uuid NOT NULL,
+    design_model_id uuid,
+    type character varying(255),
+    description character varying(255),
+    is_directed_edge boolean
+);
+
+
+ALTER TABLE public.design_model_pattern_edge OWNER TO postgres;
+
+--
+-- TOC entry 206 (class 1259 OID 16413)
+-- Name: design_model_pattern_instance; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.design_model_pattern_instance (
+    pattern_instance_id uuid NOT NULL,
+    pattern_id uuid,
+    design_model_id uuid,
+    type character varying(255),
+    index integer,
+    x double precision,
+    y double precision,
+    vx double precision,
+    vy double precision
+);
+
+
+ALTER TABLE public.design_model_pattern_instance OWNER TO postgres;
+
+--
+-- TOC entry 238 (class 1259 OID 16832)
+-- Name: design_model_undirected_edge; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.design_model_undirected_edge (
+    design_model_id uuid NOT NULL,
+    undirected_edge_id uuid NOT NULL
+);
+
+
+ALTER TABLE public.design_model_undirected_edge OWNER TO postgres;
+
+--
+-- TOC entry 211 (class 1259 OID 16433)
 -- Name: directed_edge; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -175,7 +197,7 @@ CREATE TABLE public.directed_edge (
 ALTER TABLE public.directed_edge OWNER TO postgres;
 
 --
--- TOC entry 207 (class 1259 OID 16415)
+-- TOC entry 212 (class 1259 OID 16439)
 -- Name: directed_hyperedge; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -190,7 +212,7 @@ CREATE TABLE public.directed_hyperedge (
 ALTER TABLE public.directed_hyperedge OWNER TO postgres;
 
 --
--- TOC entry 208 (class 1259 OID 16423)
+-- TOC entry 213 (class 1259 OID 16445)
 -- Name: directed_hyperedge_source_set; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -203,7 +225,7 @@ CREATE TABLE public.directed_hyperedge_source_set (
 ALTER TABLE public.directed_hyperedge_source_set OWNER TO postgres;
 
 --
--- TOC entry 209 (class 1259 OID 16428)
+-- TOC entry 214 (class 1259 OID 16448)
 -- Name: directed_hyperedge_target_set; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -216,7 +238,7 @@ CREATE TABLE public.directed_hyperedge_target_set (
 ALTER TABLE public.directed_hyperedge_target_set OWNER TO postgres;
 
 --
--- TOC entry 210 (class 1259 OID 16433)
+-- TOC entry 215 (class 1259 OID 16451)
 -- Name: discussion_comment; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -232,7 +254,7 @@ CREATE TABLE public.discussion_comment (
 ALTER TABLE public.discussion_comment OWNER TO postgres;
 
 --
--- TOC entry 211 (class 1259 OID 16438)
+-- TOC entry 216 (class 1259 OID 16454)
 -- Name: discussion_topic; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -254,7 +276,7 @@ CREATE TABLE public.discussion_topic (
 ALTER TABLE public.discussion_topic OWNER TO postgres;
 
 --
--- TOC entry 232 (class 1259 OID 16596)
+-- TOC entry 217 (class 1259 OID 16460)
 -- Name: hibernate_sequence; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -269,7 +291,7 @@ CREATE SEQUENCE public.hibernate_sequence
 ALTER TABLE public.hibernate_sequence OWNER TO postgres;
 
 --
--- TOC entry 212 (class 1259 OID 16446)
+-- TOC entry 218 (class 1259 OID 16462)
 -- Name: image; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -284,7 +306,7 @@ CREATE TABLE public.image (
 ALTER TABLE public.image OWNER TO postgres;
 
 --
--- TOC entry 213 (class 1259 OID 16454)
+-- TOC entry 219 (class 1259 OID 16468)
 -- Name: issue; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -301,7 +323,7 @@ CREATE TABLE public.issue (
 ALTER TABLE public.issue OWNER TO postgres;
 
 --
--- TOC entry 214 (class 1259 OID 16462)
+-- TOC entry 220 (class 1259 OID 16474)
 -- Name: issue_comment; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -317,7 +339,7 @@ CREATE TABLE public.issue_comment (
 ALTER TABLE public.issue_comment OWNER TO postgres;
 
 --
--- TOC entry 215 (class 1259 OID 16467)
+-- TOC entry 221 (class 1259 OID 16477)
 -- Name: issue_comment_rating; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -331,7 +353,7 @@ CREATE TABLE public.issue_comment_rating (
 ALTER TABLE public.issue_comment_rating OWNER TO postgres;
 
 --
--- TOC entry 216 (class 1259 OID 16472)
+-- TOC entry 222 (class 1259 OID 16480)
 -- Name: issue_rating; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -345,7 +367,7 @@ CREATE TABLE public.issue_rating (
 ALTER TABLE public.issue_rating OWNER TO postgres;
 
 --
--- TOC entry 217 (class 1259 OID 16477)
+-- TOC entry 223 (class 1259 OID 16483)
 -- Name: pattern; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -363,7 +385,7 @@ CREATE TABLE public.pattern (
 ALTER TABLE public.pattern OWNER TO postgres;
 
 --
--- TOC entry 218 (class 1259 OID 16485)
+-- TOC entry 224 (class 1259 OID 16489)
 -- Name: pattern_language; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -380,7 +402,7 @@ CREATE TABLE public.pattern_language (
 ALTER TABLE public.pattern_language OWNER TO postgres;
 
 --
--- TOC entry 219 (class 1259 OID 16493)
+-- TOC entry 225 (class 1259 OID 16495)
 -- Name: pattern_schema; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -392,7 +414,7 @@ CREATE TABLE public.pattern_schema (
 ALTER TABLE public.pattern_schema OWNER TO postgres;
 
 --
--- TOC entry 220 (class 1259 OID 16498)
+-- TOC entry 226 (class 1259 OID 16498)
 -- Name: pattern_section; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -406,7 +428,7 @@ CREATE TABLE public.pattern_section (
 ALTER TABLE public.pattern_section OWNER TO postgres;
 
 --
--- TOC entry 221 (class 1259 OID 16506)
+-- TOC entry 227 (class 1259 OID 16504)
 -- Name: pattern_section_schema; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -423,7 +445,7 @@ CREATE TABLE public.pattern_section_schema (
 ALTER TABLE public.pattern_section_schema OWNER TO postgres;
 
 --
--- TOC entry 222 (class 1259 OID 16514)
+-- TOC entry 228 (class 1259 OID 16510)
 -- Name: pattern_section_schema_pattern_sections; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -436,7 +458,7 @@ CREATE TABLE public.pattern_section_schema_pattern_sections (
 ALTER TABLE public.pattern_section_schema_pattern_sections OWNER TO postgres;
 
 --
--- TOC entry 223 (class 1259 OID 16517)
+-- TOC entry 229 (class 1259 OID 16513)
 -- Name: pattern_view; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -444,14 +466,15 @@ CREATE TABLE public.pattern_view (
     id uuid NOT NULL,
     name character varying(255) NOT NULL,
     uri character varying(255) NOT NULL,
-    graph jsonb
+    graph jsonb,
+    logo character varying(255)
 );
 
 
 ALTER TABLE public.pattern_view OWNER TO postgres;
 
 --
--- TOC entry 224 (class 1259 OID 16525)
+-- TOC entry 230 (class 1259 OID 16519)
 -- Name: pattern_view_directed_edge; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -464,7 +487,7 @@ CREATE TABLE public.pattern_view_directed_edge (
 ALTER TABLE public.pattern_view_directed_edge OWNER TO postgres;
 
 --
--- TOC entry 225 (class 1259 OID 16530)
+-- TOC entry 231 (class 1259 OID 16522)
 -- Name: pattern_view_pattern; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -477,7 +500,7 @@ CREATE TABLE public.pattern_view_pattern (
 ALTER TABLE public.pattern_view_pattern OWNER TO postgres;
 
 --
--- TOC entry 226 (class 1259 OID 16535)
+-- TOC entry 232 (class 1259 OID 16525)
 -- Name: pattern_view_undirected_edge; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -490,7 +513,7 @@ CREATE TABLE public.pattern_view_undirected_edge (
 ALTER TABLE public.pattern_view_undirected_edge OWNER TO postgres;
 
 --
--- TOC entry 227 (class 1259 OID 16540)
+-- TOC entry 233 (class 1259 OID 16528)
 -- Name: undirected_edge; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -507,7 +530,7 @@ CREATE TABLE public.undirected_edge (
 ALTER TABLE public.undirected_edge OWNER TO postgres;
 
 --
--- TOC entry 228 (class 1259 OID 16548)
+-- TOC entry 234 (class 1259 OID 16534)
 -- Name: undirected_hyperedge; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -522,7 +545,7 @@ CREATE TABLE public.undirected_hyperedge (
 ALTER TABLE public.undirected_hyperedge OWNER TO postgres;
 
 --
--- TOC entry 229 (class 1259 OID 16556)
+-- TOC entry 235 (class 1259 OID 16540)
 -- Name: undirected_hyperedge_patterns; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -535,7 +558,7 @@ CREATE TABLE public.undirected_hyperedge_patterns (
 ALTER TABLE public.undirected_hyperedge_patterns OWNER TO postgres;
 
 --
--- TOC entry 230 (class 1259 OID 16561)
+-- TOC entry 236 (class 1259 OID 16543)
 -- Name: user_entity; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -550,7 +573,7 @@ CREATE TABLE public.user_entity (
 ALTER TABLE public.user_entity OWNER TO postgres;
 
 --
--- TOC entry 231 (class 1259 OID 16569)
+-- TOC entry 237 (class 1259 OID 16549)
 -- Name: user_entity_roles; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -563,7 +586,7 @@ CREATE TABLE public.user_entity_roles (
 ALTER TABLE public.user_entity_roles OWNER TO postgres;
 
 --
--- TOC entry 2912 (class 2606 OID 16396)
+-- TOC entry 2953 (class 2606 OID 16553)
 -- Name: candidate_comment candidate_comment_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -572,7 +595,7 @@ ALTER TABLE ONLY public.candidate_comment
 
 
 --
--- TOC entry 2914 (class 2606 OID 16401)
+-- TOC entry 2955 (class 2606 OID 16555)
 -- Name: candidate_comment_rating candidate_comment_rating_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -581,7 +604,7 @@ ALTER TABLE ONLY public.candidate_comment_rating
 
 
 --
--- TOC entry 2908 (class 2606 OID 16391)
+-- TOC entry 2947 (class 2606 OID 16557)
 -- Name: candidate candidate_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -590,7 +613,7 @@ ALTER TABLE ONLY public.candidate
 
 
 --
--- TOC entry 2916 (class 2606 OID 16406)
+-- TOC entry 2957 (class 2606 OID 16559)
 -- Name: candidate_rating candidate_rating_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -599,7 +622,61 @@ ALTER TABLE ONLY public.candidate_rating
 
 
 --
--- TOC entry 2918 (class 2606 OID 16414)
+-- TOC entry 2935 (class 2606 OID 16391)
+-- Name: concrete_solution concrete_solution_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.concrete_solution
+    ADD CONSTRAINT concrete_solution_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2937 (class 2606 OID 16396)
+-- Name: design_model_edge_type design_model_edge_type_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.design_model_edge_type
+    ADD CONSTRAINT design_model_edge_type_pkey PRIMARY KEY (name);
+
+
+--
+-- TOC entry 2943 (class 2606 OID 16412)
+-- Name: design_model_pattern_edge design_model_pattern_edge_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.design_model_pattern_edge
+    ADD CONSTRAINT design_model_pattern_edge_pkey PRIMARY KEY (pattern_instance1_pattern_instance_id, pattern_instance2_pattern_instance_id);
+
+
+--
+-- TOC entry 2945 (class 2606 OID 16417)
+-- Name: design_model_pattern_instance design_model_pattern_instance_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.design_model_pattern_instance
+    ADD CONSTRAINT design_model_pattern_instance_pkey PRIMARY KEY (pattern_instance_id);
+
+
+--
+-- TOC entry 2939 (class 2606 OID 16404)
+-- Name: design_model design_model_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.design_model
+    ADD CONSTRAINT design_model_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 3035 (class 2606 OID 16836)
+-- Name: design_model_undirected_edge design_model_undirected_edge_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.design_model_undirected_edge
+    ADD CONSTRAINT design_model_undirected_edge_pkey PRIMARY KEY (design_model_id, undirected_edge_id);
+
+
+--
+-- TOC entry 2959 (class 2606 OID 16561)
 -- Name: directed_edge directed_edge_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -608,7 +685,7 @@ ALTER TABLE ONLY public.directed_edge
 
 
 --
--- TOC entry 2922 (class 2606 OID 16422)
+-- TOC entry 2963 (class 2606 OID 16563)
 -- Name: directed_hyperedge directed_hyperedge_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -617,7 +694,7 @@ ALTER TABLE ONLY public.directed_hyperedge
 
 
 --
--- TOC entry 2924 (class 2606 OID 16427)
+-- TOC entry 2965 (class 2606 OID 16565)
 -- Name: directed_hyperedge_source_set directed_hyperedge_source_set_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -626,7 +703,7 @@ ALTER TABLE ONLY public.directed_hyperedge_source_set
 
 
 --
--- TOC entry 2928 (class 2606 OID 16432)
+-- TOC entry 2969 (class 2606 OID 16567)
 -- Name: directed_hyperedge_target_set directed_hyperedge_target_set_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -635,7 +712,7 @@ ALTER TABLE ONLY public.directed_hyperedge_target_set
 
 
 --
--- TOC entry 2932 (class 2606 OID 16437)
+-- TOC entry 2973 (class 2606 OID 16569)
 -- Name: discussion_comment discussion_comment_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -644,7 +721,7 @@ ALTER TABLE ONLY public.discussion_comment
 
 
 --
--- TOC entry 2934 (class 2606 OID 16445)
+-- TOC entry 2975 (class 2606 OID 16571)
 -- Name: discussion_topic discussion_topic_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -653,7 +730,7 @@ ALTER TABLE ONLY public.discussion_topic
 
 
 --
--- TOC entry 2936 (class 2606 OID 16453)
+-- TOC entry 2977 (class 2606 OID 16573)
 -- Name: image image_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -662,7 +739,7 @@ ALTER TABLE ONLY public.image
 
 
 --
--- TOC entry 2942 (class 2606 OID 16466)
+-- TOC entry 2985 (class 2606 OID 16575)
 -- Name: issue_comment issue_comment_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -671,7 +748,7 @@ ALTER TABLE ONLY public.issue_comment
 
 
 --
--- TOC entry 2944 (class 2606 OID 16471)
+-- TOC entry 2987 (class 2606 OID 16577)
 -- Name: issue_comment_rating issue_comment_rating_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -680,7 +757,7 @@ ALTER TABLE ONLY public.issue_comment_rating
 
 
 --
--- TOC entry 2938 (class 2606 OID 16461)
+-- TOC entry 2979 (class 2606 OID 16579)
 -- Name: issue issue_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -689,7 +766,7 @@ ALTER TABLE ONLY public.issue
 
 
 --
--- TOC entry 2946 (class 2606 OID 16476)
+-- TOC entry 2989 (class 2606 OID 16581)
 -- Name: issue_rating issue_rating_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -698,7 +775,7 @@ ALTER TABLE ONLY public.issue_rating
 
 
 --
--- TOC entry 2952 (class 2606 OID 16492)
+-- TOC entry 2997 (class 2606 OID 16583)
 -- Name: pattern_language pattern_language_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -707,7 +784,7 @@ ALTER TABLE ONLY public.pattern_language
 
 
 --
--- TOC entry 2948 (class 2606 OID 16484)
+-- TOC entry 2991 (class 2606 OID 16585)
 -- Name: pattern pattern_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -716,7 +793,7 @@ ALTER TABLE ONLY public.pattern
 
 
 --
--- TOC entry 2956 (class 2606 OID 16497)
+-- TOC entry 3001 (class 2606 OID 16587)
 -- Name: pattern_schema pattern_schema_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -725,7 +802,7 @@ ALTER TABLE ONLY public.pattern_schema
 
 
 --
--- TOC entry 2958 (class 2606 OID 16505)
+-- TOC entry 3003 (class 2606 OID 16589)
 -- Name: pattern_section pattern_section_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -734,7 +811,7 @@ ALTER TABLE ONLY public.pattern_section
 
 
 --
--- TOC entry 2960 (class 2606 OID 16513)
+-- TOC entry 3005 (class 2606 OID 16591)
 -- Name: pattern_section_schema pattern_section_schema_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -743,7 +820,7 @@ ALTER TABLE ONLY public.pattern_section_schema
 
 
 --
--- TOC entry 2968 (class 2606 OID 16529)
+-- TOC entry 3013 (class 2606 OID 16593)
 -- Name: pattern_view_directed_edge pattern_view_directed_edge_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -752,7 +829,7 @@ ALTER TABLE ONLY public.pattern_view_directed_edge
 
 
 --
--- TOC entry 2970 (class 2606 OID 16534)
+-- TOC entry 3015 (class 2606 OID 16595)
 -- Name: pattern_view_pattern pattern_view_pattern_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -761,7 +838,7 @@ ALTER TABLE ONLY public.pattern_view_pattern
 
 
 --
--- TOC entry 2964 (class 2606 OID 16524)
+-- TOC entry 3009 (class 2606 OID 16597)
 -- Name: pattern_view pattern_view_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -770,7 +847,7 @@ ALTER TABLE ONLY public.pattern_view
 
 
 --
--- TOC entry 2972 (class 2606 OID 16539)
+-- TOC entry 3017 (class 2606 OID 16599)
 -- Name: pattern_view_undirected_edge pattern_view_undirected_edge_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -779,7 +856,16 @@ ALTER TABLE ONLY public.pattern_view_undirected_edge
 
 
 --
--- TOC entry 2910 (class 2606 OID 16573)
+-- TOC entry 2949 (class 2606 OID 16838)
+-- Name: candidate uk_2nnar9yvwxvggs1ymw99br8fq; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.candidate
+    ADD CONSTRAINT uk_2nnar9yvwxvggs1ymw99br8fq UNIQUE (uri);
+
+
+--
+-- TOC entry 2951 (class 2606 OID 16601)
 -- Name: candidate uk_3y29gxrn8rruyc1gmq6jj6uqs; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -788,7 +874,7 @@ ALTER TABLE ONLY public.candidate
 
 
 --
--- TOC entry 2984 (class 2606 OID 16595)
+-- TOC entry 3029 (class 2606 OID 16603)
 -- Name: user_entity uk_4xad1enskw4j1t2866f7sodrx; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -797,7 +883,16 @@ ALTER TABLE ONLY public.user_entity
 
 
 --
--- TOC entry 2940 (class 2606 OID 16581)
+-- TOC entry 2993 (class 2606 OID 16844)
+-- Name: pattern uk_6vocvcw50hujfwn66kt7s5fly; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.pattern
+    ADD CONSTRAINT uk_6vocvcw50hujfwn66kt7s5fly UNIQUE (uri);
+
+
+--
+-- TOC entry 2981 (class 2606 OID 16605)
 -- Name: issue uk_8063id79236r47vy0x6k3ek9n; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -806,7 +901,7 @@ ALTER TABLE ONLY public.issue
 
 
 --
--- TOC entry 2962 (class 2606 OID 16587)
+-- TOC entry 3007 (class 2606 OID 16607)
 -- Name: pattern_section_schema_pattern_sections uk_a5dhcqp5e8908x217tkb3ic31; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -815,7 +910,7 @@ ALTER TABLE ONLY public.pattern_section_schema_pattern_sections
 
 
 --
--- TOC entry 2926 (class 2606 OID 16577)
+-- TOC entry 2967 (class 2606 OID 16609)
 -- Name: directed_hyperedge_source_set uk_bevke13de29vkx6hixr9h9vei; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -824,7 +919,25 @@ ALTER TABLE ONLY public.directed_hyperedge_source_set
 
 
 --
--- TOC entry 2980 (class 2606 OID 16593)
+-- TOC entry 2941 (class 2606 OID 16840)
+-- Name: design_model uk_bry9ub9e5d26eq397ax24ra8c; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.design_model
+    ADD CONSTRAINT uk_bry9ub9e5d26eq397ax24ra8c UNIQUE (uri);
+
+
+--
+-- TOC entry 2983 (class 2606 OID 16842)
+-- Name: issue uk_c56ot98f5n1mpxjncwej48s8h; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.issue
+    ADD CONSTRAINT uk_c56ot98f5n1mpxjncwej48s8h UNIQUE (uri);
+
+
+--
+-- TOC entry 3025 (class 2606 OID 16611)
 -- Name: undirected_hyperedge_patterns uk_e61v2oikejer2v1dtcqbbc02l; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -833,7 +946,7 @@ ALTER TABLE ONLY public.undirected_hyperedge_patterns
 
 
 --
--- TOC entry 2966 (class 2606 OID 16589)
+-- TOC entry 3011 (class 2606 OID 16613)
 -- Name: pattern_view uk_gcd5mwq1kb8jn6jvwg192u3cd; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -842,7 +955,7 @@ ALTER TABLE ONLY public.pattern_view
 
 
 --
--- TOC entry 2930 (class 2606 OID 16579)
+-- TOC entry 2971 (class 2606 OID 16615)
 -- Name: directed_hyperedge_target_set uk_i7fjt85n23bduccj52sy5m7kl; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -851,7 +964,16 @@ ALTER TABLE ONLY public.directed_hyperedge_target_set
 
 
 --
--- TOC entry 2950 (class 2606 OID 16583)
+-- TOC entry 3031 (class 2606 OID 16846)
+-- Name: user_entity uk_l6ltic8jtbw6kty72cqdqxs00; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.user_entity
+    ADD CONSTRAINT uk_l6ltic8jtbw6kty72cqdqxs00 UNIQUE (email);
+
+
+--
+-- TOC entry 2995 (class 2606 OID 16617)
 -- Name: pattern uk_plmwg77e7f62fbvydxohxn4v9; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -860,7 +982,7 @@ ALTER TABLE ONLY public.pattern
 
 
 --
--- TOC entry 2954 (class 2606 OID 16585)
+-- TOC entry 2999 (class 2606 OID 16619)
 -- Name: pattern_language uk_qd35crdvw857tcrg5topnhslc; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -869,7 +991,7 @@ ALTER TABLE ONLY public.pattern_language
 
 
 --
--- TOC entry 2976 (class 2606 OID 16547)
+-- TOC entry 3021 (class 2606 OID 16621)
 -- Name: undirected_edge undirected_edge_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -878,7 +1000,7 @@ ALTER TABLE ONLY public.undirected_edge
 
 
 --
--- TOC entry 2982 (class 2606 OID 16560)
+-- TOC entry 3027 (class 2606 OID 16623)
 -- Name: undirected_hyperedge_patterns undirected_hyperedge_patterns_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -887,7 +1009,7 @@ ALTER TABLE ONLY public.undirected_hyperedge_patterns
 
 
 --
--- TOC entry 2978 (class 2606 OID 16555)
+-- TOC entry 3023 (class 2606 OID 16625)
 -- Name: undirected_hyperedge undirected_hyperedge_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -896,7 +1018,7 @@ ALTER TABLE ONLY public.undirected_hyperedge
 
 
 --
--- TOC entry 2986 (class 2606 OID 16568)
+-- TOC entry 3033 (class 2606 OID 16627)
 -- Name: user_entity user_entity_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -905,7 +1027,7 @@ ALTER TABLE ONLY public.user_entity
 
 
 --
--- TOC entry 2973 (class 1259 OID 16590)
+-- TOC entry 3018 (class 1259 OID 16628)
 -- Name: p1patternidx; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -913,7 +1035,7 @@ CREATE INDEX p1patternidx ON public.undirected_edge USING btree (p1_id);
 
 
 --
--- TOC entry 2974 (class 1259 OID 16591)
+-- TOC entry 3019 (class 1259 OID 16629)
 -- Name: p2patternidx; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -921,7 +1043,7 @@ CREATE INDEX p2patternidx ON public.undirected_edge USING btree (p2_id);
 
 
 --
--- TOC entry 2919 (class 1259 OID 16574)
+-- TOC entry 2960 (class 1259 OID 16630)
 -- Name: sourcepatternidx; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -929,7 +1051,7 @@ CREATE INDEX sourcepatternidx ON public.directed_edge USING btree (source_id);
 
 
 --
--- TOC entry 2920 (class 1259 OID 16575)
+-- TOC entry 2961 (class 1259 OID 16631)
 -- Name: targetpatternidx; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -937,7 +1059,7 @@ CREATE INDEX targetpatternidx ON public.directed_edge USING btree (target_id);
 
 
 --
--- TOC entry 3014 (class 2606 OID 16733)
+-- TOC entry 3068 (class 2606 OID 16632)
 -- Name: pattern_view_directed_edge fk3b7r2oi11ur1t7ugi1477imrp; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -946,7 +1068,16 @@ ALTER TABLE ONLY public.pattern_view_directed_edge
 
 
 --
--- TOC entry 3010 (class 2606 OID 16713)
+-- TOC entry 3081 (class 2606 OID 16877)
+-- Name: design_model_undirected_edge fk3c78hgbc42y1nag5hbiec4mf8; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.design_model_undirected_edge
+    ADD CONSTRAINT fk3c78hgbc42y1nag5hbiec4mf8 FOREIGN KEY (undirected_edge_id) REFERENCES public.undirected_edge(id);
+
+
+--
+-- TOC entry 3064 (class 2606 OID 16637)
 -- Name: pattern_section fk3cvo9f0idatua01yg1n112wkq; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -955,7 +1086,16 @@ ALTER TABLE ONLY public.pattern_section
 
 
 --
--- TOC entry 3005 (class 2606 OID 16688)
+-- TOC entry 3039 (class 2606 OID 16862)
+-- Name: design_model_pattern_instance fk3n041q3n5smuaq4brv9fhf7br; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.design_model_pattern_instance
+    ADD CONSTRAINT fk3n041q3n5smuaq4brv9fhf7br FOREIGN KEY (design_model_id) REFERENCES public.design_model(id);
+
+
+--
+-- TOC entry 3058 (class 2606 OID 16642)
 -- Name: issue_comment_rating fk3o0axm0t08m1p1fb94ucksys1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -964,7 +1104,7 @@ ALTER TABLE ONLY public.issue_comment_rating
 
 
 --
--- TOC entry 3003 (class 2606 OID 16678)
+-- TOC entry 3056 (class 2606 OID 16647)
 -- Name: issue_comment fk3qe8erpdobc1yb6dk26nbhojp; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -973,7 +1113,7 @@ ALTER TABLE ONLY public.issue_comment
 
 
 --
--- TOC entry 3007 (class 2606 OID 16698)
+-- TOC entry 3060 (class 2606 OID 16652)
 -- Name: issue_rating fk3qnwbh69l8ihd5ms33nvo0n83; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -982,7 +1122,7 @@ ALTER TABLE ONLY public.issue_rating
 
 
 --
--- TOC entry 3008 (class 2606 OID 16703)
+-- TOC entry 3062 (class 2606 OID 16657)
 -- Name: pattern fk77ttqbiemowpyaxy1cc5k9is5; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -991,7 +1131,7 @@ ALTER TABLE ONLY public.pattern
 
 
 --
--- TOC entry 3017 (class 2606 OID 16748)
+-- TOC entry 3070 (class 2606 OID 16662)
 -- Name: pattern_view_pattern fk7gjr0y7vsqmnnsgohqgb5l7ac; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1000,7 +1140,16 @@ ALTER TABLE ONLY public.pattern_view_pattern
 
 
 --
--- TOC entry 3001 (class 2606 OID 16668)
+-- TOC entry 3040 (class 2606 OID 16867)
+-- Name: design_model_pattern_instance fk7rdcjjev6awr8jfvwoyi3cvml; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.design_model_pattern_instance
+    ADD CONSTRAINT fk7rdcjjev6awr8jfvwoyi3cvml FOREIGN KEY (pattern_id) REFERENCES public.pattern(id);
+
+
+--
+-- TOC entry 3055 (class 2606 OID 16667)
 -- Name: discussion_comment fk7st41tqwtxhelg9euc4y4qqm4; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1009,7 +1158,7 @@ ALTER TABLE ONLY public.discussion_comment
 
 
 --
--- TOC entry 2997 (class 2606 OID 16648)
+-- TOC entry 3051 (class 2606 OID 16672)
 -- Name: directed_hyperedge_source_set fk8guwfrj62or1u8rwdwtf7y5yn; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1018,7 +1167,7 @@ ALTER TABLE ONLY public.directed_hyperedge_source_set
 
 
 --
--- TOC entry 2987 (class 2606 OID 16598)
+-- TOC entry 3041 (class 2606 OID 16677)
 -- Name: candidate fk8s7x8de0d0upup60hkuggb86q; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1027,7 +1176,7 @@ ALTER TABLE ONLY public.candidate
 
 
 --
--- TOC entry 3020 (class 2606 OID 16763)
+-- TOC entry 3074 (class 2606 OID 16682)
 -- Name: undirected_edge fk8sqyicdi1e8n3neu2kueocol3; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1036,7 +1185,7 @@ ALTER TABLE ONLY public.undirected_edge
 
 
 --
--- TOC entry 3002 (class 2606 OID 16673)
+-- TOC entry 3057 (class 2606 OID 16687)
 -- Name: issue_comment fk8wy5rxggrte2ntcq80g7o7210; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1045,7 +1194,16 @@ ALTER TABLE ONLY public.issue_comment
 
 
 --
--- TOC entry 3018 (class 2606 OID 16753)
+-- TOC entry 3080 (class 2606 OID 16872)
+-- Name: design_model_undirected_edge fkbu6vgj31dog8bhcfbhyw3dydq; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.design_model_undirected_edge
+    ADD CONSTRAINT fkbu6vgj31dog8bhcfbhyw3dydq FOREIGN KEY (design_model_id) REFERENCES public.design_model(id);
+
+
+--
+-- TOC entry 3072 (class 2606 OID 16692)
 -- Name: pattern_view_undirected_edge fkd1qjwyn88gn4jtpygu1kna7ht; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1054,7 +1212,7 @@ ALTER TABLE ONLY public.pattern_view_undirected_edge
 
 
 --
--- TOC entry 3004 (class 2606 OID 16683)
+-- TOC entry 3059 (class 2606 OID 16697)
 -- Name: issue_comment_rating fkdpod2iog9jj6y5mitrw318sqj; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1063,7 +1221,7 @@ ALTER TABLE ONLY public.issue_comment_rating
 
 
 --
--- TOC entry 2995 (class 2606 OID 16638)
+-- TOC entry 3048 (class 2606 OID 16702)
 -- Name: directed_edge fkdvt319vj8sqqs5q8cxa2mqam2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1072,7 +1230,7 @@ ALTER TABLE ONLY public.directed_edge
 
 
 --
--- TOC entry 3016 (class 2606 OID 16743)
+-- TOC entry 3071 (class 2606 OID 16707)
 -- Name: pattern_view_pattern fke118qe89rm1swbs0f6ffs3wo8; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1081,7 +1239,7 @@ ALTER TABLE ONLY public.pattern_view_pattern
 
 
 --
--- TOC entry 3012 (class 2606 OID 16723)
+-- TOC entry 3066 (class 2606 OID 16712)
 -- Name: pattern_section_schema_pattern_sections fkegwj4doqcp1wipgwb2l3komdn; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1090,7 +1248,7 @@ ALTER TABLE ONLY public.pattern_section_schema_pattern_sections
 
 
 --
--- TOC entry 2994 (class 2606 OID 16633)
+-- TOC entry 3049 (class 2606 OID 16717)
 -- Name: directed_edge fken29l6v8wmkqxaiaks7pe8rwu; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1099,7 +1257,7 @@ ALTER TABLE ONLY public.directed_edge
 
 
 --
--- TOC entry 3013 (class 2606 OID 16728)
+-- TOC entry 3067 (class 2606 OID 16722)
 -- Name: pattern_section_schema_pattern_sections fkfafffrkwjwkpm4rus99ao5gvm; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1108,7 +1266,7 @@ ALTER TABLE ONLY public.pattern_section_schema_pattern_sections
 
 
 --
--- TOC entry 3009 (class 2606 OID 16708)
+-- TOC entry 3063 (class 2606 OID 16727)
 -- Name: pattern_schema fkfuru8632bnda9yj6he9aqffme; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1117,7 +1275,7 @@ ALTER TABLE ONLY public.pattern_schema
 
 
 --
--- TOC entry 2990 (class 2606 OID 16613)
+-- TOC entry 3044 (class 2606 OID 16732)
 -- Name: candidate_comment_rating fkg7qo3nvneqg1ivvlt50123ss2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1126,7 +1284,7 @@ ALTER TABLE ONLY public.candidate_comment_rating
 
 
 --
--- TOC entry 2991 (class 2606 OID 16618)
+-- TOC entry 3045 (class 2606 OID 16737)
 -- Name: candidate_comment_rating fkg8j63smj6n8rh6kr8tp3nfdix; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1135,7 +1293,7 @@ ALTER TABLE ONLY public.candidate_comment_rating
 
 
 --
--- TOC entry 2988 (class 2606 OID 16603)
+-- TOC entry 3042 (class 2606 OID 16742)
 -- Name: candidate_comment fkgl0y3i6y5dd9c8psdu7mp7xqy; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1144,7 +1302,7 @@ ALTER TABLE ONLY public.candidate_comment
 
 
 --
--- TOC entry 2999 (class 2606 OID 16658)
+-- TOC entry 3053 (class 2606 OID 16747)
 -- Name: directed_hyperedge_target_set fkhl9yorn5wev3m5ooqrlq3ufxg; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1153,7 +1311,16 @@ ALTER TABLE ONLY public.directed_hyperedge_target_set
 
 
 --
--- TOC entry 3019 (class 2606 OID 16758)
+-- TOC entry 3037 (class 2606 OID 16852)
+-- Name: design_model_pattern_edge fkhx1ynl2ovjddccjvxnjytl2n9; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.design_model_pattern_edge
+    ADD CONSTRAINT fkhx1ynl2ovjddccjvxnjytl2n9 FOREIGN KEY (pattern_instance1_pattern_instance_id) REFERENCES public.design_model_pattern_instance(pattern_instance_id);
+
+
+--
+-- TOC entry 3073 (class 2606 OID 16752)
 -- Name: pattern_view_undirected_edge fki4vnsjoalbiwx4yr4thn4ya87; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1162,7 +1329,7 @@ ALTER TABLE ONLY public.pattern_view_undirected_edge
 
 
 --
--- TOC entry 3000 (class 2606 OID 16663)
+-- TOC entry 3054 (class 2606 OID 16757)
 -- Name: directed_hyperedge_target_set fkjoimrxph588139toilxf57uy2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1171,7 +1338,7 @@ ALTER TABLE ONLY public.directed_hyperedge_target_set
 
 
 --
--- TOC entry 3021 (class 2606 OID 16768)
+-- TOC entry 3075 (class 2606 OID 16762)
 -- Name: undirected_edge fkjos3a1eebvu6hbrbls6wpoygt; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1180,7 +1347,7 @@ ALTER TABLE ONLY public.undirected_edge
 
 
 --
--- TOC entry 3025 (class 2606 OID 16788)
+-- TOC entry 3079 (class 2606 OID 16767)
 -- Name: user_entity_roles fkjvvinok3stf32dvgie3vr73s0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1189,7 +1356,7 @@ ALTER TABLE ONLY public.user_entity_roles
 
 
 --
--- TOC entry 2989 (class 2606 OID 16608)
+-- TOC entry 3043 (class 2606 OID 16772)
 -- Name: candidate_comment fkjwq8pmpyru6a87cukgmvo0q93; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1198,7 +1365,7 @@ ALTER TABLE ONLY public.candidate_comment
 
 
 --
--- TOC entry 3006 (class 2606 OID 16693)
+-- TOC entry 3061 (class 2606 OID 16777)
 -- Name: issue_rating fkky82wgp632e04u03hksxeg1ww; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1207,7 +1374,7 @@ ALTER TABLE ONLY public.issue_rating
 
 
 --
--- TOC entry 3015 (class 2606 OID 16738)
+-- TOC entry 3069 (class 2606 OID 16782)
 -- Name: pattern_view_directed_edge fkl97vn4so04u3ab22i5nv72q6e; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1216,7 +1383,16 @@ ALTER TABLE ONLY public.pattern_view_directed_edge
 
 
 --
--- TOC entry 2993 (class 2606 OID 16628)
+-- TOC entry 3038 (class 2606 OID 16857)
+-- Name: design_model_pattern_edge fkoy98b1qvknikypxgc0jcj0xtc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.design_model_pattern_edge
+    ADD CONSTRAINT fkoy98b1qvknikypxgc0jcj0xtc FOREIGN KEY (pattern_instance2_pattern_instance_id) REFERENCES public.design_model_pattern_instance(pattern_instance_id);
+
+
+--
+-- TOC entry 3046 (class 2606 OID 16787)
 -- Name: candidate_rating fkp3b3ukrra2u0sysqcwlv4klkn; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1225,7 +1401,7 @@ ALTER TABLE ONLY public.candidate_rating
 
 
 --
--- TOC entry 2996 (class 2606 OID 16643)
+-- TOC entry 3050 (class 2606 OID 16792)
 -- Name: directed_edge fkq14jnn8mw3w8t1qo9lgtcpk9e; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1234,7 +1410,7 @@ ALTER TABLE ONLY public.directed_edge
 
 
 --
--- TOC entry 2992 (class 2606 OID 16623)
+-- TOC entry 3047 (class 2606 OID 16797)
 -- Name: candidate_rating fkqbpga562vdylosfny7pjviddq; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1243,7 +1419,7 @@ ALTER TABLE ONLY public.candidate_rating
 
 
 --
--- TOC entry 3011 (class 2606 OID 16718)
+-- TOC entry 3065 (class 2606 OID 16802)
 -- Name: pattern_section_schema fkrie76ldgkhkbs3cug3kkvmkcd; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1252,7 +1428,7 @@ ALTER TABLE ONLY public.pattern_section_schema
 
 
 --
--- TOC entry 3024 (class 2606 OID 16783)
+-- TOC entry 3077 (class 2606 OID 16807)
 -- Name: undirected_hyperedge_patterns fksv0r49fdkcsiv4gg4qgg5t6w0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1261,7 +1437,7 @@ ALTER TABLE ONLY public.undirected_hyperedge_patterns
 
 
 --
--- TOC entry 2998 (class 2606 OID 16653)
+-- TOC entry 3052 (class 2606 OID 16812)
 -- Name: directed_hyperedge_source_set fksyqyvo4dr6pj2mdofd5drosdm; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1270,7 +1446,7 @@ ALTER TABLE ONLY public.directed_hyperedge_source_set
 
 
 --
--- TOC entry 3023 (class 2606 OID 16778)
+-- TOC entry 3078 (class 2606 OID 16817)
 -- Name: undirected_hyperedge_patterns fkt25wk8gkit4hr7oyee2prm48; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1279,7 +1455,7 @@ ALTER TABLE ONLY public.undirected_hyperedge_patterns
 
 
 --
--- TOC entry 3022 (class 2606 OID 16773)
+-- TOC entry 3076 (class 2606 OID 16822)
 -- Name: undirected_edge fkt73wgqcqh5u6ro109oq15dh9v; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1287,7 +1463,16 @@ ALTER TABLE ONLY public.undirected_edge
     ADD CONSTRAINT fkt73wgqcqh5u6ro109oq15dh9v FOREIGN KEY (pattern_language_id) REFERENCES public.pattern_language(id);
 
 
--- Completed on 2020-11-04 14:39:37
+--
+-- TOC entry 3036 (class 2606 OID 16847)
+-- Name: design_model_pattern_edge fktmrf8lhrt4fpnh9jwdlpk1iae; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.design_model_pattern_edge
+    ADD CONSTRAINT fktmrf8lhrt4fpnh9jwdlpk1iae FOREIGN KEY (design_model_id) REFERENCES public.design_model(id);
+
+
+-- Completed on 2021-07-07 15:42:07 CEST
 
 --
 -- PostgreSQL database dump complete
