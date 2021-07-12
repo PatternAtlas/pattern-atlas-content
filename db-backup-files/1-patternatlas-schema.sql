@@ -5,7 +5,7 @@
 -- Dumped from database version 12.5 (Debian 12.5-1.pgdg100+1)
 -- Dumped by pg_dump version 13.3
 
--- Started on 2021-07-08 11:30:11 CEST
+-- Started on 2021-07-12 16:58:09 CEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1472,7 +1472,7 @@ ALTER TABLE ONLY public.design_model_pattern_edge
     ADD CONSTRAINT fktmrf8lhrt4fpnh9jwdlpk1iae FOREIGN KEY (design_model_id) REFERENCES public.design_model(id);
 
 
--- Completed on 2021-07-08 11:30:12 CEST
+-- Completed on 2021-07-12 16:58:10 CEST
 
 --
 -- PostgreSQL database dump complete
