@@ -1,11 +1,76 @@
 --
+-- PostgreSQL database cluster dump
+--
+
+-- Started on 2021-07-27 17:56:21
+
+SET default_transaction_read_only = off;
+
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+
+--
+-- Roles
+--
+
+CREATE ROLE postgres;
+ALTER ROLE postgres WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION BYPASSRLS PASSWORD 'md53175bce1d3201d16594cebf9d7eb3f9d';
+
+
+
+
+
+
+--
+-- Databases
+--
+
+--
+-- Database "template1" dump
+--
+
+\connect template1
+
+--
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.5 (Debian 12.5-1.pgdg100+1)
--- Dumped by pg_dump version 13.3
+-- Dumped from database version 12.7 (Debian 12.7-1.pgdg100+1)
+-- Dumped by pg_dump version 13.0
 
--- Started on 2021-07-19 10:05:18 CEST
+-- Started on 2021-07-27 17:56:22
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+-- Completed on 2021-07-27 17:56:22
+
+--
+-- PostgreSQL database dump complete
+--
+
+--
+-- Database "postgres" dump
+--
+
+\connect postgres
+
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 12.7 (Debian 12.7-1.pgdg100+1)
+-- Dumped by pg_dump version 13.0
+
+-- Started on 2021-07-27 17:56:22
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -378,7 +443,8 @@ CREATE TABLE public.pattern (
     content jsonb NOT NULL,
     icon_url character varying(255),
     rendered_content jsonb,
-    pattern_language_id uuid
+    pattern_language_id uuid,
+    paper_ref character varying(255)
 );
 
 
@@ -1472,9 +1538,15 @@ ALTER TABLE ONLY public.design_model_pattern_edge
     ADD CONSTRAINT fktmrf8lhrt4fpnh9jwdlpk1iae FOREIGN KEY (design_model_id) REFERENCES public.design_model(id);
 
 
--- Completed on 2021-07-19 10:05:19 CEST
+-- Completed on 2021-07-27 17:56:22
 
 --
 -- PostgreSQL database dump complete
+--
+
+-- Completed on 2021-07-27 17:56:22
+
+--
+-- PostgreSQL database cluster dump complete
 --
 
