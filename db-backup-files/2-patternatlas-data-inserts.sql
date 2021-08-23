@@ -5,7 +5,7 @@
 -- Dumped from database version 12.7 (Debian 12.7-1.pgdg100+1)
 -- Dumped by pg_dump version 13.0
 
--- Started on 2021-08-23 14:05:37
+-- Started on 2021-08-23 14:17:51
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1328,7 +1328,7 @@ INSERT INTO public.pattern_section_schema (id, label, name, "position", type, pa
 SELECT pg_catalog.setval('public.hibernate_sequence', 1, false);
 
 
--- Completed on 2021-08-23 14:05:38
+-- Completed on 2021-08-23 14:17:52
 
 --
 -- PostgreSQL database dump complete
