@@ -55,7 +55,7 @@ SET row_security = off;
 -- Database "postgres" dump
 --
 
-\connect postgres
+\connect patternatlas
 
 --
 -- PostgreSQL database dump
