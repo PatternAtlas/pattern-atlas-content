@@ -55,7 +55,7 @@ SET row_security = off;
 -- Database "postgres" dump
 --
 
-\connect postgres
+\connect patternatlas
 
 --
 -- PostgreSQL database dump
@@ -98,7 +98,7 @@ CREATE TABLE public.candidate (
 );
 
 
-ALTER TABLE public.candidate OWNER TO postgres;
+ALTER TABLE public.candidate OWNER TO patternatlas;
 
 --
 -- TOC entry 203 (class 1259 OID 16390)
@@ -114,7 +114,7 @@ CREATE TABLE public.candidate_comment (
 );
 
 
-ALTER TABLE public.candidate_comment OWNER TO postgres;
+ALTER TABLE public.candidate_comment OWNER TO patternatlas;
 
 --
 -- TOC entry 204 (class 1259 OID 16393)
@@ -128,7 +128,7 @@ CREATE TABLE public.candidate_comment_rating (
 );
 
 
-ALTER TABLE public.candidate_comment_rating OWNER TO postgres;
+ALTER TABLE public.candidate_comment_rating OWNER TO patternatlas;
 
 --
 -- TOC entry 205 (class 1259 OID 16396)
@@ -142,7 +142,7 @@ CREATE TABLE public.candidate_rating (
 );
 
 
-ALTER TABLE public.candidate_rating OWNER TO postgres;
+ALTER TABLE public.candidate_rating OWNER TO patternatlas;
 
 --
 -- TOC entry 206 (class 1259 OID 16399)
@@ -158,7 +158,7 @@ CREATE TABLE public.concrete_solution (
 );
 
 
-ALTER TABLE public.concrete_solution OWNER TO postgres;
+ALTER TABLE public.concrete_solution OWNER TO patternatlas;
 
 --
 -- TOC entry 207 (class 1259 OID 16405)
@@ -173,7 +173,7 @@ CREATE TABLE public.design_model (
 );
 
 
-ALTER TABLE public.design_model OWNER TO postgres;
+ALTER TABLE public.design_model OWNER TO patternatlas;
 
 --
 -- TOC entry 208 (class 1259 OID 16411)
@@ -186,7 +186,7 @@ CREATE TABLE public.design_model_edge_type (
 );
 
 
-ALTER TABLE public.design_model_edge_type OWNER TO postgres;
+ALTER TABLE public.design_model_edge_type OWNER TO patternatlas;
 
 --
 -- TOC entry 209 (class 1259 OID 16414)
@@ -203,7 +203,7 @@ CREATE TABLE public.design_model_pattern_edge (
 );
 
 
-ALTER TABLE public.design_model_pattern_edge OWNER TO postgres;
+ALTER TABLE public.design_model_pattern_edge OWNER TO patternatlas;
 
 --
 -- TOC entry 210 (class 1259 OID 16420)
@@ -223,7 +223,7 @@ CREATE TABLE public.design_model_pattern_instance (
 );
 
 
-ALTER TABLE public.design_model_pattern_instance OWNER TO postgres;
+ALTER TABLE public.design_model_pattern_instance OWNER TO patternatlas;
 
 --
 -- TOC entry 211 (class 1259 OID 16423)
@@ -236,7 +236,7 @@ CREATE TABLE public.design_model_undirected_edge (
 );
 
 
-ALTER TABLE public.design_model_undirected_edge OWNER TO postgres;
+ALTER TABLE public.design_model_undirected_edge OWNER TO patternatlas;
 
 --
 -- TOC entry 212 (class 1259 OID 16426)
@@ -253,7 +253,7 @@ CREATE TABLE public.directed_edge (
 );
 
 
-ALTER TABLE public.directed_edge OWNER TO postgres;
+ALTER TABLE public.directed_edge OWNER TO patternatlas;
 
 --
 -- TOC entry 213 (class 1259 OID 16432)
@@ -268,7 +268,7 @@ CREATE TABLE public.directed_hyperedge (
 );
 
 
-ALTER TABLE public.directed_hyperedge OWNER TO postgres;
+ALTER TABLE public.directed_hyperedge OWNER TO patternatlas;
 
 --
 -- TOC entry 214 (class 1259 OID 16438)
@@ -281,7 +281,7 @@ CREATE TABLE public.directed_hyperedge_source_set (
 );
 
 
-ALTER TABLE public.directed_hyperedge_source_set OWNER TO postgres;
+ALTER TABLE public.directed_hyperedge_source_set OWNER TO patternatlas;
 
 --
 -- TOC entry 215 (class 1259 OID 16441)
@@ -294,7 +294,7 @@ CREATE TABLE public.directed_hyperedge_target_set (
 );
 
 
-ALTER TABLE public.directed_hyperedge_target_set OWNER TO postgres;
+ALTER TABLE public.directed_hyperedge_target_set OWNER TO patternatlas;
 
 --
 -- TOC entry 216 (class 1259 OID 16444)
@@ -310,7 +310,7 @@ CREATE TABLE public.discussion_comment (
 );
 
 
-ALTER TABLE public.discussion_comment OWNER TO postgres;
+ALTER TABLE public.discussion_comment OWNER TO patternatlas;
 
 --
 -- TOC entry 217 (class 1259 OID 16447)
@@ -332,7 +332,7 @@ CREATE TABLE public.discussion_topic (
 );
 
 
-ALTER TABLE public.discussion_topic OWNER TO postgres;
+ALTER TABLE public.discussion_topic OWNER TO patternatlas;
 
 --
 -- TOC entry 218 (class 1259 OID 16453)
@@ -347,7 +347,7 @@ CREATE SEQUENCE public.hibernate_sequence
     CACHE 1;
 
 
-ALTER TABLE public.hibernate_sequence OWNER TO postgres;
+ALTER TABLE public.hibernate_sequence OWNER TO patternatlas;
 
 --
 -- TOC entry 219 (class 1259 OID 16455)
@@ -362,7 +362,7 @@ CREATE TABLE public.image (
 );
 
 
-ALTER TABLE public.image OWNER TO postgres;
+ALTER TABLE public.image OWNER TO patternatlas;
 
 --
 -- TOC entry 220 (class 1259 OID 16461)
@@ -379,7 +379,7 @@ CREATE TABLE public.issue (
 );
 
 
-ALTER TABLE public.issue OWNER TO postgres;
+ALTER TABLE public.issue OWNER TO patternatlas;
 
 --
 -- TOC entry 221 (class 1259 OID 16467)
@@ -395,7 +395,7 @@ CREATE TABLE public.issue_comment (
 );
 
 
-ALTER TABLE public.issue_comment OWNER TO postgres;
+ALTER TABLE public.issue_comment OWNER TO patternatlas;
 
 --
 -- TOC entry 222 (class 1259 OID 16470)
@@ -409,7 +409,7 @@ CREATE TABLE public.issue_comment_rating (
 );
 
 
-ALTER TABLE public.issue_comment_rating OWNER TO postgres;
+ALTER TABLE public.issue_comment_rating OWNER TO patternatlas;
 
 --
 -- TOC entry 223 (class 1259 OID 16473)
@@ -423,7 +423,7 @@ CREATE TABLE public.issue_rating (
 );
 
 
-ALTER TABLE public.issue_rating OWNER TO postgres;
+ALTER TABLE public.issue_rating OWNER TO patternatlas;
 
 --
 -- TOC entry 224 (class 1259 OID 16476)
@@ -442,7 +442,7 @@ CREATE TABLE public.pattern (
 );
 
 
-ALTER TABLE public.pattern OWNER TO postgres;
+ALTER TABLE public.pattern OWNER TO patternatlas;
 
 --
 -- TOC entry 225 (class 1259 OID 16482)
@@ -459,7 +459,7 @@ CREATE TABLE public.pattern_language (
 );
 
 
-ALTER TABLE public.pattern_language OWNER TO postgres;
+ALTER TABLE public.pattern_language OWNER TO patternatlas;
 
 --
 -- TOC entry 226 (class 1259 OID 16488)
@@ -471,7 +471,7 @@ CREATE TABLE public.pattern_schema (
 );
 
 
-ALTER TABLE public.pattern_schema OWNER TO postgres;
+ALTER TABLE public.pattern_schema OWNER TO patternatlas;
 
 --
 -- TOC entry 227 (class 1259 OID 16491)
@@ -485,7 +485,7 @@ CREATE TABLE public.pattern_section (
 );
 
 
-ALTER TABLE public.pattern_section OWNER TO postgres;
+ALTER TABLE public.pattern_section OWNER TO patternatlas;
 
 --
 -- TOC entry 228 (class 1259 OID 16497)
@@ -502,7 +502,7 @@ CREATE TABLE public.pattern_section_schema (
 );
 
 
-ALTER TABLE public.pattern_section_schema OWNER TO postgres;
+ALTER TABLE public.pattern_section_schema OWNER TO patternatlas;
 
 --
 -- TOC entry 229 (class 1259 OID 16503)
@@ -515,7 +515,7 @@ CREATE TABLE public.pattern_section_schema_pattern_sections (
 );
 
 
-ALTER TABLE public.pattern_section_schema_pattern_sections OWNER TO postgres;
+ALTER TABLE public.pattern_section_schema_pattern_sections OWNER TO patternatlas;
 
 --
 -- TOC entry 230 (class 1259 OID 16506)
@@ -531,7 +531,7 @@ CREATE TABLE public.pattern_view (
 );
 
 
-ALTER TABLE public.pattern_view OWNER TO postgres;
+ALTER TABLE public.pattern_view OWNER TO patternatlas;
 
 --
 -- TOC entry 231 (class 1259 OID 16512)
@@ -544,7 +544,7 @@ CREATE TABLE public.pattern_view_directed_edge (
 );
 
 
-ALTER TABLE public.pattern_view_directed_edge OWNER TO postgres;
+ALTER TABLE public.pattern_view_directed_edge OWNER TO patternatlas;
 
 --
 -- TOC entry 232 (class 1259 OID 16515)
@@ -557,7 +557,7 @@ CREATE TABLE public.pattern_view_pattern (
 );
 
 
-ALTER TABLE public.pattern_view_pattern OWNER TO postgres;
+ALTER TABLE public.pattern_view_pattern OWNER TO patternatlas;
 
 --
 -- TOC entry 233 (class 1259 OID 16518)
@@ -570,7 +570,7 @@ CREATE TABLE public.pattern_view_undirected_edge (
 );
 
 
-ALTER TABLE public.pattern_view_undirected_edge OWNER TO postgres;
+ALTER TABLE public.pattern_view_undirected_edge OWNER TO patternatlas;
 
 --
 -- TOC entry 234 (class 1259 OID 16521)
@@ -587,7 +587,7 @@ CREATE TABLE public.undirected_edge (
 );
 
 
-ALTER TABLE public.undirected_edge OWNER TO postgres;
+ALTER TABLE public.undirected_edge OWNER TO patternatlas;
 
 --
 -- TOC entry 235 (class 1259 OID 16527)
@@ -602,7 +602,7 @@ CREATE TABLE public.undirected_hyperedge (
 );
 
 
-ALTER TABLE public.undirected_hyperedge OWNER TO postgres;
+ALTER TABLE public.undirected_hyperedge OWNER TO patternatlas;
 
 --
 -- TOC entry 236 (class 1259 OID 16533)
@@ -615,7 +615,7 @@ CREATE TABLE public.undirected_hyperedge_patterns (
 );
 
 
-ALTER TABLE public.undirected_hyperedge_patterns OWNER TO postgres;
+ALTER TABLE public.undirected_hyperedge_patterns OWNER TO patternatlas;
 
 --
 -- TOC entry 237 (class 1259 OID 16536)
@@ -630,7 +630,7 @@ CREATE TABLE public.user_entity (
 );
 
 
-ALTER TABLE public.user_entity OWNER TO postgres;
+ALTER TABLE public.user_entity OWNER TO patternatlas;
 
 --
 -- TOC entry 238 (class 1259 OID 16542)
@@ -643,7 +643,7 @@ CREATE TABLE public.user_entity_roles (
 );
 
 
-ALTER TABLE public.user_entity_roles OWNER TO postgres;
+ALTER TABLE public.user_entity_roles OWNER TO patternatlas;
 
 --
 -- TOC entry 2941 (class 2606 OID 16546)
