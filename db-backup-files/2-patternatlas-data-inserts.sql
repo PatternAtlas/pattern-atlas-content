@@ -69,13 +69,6 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
---
--- TOC entry 3250 (class 1262 OID 16384)
--- Name: patternatlas; Type: DATABASE; Schema: -; Owner: -
---
-
-CREATE DATABASE patternatlas WITH TEMPLATE = template0 ENCODING = 'UTF8'
-
 
 \connect patternatlas
 
