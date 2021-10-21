@@ -2,7 +2,7 @@
 -- PostgreSQL database cluster dump
 --
 
--- Started on 2021-10-21 12:01:32
+-- Started on 2021-10-21 12:20:10
 
 SET default_transaction_read_only = off;
 
@@ -26,7 +26,7 @@ SET standard_conforming_strings = on;
 -- Dumped from database version 12.7 (Debian 12.7-1.pgdg100+1)
 -- Dumped by pg_dump version 13.0
 
--- Started on 2021-10-21 12:01:32
+-- Started on 2021-10-21 12:20:10
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -39,7 +39,7 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
--- Completed on 2021-10-21 12:01:32
+-- Completed on 2021-10-21 12:20:10
 
 --
 -- PostgreSQL database dump complete
@@ -56,7 +56,7 @@ SET row_security = off;
 -- Dumped from database version 12.7 (Debian 12.7-1.pgdg100+1)
 -- Dumped by pg_dump version 13.0
 
--- Started on 2021-10-21 12:01:32
+-- Started on 2021-10-21 12:20:10
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1454,7 +1454,7 @@ INSERT INTO public.pattern_section_schema VALUES ('adde19c0-0637-4b96-8aca-a5a8c
 SELECT pg_catalog.setval('public.hibernate_sequence', 1, false);
 
 
--- Completed on 2021-10-21 12:01:32
+-- Completed on 2021-10-21 12:20:11
 
 --
 -- PostgreSQL database dump complete
@@ -1473,7 +1473,7 @@ SELECT pg_catalog.setval('public.hibernate_sequence', 1, false);
 -- Dumped from database version 12.7 (Debian 12.7-1.pgdg100+1)
 -- Dumped by pg_dump version 13.0
 
--- Started on 2021-10-21 12:01:33
+-- Started on 2021-10-21 12:20:11
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1486,13 +1486,13 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
--- Completed on 2021-10-21 12:01:33
+-- Completed on 2021-10-21 12:20:11
 
 --
 -- PostgreSQL database dump complete
 --
 
--- Completed on 2021-10-21 12:01:33
+-- Completed on 2021-10-21 12:20:11
 
 --
 -- PostgreSQL database cluster dump complete
