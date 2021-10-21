@@ -74,7 +74,7 @@ SET row_security = off;
 -- Name: patternatlas; Type: DATABASE; Schema: -; Owner: -
 --
 
-CREATE DATABASE patternatlas WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'en_US.utf8';
+CREATE DATABASE patternatlas WITH TEMPLATE = template0 ENCODING = 'UTF8'
 
 
 \connect patternatlas
