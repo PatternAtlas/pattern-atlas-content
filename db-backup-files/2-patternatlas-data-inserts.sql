@@ -5,7 +5,7 @@
 -- Dumped from database version 12.7 (Debian 12.7-1.pgdg100+1)
 -- Dumped by pg_dump version 13.3
 
--- Started on 2021-11-28 17:10:55 CET
+-- Started on 2021-11-28 19:57:48 CET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1366,6 +1366,10 @@ INSERT INTO public.privilege VALUES ('5d164e4a-1130-4cc2-8070-a23680e245ae', 'PA
 INSERT INTO public.privilege VALUES ('5353ddd2-e720-460f-a887-b95a9f036091', 'PATTERN_CANDIDATE_EDIT_ALL');
 INSERT INTO public.privilege VALUES ('99739159-5f6b-4031-8bdd-b570dcc9ca30', 'PATTERN_CANDIDATE_DELETE_ALL');
 INSERT INTO public.privilege VALUES ('e125fbed-daa1-4a17-b4da-ab69758ff580', 'PATTERN_CANDIDATE_TO_PATTERN_ALL');
+INSERT INTO public.privilege VALUES ('6b3c34ae-75f9-45c2-8da5-325f2ced1ae4', 'PATTERN_LANGUAGE_CREATE');
+INSERT INTO public.privilege VALUES ('b81d9d77-ef12-4410-a55d-af08690dead0', 'PATTERN_LANGUAGE_READ_ALL');
+INSERT INTO public.privilege VALUES ('e784cf06-e99a-4133-93e1-da0bdff133e5', 'PATTERN_LANGUAGE_EDIT_ALL');
+INSERT INTO public.privilege VALUES ('dc6beb6c-f3c1-4827-b04b-dccdf0eaec76', 'PATTERN_LANGUAGE_DELETE_ALL');
 INSERT INTO public.privilege VALUES ('0a138873-1e76-411f-b792-3df50f76898a', 'APPROVED_PATTERN_CREATE');
 INSERT INTO public.privilege VALUES ('2fe73819-7c3b-473c-bd75-80d7bd99a9cf', 'APPROVED_PATTERN_READ_ALL');
 INSERT INTO public.privilege VALUES ('a7a4ef2b-5def-4daf-b844-5a553810ed8c', 'APPROVED_PATTERN_EDIT_ALL');
@@ -1960,6 +1964,10 @@ INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e
 INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '7727e4db-f892-440f-aeaf-86cf09275800');
 INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '3b9fd885-a4c9-4f6a-bcf3-e2d01daed51d');
 INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '2fdfcb48-1ae2-4cd9-b8da-844b4da44373');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '6b3c34ae-75f9-45c2-8da5-325f2ced1ae4');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', 'b81d9d77-ef12-4410-a55d-af08690dead0');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', 'e784cf06-e99a-4133-93e1-da0bdff133e5');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', 'dc6beb6c-f3c1-4827-b04b-dccdf0eaec76');
 
 
 --
@@ -1995,7 +2003,7 @@ INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e
 SELECT pg_catalog.setval('public.hibernate_sequence', 1, false);
 
 
--- Completed on 2021-11-28 17:10:56 CET
+-- Completed on 2021-11-28 19:57:48 CET
 
 --
 -- PostgreSQL database dump complete
