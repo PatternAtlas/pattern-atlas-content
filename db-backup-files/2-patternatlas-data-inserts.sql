@@ -5,7 +5,7 @@
 -- Dumped from database version 12.7 (Debian 12.7-1.pgdg100+1)
 -- Dumped by pg_dump version 13.3
 
--- Started on 2021-11-27 17:56:30 CET
+-- Started on 2021-11-28 17:10:55 CET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -44,6 +44,7 @@ INSERT INTO public.pattern_language VALUES ('66540853-0299-4815-ac1b-6d2d1ba369d
 -- Data for Name: role; Type: TABLE DATA; Schema: public; Owner: patternatlas
 --
 
+INSERT INTO public.role VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', 'ADMIN');
 
 
 --
@@ -52,6 +53,7 @@ INSERT INTO public.pattern_language VALUES ('66540853-0299-4815-ac1b-6d2d1ba369d
 -- Data for Name: user_entity; Type: TABLE DATA; Schema: public; Owner: patternatlas
 --
 
+INSERT INTO public.user_entity VALUES ('6ad807b2-949b-4502-9827-0d1475a9a3b5', 'admin@mail', 'ADMIN', '$2a$10$9SvJDvLMDCkTQCCXDqCop.X7KCehIjE.WNsdoAT7jHN9KW6gWiy3i', 'e75701d2-06f3-4ade-8d49-790020ac808e');
 
 
 --
@@ -1354,6 +1356,31 @@ INSERT INTO public.pattern_section_schema VALUES ('8b81cb02-4220-47ac-b97d-4e17a
 -- Data for Name: privilege; Type: TABLE DATA; Schema: public; Owner: patternatlas
 --
 
+INSERT INTO public.privilege VALUES ('2dd99322-adeb-49f1-a88b-088829fdbad5', 'ISSUE_CREATE');
+INSERT INTO public.privilege VALUES ('024eb53a-8e75-4109-b00e-e35aff24b2e5', 'ISSUE_READ_ALL');
+INSERT INTO public.privilege VALUES ('b2403c34-3894-4a63-8628-ba8c96477cf3', 'ISSUE_EDIT_ALL');
+INSERT INTO public.privilege VALUES ('5d574f21-5151-4ad6-93db-024452630ea5', 'ISSUE_DELETE_ALL');
+INSERT INTO public.privilege VALUES ('7cd08260-e6d7-45f0-bea2-26b854a54f06', 'ISSUE_TO_PATTERN_CANDIDATE_ALL');
+INSERT INTO public.privilege VALUES ('d0b0db3d-c368-42f5-9a05-cfe89d284636', 'PATTERN_CANDIDATE_CREATE');
+INSERT INTO public.privilege VALUES ('5d164e4a-1130-4cc2-8070-a23680e245ae', 'PATTERN_CANDIDATE_READ_ALL');
+INSERT INTO public.privilege VALUES ('5353ddd2-e720-460f-a887-b95a9f036091', 'PATTERN_CANDIDATE_EDIT_ALL');
+INSERT INTO public.privilege VALUES ('99739159-5f6b-4031-8bdd-b570dcc9ca30', 'PATTERN_CANDIDATE_DELETE_ALL');
+INSERT INTO public.privilege VALUES ('e125fbed-daa1-4a17-b4da-ab69758ff580', 'PATTERN_CANDIDATE_TO_PATTERN_ALL');
+INSERT INTO public.privilege VALUES ('0a138873-1e76-411f-b792-3df50f76898a', 'APPROVED_PATTERN_CREATE');
+INSERT INTO public.privilege VALUES ('2fe73819-7c3b-473c-bd75-80d7bd99a9cf', 'APPROVED_PATTERN_READ_ALL');
+INSERT INTO public.privilege VALUES ('a7a4ef2b-5def-4daf-b844-5a553810ed8c', 'APPROVED_PATTERN_EDIT_ALL');
+INSERT INTO public.privilege VALUES ('551f5827-6f07-4aef-83ee-80c9ea239718', 'APPROVED_PATTERN_DELETE_ALL');
+INSERT INTO public.privilege VALUES ('903617a7-54c2-4d36-a9f0-4879f606a394', 'USER_READ');
+INSERT INTO public.privilege VALUES ('958f608e-95d1-4c74-a324-c0b121106d72', 'USER_CREATE');
+INSERT INTO public.privilege VALUES ('9e4658a6-17f9-4e74-9f3a-b9fc1d75d1d9', 'USER_EDIT');
+INSERT INTO public.privilege VALUES ('6ffb7514-159c-4cdf-aa50-c0d5f536fa75', 'USER_DELETE');
+INSERT INTO public.privilege VALUES ('f7f13e40-456a-4c3f-aaf7-6ff9733a0534', 'USER_READ_ALL');
+INSERT INTO public.privilege VALUES ('b152095d-d21b-4c7a-bf16-68e990b298f8', 'USER_EDIT_ALL');
+INSERT INTO public.privilege VALUES ('596995c3-286e-4eea-996d-830f4ce3b0c0', 'USER_DELETE_ALL');
+INSERT INTO public.privilege VALUES ('bb6f4e60-08a2-48d2-b0da-69eab58d39e8', 'USER_ALL');
+INSERT INTO public.privilege VALUES ('7727e4db-f892-440f-aeaf-86cf09275800', 'COMMENT');
+INSERT INTO public.privilege VALUES ('3b9fd885-a4c9-4f6a-bcf3-e2d01daed51d', 'VOTE');
+INSERT INTO public.privilege VALUES ('2fdfcb48-1ae2-4cd9-b8da-844b4da44373', 'EVIDENCE');
 INSERT INTO public.privilege VALUES ('0dc48afa-c73e-4959-9e34-b010322d77ee', 'PATTERN_LANGUAGE_READ_efdc1625-6445-4662-a37e-5f1fd37a542b');
 INSERT INTO public.privilege VALUES ('2e061dec-b307-4eee-8057-7ea46cd4864f', 'PATTERN_LANGUAGE_READ_f6b807aa-5905-4435-aec6-324355a0483f');
 INSERT INTO public.privilege VALUES ('da0e4b51-81c6-420b-be24-522e043b4fda', 'PATTERN_LANGUAGE_READ_af7780d5-1f97-4536-8da7-4194b093ab1d');
@@ -1908,6 +1935,31 @@ INSERT INTO public.privilege VALUES ('385ce531-43e8-4de7-811b-029d7ab1cd08', 'AP
 -- Data for Name: role_privileges; Type: TABLE DATA; Schema: public; Owner: patternatlas
 --
 
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '2dd99322-adeb-49f1-a88b-088829fdbad5');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '024eb53a-8e75-4109-b00e-e35aff24b2e5');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', 'b2403c34-3894-4a63-8628-ba8c96477cf3');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '5d574f21-5151-4ad6-93db-024452630ea5');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '7cd08260-e6d7-45f0-bea2-26b854a54f06');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', 'd0b0db3d-c368-42f5-9a05-cfe89d284636');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '5d164e4a-1130-4cc2-8070-a23680e245ae');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '5353ddd2-e720-460f-a887-b95a9f036091');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '99739159-5f6b-4031-8bdd-b570dcc9ca30');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', 'e125fbed-daa1-4a17-b4da-ab69758ff580');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '0a138873-1e76-411f-b792-3df50f76898a');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '2fe73819-7c3b-473c-bd75-80d7bd99a9cf');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', 'a7a4ef2b-5def-4daf-b844-5a553810ed8c');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '551f5827-6f07-4aef-83ee-80c9ea239718');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '903617a7-54c2-4d36-a9f0-4879f606a394');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '958f608e-95d1-4c74-a324-c0b121106d72');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '9e4658a6-17f9-4e74-9f3a-b9fc1d75d1d9');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '6ffb7514-159c-4cdf-aa50-c0d5f536fa75');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', 'f7f13e40-456a-4c3f-aaf7-6ff9733a0534');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', 'b152095d-d21b-4c7a-bf16-68e990b298f8');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '596995c3-286e-4eea-996d-830f4ce3b0c0');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', 'bb6f4e60-08a2-48d2-b0da-69eab58d39e8');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '7727e4db-f892-440f-aeaf-86cf09275800');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '3b9fd885-a4c9-4f6a-bcf3-e2d01daed51d');
+INSERT INTO public.role_privileges VALUES ('e75701d2-06f3-4ade-8d49-790020ac808e', '2fdfcb48-1ae2-4cd9-b8da-844b4da44373');
 
 
 --
@@ -1943,7 +1995,7 @@ INSERT INTO public.privilege VALUES ('385ce531-43e8-4de7-811b-029d7ab1cd08', 'AP
 SELECT pg_catalog.setval('public.hibernate_sequence', 1, false);
 
 
--- Completed on 2021-11-27 17:56:30 CET
+-- Completed on 2021-11-28 17:10:56 CET
 
 --
 -- PostgreSQL database dump complete
