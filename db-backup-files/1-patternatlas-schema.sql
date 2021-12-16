@@ -90,7 +90,7 @@ CREATE TABLE public.candidate (
     id uuid NOT NULL,
     name character varying(255) NOT NULL,
     uri character varying(255) NOT NULL,
-    content character varying(255),
+    content jsonb,
     icon_url character varying(255),
     rating integer NOT NULL,
     version character varying(255),
