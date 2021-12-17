@@ -1166,6 +1166,9 @@ INSERT INTO public.directed_edge VALUES ('8659b2c1-b0e5-45a3-b763-ea04920aab01',
 INSERT INTO public.directed_edge VALUES ('dd5b2a19-a01a-4d26-b968-31b53d976815', '"This pattern can be combined with Warm Start."', 'canBeUsedWith', 'af7780d5-1f97-4536-8da7-4194b093ab1d', 'b657ea73-63c0-4800-a69d-a91925e19ac6', '3ea9e187-e91b-4852-84eb-b35b5c480892');
 INSERT INTO public.directed_edge VALUES ('c54ccf5f-38de-45d1-b496-ffa0192a6f6b', '"The higher-level structure of this pattern is described by Alternating Operator Ansatz (AOA)"', 'refines', 'af7780d5-1f97-4536-8da7-4194b093ab1d', 'da93f915-7f4c-49df-99d0-80d91f26a337', 'b657ea73-63c0-4800-a69d-a91925e19ac6');
 INSERT INTO public.directed_edge VALUES ('70f81341-8ca3-4f47-9ac6-2d598fa31617', 'null', 'canBeUsedWith', 'af7780d5-1f97-4536-8da7-4194b093ab1d', '27a5d147-a323-4c6a-84ef-45d80cae923d', '3ea9e187-e91b-4852-84eb-b35b5c480892');
+INSERT INTO public.directed_edge VALUES ('b5bf73ab-d584-4cda-ae75-bfc9fb7a2cf2', 'null', 'uses', 'af7780d5-1f97-4536-8da7-4194b093ab1d', 'd9c57511-1101-4707-99bf-36f43a12cb13', 'bcd4c7a1-3c92-4f8c-a530-72b8b95d3750');
+INSERT INTO public.directed_edge VALUES ('230d5597-cdfa-4438-b63a-3affbf94a66a', 'null', 'refines', 'af7780d5-1f97-4536-8da7-4194b093ab1d', 'd9c57511-1101-4707-99bf-36f43a12cb13', '312bc9d3-26c0-40ae-b90b-56effd136c0d');
+INSERT INTO public.directed_edge VALUES ('dfdf1abc-ce0b-4784-8c99-ad50a4077702', 'null', 'uses', 'af7780d5-1f97-4536-8da7-4194b093ab1d', 'd9c57511-1101-4707-99bf-36f43a12cb13', '3d1f3991-df47-4d42-8f9a-e6dcf4e3ccec');
 
 
 --
