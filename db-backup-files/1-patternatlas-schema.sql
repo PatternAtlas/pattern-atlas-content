@@ -619,8 +619,8 @@ ALTER TABLE public.user_entity OWNER TO patternatlas;
 --
 
 CREATE TABLE public.user_entity_roles (
-    user_entity_id uuid NOT NULL,
-    roles character varying(255)
+    users_id uuid NOT NULL,
+    roles_id uuid NOT NULL
 );
 
 
@@ -1447,7 +1447,16 @@ ALTER TABLE ONLY public.undirected_edge
 --
 
 ALTER TABLE ONLY public.user_entity_roles
-    ADD CONSTRAINT fkjvvinok3stf32dvgie3vr73s0 FOREIGN KEY (user_entity_id) REFERENCES public.user_entity(id);
+    ADD CONSTRAINT fkjvvinok3stf32dvgie3vr73s0 FOREIGN KEY (users_id) REFERENCES public.user_entity(id);
+
+
+--
+-- TOC entry 3102 (class 2606 OID 16808)
+-- Name: user_entity_roles fkejo1ln9l1vbw4nhk416jjfc0d; Type: FK CONSTRAINT; Schema: public; Owner: patternatlas
+--
+
+ALTER TABLE ONLY public.user_entity_roles
+    ADD CONSTRAINT fkejo1ln9l1vbw4nhk416jjfc0d FOREIGN KEY (roles_id) REFERENCES public.role(id);
 
 
 --
