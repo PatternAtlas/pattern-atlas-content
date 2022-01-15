@@ -1266,7 +1266,7 @@ ALTER TABLE ONLY public.issue_comment
 --
 
 ALTER TABLE ONLY public.role_privileges
-    ADD CONSTRAINT fk9n2w8s3aw0yk00s4nmqvucw6b FOREIGN KEY (roles_id) REFERENCES public.role(id);
+    ADD CONSTRAINT fk9n2w8s3aw0yk00s4nmqvucw6b FOREIGN KEY (roles_id) REFERENCES public.role(id) ON DELETE CASCADE;
 
 
 --
@@ -1275,7 +1275,7 @@ ALTER TABLE ONLY public.role_privileges
 --
 
 ALTER TABLE ONLY public.role_privileges
-    ADD CONSTRAINT fkas5s9i1itvr8tgocse4xmtwox FOREIGN KEY (privileges_id) REFERENCES public.privilege(id);
+    ADD CONSTRAINT fkas5s9i1itvr8tgocse4xmtwox FOREIGN KEY (privileges_id) REFERENCES public.privilege(id) ON DELETE CASCADE;
 
 
 --
