@@ -1338,7 +1338,7 @@ ALTER TABLE ONLY public.pattern_section_schema_pattern_sections
 --
 
 ALTER TABLE ONLY public.user_entity_roles
-    ADD CONSTRAINT fkejo1ln9l1vbw4nhk416jjfc0d FOREIGN KEY (roles_id) REFERENCES public.role(id);
+    ADD CONSTRAINT fkejo1ln9l1vbw4nhk416jjfc0d FOREIGN KEY (roles_id) REFERENCES public.role(id) ON DELETE CASCADE;
 
 
 --
@@ -1446,7 +1446,7 @@ ALTER TABLE ONLY public.undirected_edge
 --
 
 ALTER TABLE ONLY public.user_entity_roles
-    ADD CONSTRAINT fkjvvinok3stf32dvgie3vr73s0 FOREIGN KEY (users_id) REFERENCES public.user_entity(id);
+    ADD CONSTRAINT fkjvvinok3stf32dvgie3vr73s0 FOREIGN KEY (users_id) REFERENCES public.user_entity(id) ON DELETE CASCADE;
 
 
 --
