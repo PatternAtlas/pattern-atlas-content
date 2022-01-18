@@ -1287,7 +1287,7 @@ INSERT INTO public.pattern_section_schema VALUES ('1956440b-e6c6-4f0b-ad86-75611
 INSERT INTO public.pattern_section_schema VALUES ('bfd946ae-be80-499b-862b-cf910fb35c5d', 'Context', 'Context', 2, 'any', 'af7780d5-1f97-4536-8da7-4194b093ab1d');
 INSERT INTO public.pattern_section_schema VALUES ('6f28f031-36ef-415a-9854-b088093f419b', 'Solution', 'Solution', 3, 'any', 'af7780d5-1f97-4536-8da7-4194b093ab1d');
 INSERT INTO public.pattern_section_schema VALUES ('2f2845d2-89d2-482d-81b9-8bd9e0074da3', 'Result', 'Result', 4, 'any', 'af7780d5-1f97-4536-8da7-4194b093ab1d');
-INSERT INTO public.pattern_section_schema VALUES ('15392092-3e5b-4e90-8994-5924da1c42ff', 'Related Pattern', 'Related Pattern', 5, 'any', 'af7780d5-1f97-4536-8da7-4194b093ab1d');
+INSERT INTO public.pattern_section_schema VALUES ('15392092-3e5b-4e90-8994-5924da1c42ff', 'Related Patterns', 'Related Patterns', 5, 'any', 'af7780d5-1f97-4536-8da7-4194b093ab1d');
 INSERT INTO public.pattern_section_schema VALUES ('df1680b5-8cac-46de-ae85-f957b29be9ce', 'Variants', 'Variants', 6, 'any', 'af7780d5-1f97-4536-8da7-4194b093ab1d');
 INSERT INTO public.pattern_section_schema VALUES ('2545d861-de4f-495f-a1bc-89ccd8e311a0', 'Known Uses', 'Known Uses', 7, 'any', 'af7780d5-1f97-4536-8da7-4194b093ab1d');
 
