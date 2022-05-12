@@ -6556,20 +6556,6 @@
             <column name="target_id" value="3d1f3991-df47-4d42-8f9a-e6dcf4e3ccec"/>
         </insert>
     </changeSet>
-    <changeSet author="philwun (generated)" id="1651834965444-3">
-        <insert tableName="user_entity">
-            <column name="id" value="a0d25762-01b9-4ddd-9fb5-7c9b1d2f2267"/>
-            <column name="email" value="admin@mail"/>
-            <column name="name" value="ADMIN"/>
-            <column name="password" value="$2a$10$N/6mrg5rlNQ/5SFnexoyi.vlqQpjwrllfk1RyyQNXEA/6HDp/4qn2"/>
-        </insert>
-        <insert tableName="user_entity">
-            <column name="id" value="427b892a-dfb0-493d-98d0-740f2a50402a"/>
-            <column name="email" value="member@mail"/>
-            <column name="name" value="testmember"/>
-            <column name="password" value="$2a$10$f9rDWYd.3WxDeicXrqTf3efYam/l.8Mi2lUb54hOjfecwzl2H/.Oy"/>
-        </insert>
-    </changeSet>
     <changeSet author="philwun (generated)" id="1651834965444-4">
         <insert tableName="pattern">
             <column name="id" value="1a1b9319-e303-431d-91c3-f4a3b6189982"/>
@@ -19059,16 +19045,6 @@
         <insert tableName="role_privileges">
             <column name="roles_id" value="9c0fba32-92f7-4dba-8098-c5af3c92a7ac"/>
             <column name="privileges_id" value="f9317103-f3b8-4bb7-8882-40ba73ec004d"/>
-        </insert>
-    </changeSet>
-    <changeSet author="philwun (generated)" id="1651834965444-17">
-        <insert tableName="user_entity_roles">
-            <column name="users_id" value="a0d25762-01b9-4ddd-9fb5-7c9b1d2f2267"/>
-            <column name="roles_id" value="56b7f57b-dd6a-4349-9279-057eaa583dce"/>
-        </insert>
-        <insert tableName="user_entity_roles">
-            <column name="users_id" value="427b892a-dfb0-493d-98d0-740f2a50402a"/>
-            <column name="roles_id" value="a5651c4c-294f-494f-90e9-b735043d6d6a"/>
         </insert>
     </changeSet>
 </databaseChangeLog>

@@ -26,9 +26,6 @@
     <changeSet author="alex (generated)" id="1646839031337-6">
         <addUniqueConstraint columnNames="uri" constraintName="uk_3y29gxrn8rruyc1gmq6jj6uqs" tableName="candidate"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646839031337-7">
-        <addUniqueConstraint columnNames="email" constraintName="uk_4xad1enskw4j1t2866f7sodrx" tableName="user_entity"/>
-    </changeSet>
     <changeSet author="alex (generated)" id="1646839031337-8">
         <addUniqueConstraint columnNames="email, name" constraintName="uk_l6ltic8jtbw6kty72cqdqxs00" tableName="user_entity"/>
     </changeSet>
