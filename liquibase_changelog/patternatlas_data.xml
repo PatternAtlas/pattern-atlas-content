@@ -13462,6 +13462,10 @@
             <column name="roles_id" value="d6061a45-6e35-451d-9e06-189f47a5edd3"/>
             <column name="privileges_id" value="05a6e3ee-863f-41df-af41-88799e11b7ea"/>
         </insert>
+		<insert tableName="role_privileges">
+            <column name="roles_id" value="d6061a45-6e35-451d-9e06-189f47a5edd3"/>
+            <column name="privileges_id" value="4ea8ad0a-5e36-45e7-9d60-634fbc3a42e6"/>
+        </insert>
         <insert tableName="role_privileges">
             <column name="roles_id" value="003891ff-8879-4352-8091-5efd9c340fd8"/>
             <column name="privileges_id" value="004df605-df06-4510-8459-65526e503736"/>
