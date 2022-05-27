@@ -1,308 +1,380 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.6.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
-    <changeSet author="alex (generated)" id="1646123382978-1">
+    <changeSet author="alex (generated)" id="1646839031337-1">
         <createIndex indexName="p1patternidx" tableName="undirected_edge">
             <column name="p1_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-2">
+    <changeSet author="alex (generated)" id="1646839031337-2">
         <createIndex indexName="p2patternidx" tableName="undirected_edge">
             <column name="p2_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-3">
+    <changeSet author="alex (generated)" id="1646839031337-3">
         <createIndex indexName="sourcepatternidx" tableName="directed_edge">
             <column name="source_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-4">
+    <changeSet author="alex (generated)" id="1646839031337-4">
         <createIndex indexName="targetpatternidx" tableName="directed_edge">
             <column name="target_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-5">
+    <changeSet author="alex (generated)" id="1646839031337-5">
         <addUniqueConstraint columnNames="uri" constraintName="uk_2nnar9yvwxvggs1ymw99br8fq" tableName="candidate"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-6">
+    <changeSet author="alex (generated)" id="1646839031337-6">
         <addUniqueConstraint columnNames="uri" constraintName="uk_3y29gxrn8rruyc1gmq6jj6uqs" tableName="candidate"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-7">
-        <addUniqueConstraint columnNames="email" constraintName="uk_4xad1enskw4j1t2866f7sodrx" tableName="user_entity"/>
+    <changeSet author="alex (generated)" id="1646839031337-8">
+        <addUniqueConstraint columnNames="email, name" constraintName="uk_l6ltic8jtbw6kty72cqdqxs00" tableName="user_entity"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-8">
-        <addUniqueConstraint columnNames="email" constraintName="uk_l6ltic8jtbw6kty72cqdqxs00" tableName="user_entity"/>
-    </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-9">
+    <changeSet author="alex (generated)" id="1646839031337-9">
         <addUniqueConstraint columnNames="uri" constraintName="uk_6vocvcw50hujfwn66kt7s5fly" tableName="pattern"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-10">
+    <changeSet author="alex (generated)" id="1646839031337-10">
         <addUniqueConstraint columnNames="uri" constraintName="uk_plmwg77e7f62fbvydxohxn4v9" tableName="pattern"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-11">
+    <changeSet author="alex (generated)" id="1646839031337-11">
         <addUniqueConstraint columnNames="uri" constraintName="uk_8063id79236r47vy0x6k3ek9n" tableName="issue"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-12">
+    <changeSet author="alex (generated)" id="1646839031337-12">
         <addUniqueConstraint columnNames="uri" constraintName="uk_c56ot98f5n1mpxjncwej48s8h" tableName="issue"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-13">
+    <changeSet author="alex (generated)" id="1646839031337-13">
+        <addUniqueConstraint columnNames="name" constraintName="uk_8sewwnpamngi6b1dwaa88askk" tableName="role"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-14">
         <addUniqueConstraint columnNames="pattern_sections_id" constraintName="uk_a5dhcqp5e8908x217tkb3ic31" tableName="pattern_section_schema_pattern_sections"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-14">
+    <changeSet author="alex (generated)" id="1646839031337-15">
         <addUniqueConstraint columnNames="source_set_id" constraintName="uk_bevke13de29vkx6hixr9h9vei" tableName="directed_hyperedge_source_set"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-15">
+    <changeSet author="alex (generated)" id="1646839031337-16">
         <addUniqueConstraint columnNames="uri" constraintName="uk_bry9ub9e5d26eq397ax24ra8c" tableName="design_model"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-16">
+    <changeSet author="alex (generated)" id="1646839031337-17">
         <addUniqueConstraint columnNames="patterns_id" constraintName="uk_e61v2oikejer2v1dtcqbbc02l" tableName="undirected_hyperedge_patterns"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-17">
+    <changeSet author="alex (generated)" id="1646839031337-18">
         <addUniqueConstraint columnNames="uri" constraintName="uk_gcd5mwq1kb8jn6jvwg192u3cd" tableName="pattern_view"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-18">
+    <changeSet author="alex (generated)" id="1646839031337-19">
+        <addUniqueConstraint columnNames="name" constraintName="uk_h7iwbdg4ev8mgvmij76881tx8" tableName="privilege"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-20">
         <addUniqueConstraint columnNames="target_set_id" constraintName="uk_i7fjt85n23bduccj52sy5m7kl" tableName="directed_hyperedge_target_set"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-19">
+    <changeSet author="alex (generated)" id="1646839031337-21">
         <addUniqueConstraint columnNames="uri" constraintName="uk_qd35crdvw857tcrg5topnhslc" tableName="pattern_language"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-20">
+    <changeSet author="alex (generated)" id="1646839031337-22">
+        <addPrimaryKey columnNames="candidate_id, user_id" constraintName="candidate_author_pkey" tableName="candidate_author"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-23">
         <addPrimaryKey columnNames="id" constraintName="candidate_comment_pkey" tableName="candidate_comment"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-21">
+    <changeSet author="alex (generated)" id="1646839031337-24">
         <addPrimaryKey columnNames="candidate_comment_id, user_id" constraintName="candidate_comment_rating_pkey" tableName="candidate_comment_rating"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-22">
+    <changeSet author="alex (generated)" id="1646839031337-25">
+        <addPrimaryKey columnNames="id" constraintName="candidate_evidence_pkey" tableName="candidate_evidence"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-26">
+        <addPrimaryKey columnNames="candidate_evidence_id, user_id" constraintName="candidate_evidence_rating_pkey" tableName="candidate_evidence_rating"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-27">
         <addPrimaryKey columnNames="id" constraintName="candidate_pkey" tableName="candidate"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-23">
+    <changeSet author="alex (generated)" id="1646839031337-28">
         <addPrimaryKey columnNames="candidate_id, user_id" constraintName="candidate_rating_pkey" tableName="candidate_rating"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-24">
+    <changeSet author="alex (generated)" id="1646839031337-29">
         <addPrimaryKey columnNames="id" constraintName="concrete_solution_pkey" tableName="concrete_solution"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-25">
+    <changeSet author="alex (generated)" id="1646839031337-30">
         <addPrimaryKey columnNames="name" constraintName="design_model_edge_type_pkey" tableName="design_model_edge_type"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-26">
+    <changeSet author="alex (generated)" id="1646839031337-31">
         <addPrimaryKey columnNames="pattern_instance1_pattern_instance_id, pattern_instance2_pattern_instance_id" constraintName="design_model_pattern_edge_pkey" tableName="design_model_pattern_edge"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-27">
+    <changeSet author="alex (generated)" id="1646839031337-32">
         <addPrimaryKey columnNames="pattern_instance_id" constraintName="design_model_pattern_instance_pkey" tableName="design_model_pattern_instance"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-28">
+    <changeSet author="alex (generated)" id="1646839031337-33">
         <addPrimaryKey columnNames="id" constraintName="design_model_pkey" tableName="design_model"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-29">
+    <changeSet author="alex (generated)" id="1646839031337-34">
         <addPrimaryKey columnNames="design_model_id, undirected_edge_id" constraintName="design_model_undirected_edge_pkey" tableName="design_model_undirected_edge"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-30">
+    <changeSet author="alex (generated)" id="1646839031337-35">
         <addPrimaryKey columnNames="id" constraintName="directed_edge_pkey" tableName="directed_edge"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-31">
+    <changeSet author="alex (generated)" id="1646839031337-36">
         <addPrimaryKey columnNames="id" constraintName="directed_hyperedge_pkey" tableName="directed_hyperedge"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-32">
+    <changeSet author="alex (generated)" id="1646839031337-37">
         <addPrimaryKey columnNames="directed_hyperedge_id, source_set_id" constraintName="directed_hyperedge_source_set_pkey" tableName="directed_hyperedge_source_set"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-33">
+    <changeSet author="alex (generated)" id="1646839031337-38">
         <addPrimaryKey columnNames="directed_hyperedge_id, target_set_id" constraintName="directed_hyperedge_target_set_pkey" tableName="directed_hyperedge_target_set"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-34">
+    <changeSet author="alex (generated)" id="1646839031337-39">
         <addPrimaryKey columnNames="id" constraintName="discussion_comment_pkey" tableName="discussion_comment"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-35">
+    <changeSet author="alex (generated)" id="1646839031337-40">
         <addPrimaryKey columnNames="id" constraintName="discussion_topic_pkey" tableName="discussion_topic"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-36">
+    <changeSet author="alex (generated)" id="1646839031337-41">
         <addPrimaryKey columnNames="id" constraintName="image_pkey" tableName="image"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-37">
+    <changeSet author="alex (generated)" id="1646839031337-42">
+        <addPrimaryKey columnNames="issue_id, user_id" constraintName="issue_author_pkey" tableName="issue_author"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-43">
         <addPrimaryKey columnNames="id" constraintName="issue_comment_pkey" tableName="issue_comment"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-38">
+    <changeSet author="alex (generated)" id="1646839031337-44">
         <addPrimaryKey columnNames="issue_comment_id, user_id" constraintName="issue_comment_rating_pkey" tableName="issue_comment_rating"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-39">
+    <changeSet author="alex (generated)" id="1646839031337-45">
+        <addPrimaryKey columnNames="id" constraintName="issue_evidence_pkey" tableName="issue_evidence"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-46">
+        <addPrimaryKey columnNames="issue_evidence_id, user_id" constraintName="issue_evidence_rating_pkey" tableName="issue_evidence_rating"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-47">
         <addPrimaryKey columnNames="id" constraintName="issue_pkey" tableName="issue"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-40">
+    <changeSet author="alex (generated)" id="1646839031337-48">
         <addPrimaryKey columnNames="issue_id, user_id" constraintName="issue_rating_pkey" tableName="issue_rating"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-41">
+    <changeSet author="alex (generated)" id="1646839031337-49">
         <addPrimaryKey columnNames="id" constraintName="pattern_language_pkey" tableName="pattern_language"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-42">
+    <changeSet author="alex (generated)" id="1646839031337-50">
         <addPrimaryKey columnNames="id" constraintName="pattern_pkey" tableName="pattern"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-43">
+    <changeSet author="alex (generated)" id="1646839031337-51">
         <addPrimaryKey columnNames="pattern_language_id" constraintName="pattern_schema_pkey" tableName="pattern_schema"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-44">
+    <changeSet author="alex (generated)" id="1646839031337-52">
         <addPrimaryKey columnNames="id" constraintName="pattern_section_pkey" tableName="pattern_section"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-45">
+    <changeSet author="alex (generated)" id="1646839031337-53">
         <addPrimaryKey columnNames="id" constraintName="pattern_section_schema_pkey" tableName="pattern_section_schema"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-46">
+    <changeSet author="alex (generated)" id="1646839031337-54">
         <addPrimaryKey columnNames="directed_edge_id, pattern_view_id" constraintName="pattern_view_directed_edge_pkey" tableName="pattern_view_directed_edge"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-47">
+    <changeSet author="alex (generated)" id="1646839031337-55">
         <addPrimaryKey columnNames="pattern_id, pattern_view_id" constraintName="pattern_view_pattern_pkey" tableName="pattern_view_pattern"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-48">
+    <changeSet author="alex (generated)" id="1646839031337-56">
         <addPrimaryKey columnNames="id" constraintName="pattern_view_pkey" tableName="pattern_view"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-49">
+    <changeSet author="alex (generated)" id="1646839031337-57">
         <addPrimaryKey columnNames="pattern_view_id, undirected_edge_id" constraintName="pattern_view_undirected_edge_pkey" tableName="pattern_view_undirected_edge"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-50">
+    <changeSet author="alex (generated)" id="1646839031337-58">
+        <addPrimaryKey columnNames="id" constraintName="privilege_pkey" tableName="privilege"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-59">
+        <addPrimaryKey columnNames="id" constraintName="role_pkey" tableName="role"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-60">
         <addPrimaryKey columnNames="id" constraintName="undirected_edge_pkey" tableName="undirected_edge"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-51">
+    <changeSet author="alex (generated)" id="1646839031337-61">
         <addPrimaryKey columnNames="undirected_hyperedge_id, patterns_id" constraintName="undirected_hyperedge_patterns_pkey" tableName="undirected_hyperedge_patterns"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-52">
+    <changeSet author="alex (generated)" id="1646839031337-62">
         <addPrimaryKey columnNames="id" constraintName="undirected_hyperedge_pkey" tableName="undirected_hyperedge"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-53">
+    <changeSet author="alex (generated)" id="1646839031337-63">
         <addPrimaryKey columnNames="id" constraintName="user_entity_pkey" tableName="user_entity"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-54">
+    <changeSet author="alex (generated)" id="1646839031337-64">
         <addForeignKeyConstraint baseColumnNames="directed_edge_id" baseTableName="pattern_view_directed_edge" constraintName="fk3b7r2oi11ur1t7ugi1477imrp" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="directed_edge" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-55">
+    <changeSet author="alex (generated)" id="1646839031337-65">
         <addForeignKeyConstraint baseColumnNames="undirected_edge_id" baseTableName="design_model_undirected_edge" constraintName="fk3c78hgbc42y1nag5hbiec4mf8" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="undirected_edge" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-56">
+    <changeSet author="alex (generated)" id="1646839031337-66">
         <addForeignKeyConstraint baseColumnNames="pattern_section_schema_id" baseTableName="pattern_section" constraintName="fk3cvo9f0idatua01yg1n112wkq" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_section_schema" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-57">
+    <changeSet author="alex (generated)" id="1646839031337-67">
         <addForeignKeyConstraint baseColumnNames="design_model_id" baseTableName="design_model_pattern_instance" constraintName="fk3n041q3n5smuaq4brv9fhf7br" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="design_model" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-58">
+    <changeSet author="alex (generated)" id="1646839031337-68">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="issue_comment_rating" constraintName="fk3o0axm0t08m1p1fb94ucksys1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-59">
+    <changeSet author="alex (generated)" id="1646839031337-69">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="issue_comment" constraintName="fk3qe8erpdobc1yb6dk26nbhojp" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-60">
+    <changeSet author="alex (generated)" id="1646839031337-70">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="issue_rating" constraintName="fk3qnwbh69l8ihd5ms33nvo0n83" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-61">
+    <changeSet author="alex (generated)" id="1646839031337-71">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="candidate_evidence_rating" constraintName="fk4erjjf0c3g5691pdu251ycya0" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-72">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="issue_author" constraintName="fk54ek3qt42c6okrhfyn363haxo" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-73">
         <addForeignKeyConstraint baseColumnNames="pattern_language_id" baseTableName="pattern" constraintName="fk77ttqbiemowpyaxy1cc5k9is5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_language" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-62">
+    <changeSet author="alex (generated)" id="1646839031337-74">
         <addForeignKeyConstraint baseColumnNames="pattern_view_id" baseTableName="pattern_view_pattern" constraintName="fk7gjr0y7vsqmnnsgohqgb5l7ac" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_view" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-63">
+    <changeSet author="alex (generated)" id="1646839031337-75">
         <addForeignKeyConstraint baseColumnNames="pattern_id" baseTableName="design_model_pattern_instance" constraintName="fk7rdcjjev6awr8jfvwoyi3cvml" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-64">
+    <changeSet author="alex (generated)" id="1646839031337-76">
         <addForeignKeyConstraint baseColumnNames="discussion_topic_id" baseTableName="discussion_comment" constraintName="fk7st41tqwtxhelg9euc4y4qqm4" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="discussion_topic" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-65">
+    <changeSet author="alex (generated)" id="1646839031337-77">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="issue_evidence_rating" constraintName="fk8g8u3v97wivak121r5oya1yge" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-78">
         <addForeignKeyConstraint baseColumnNames="source_set_id" baseTableName="directed_hyperedge_source_set" constraintName="fk8guwfrj62or1u8rwdwtf7y5yn" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-66">
+    <changeSet author="alex (generated)" id="1646839031337-79">
         <addForeignKeyConstraint baseColumnNames="pattern_language_id" baseTableName="candidate" constraintName="fk8s7x8de0d0upup60hkuggb86q" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_language" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-67">
+    <changeSet author="alex (generated)" id="1646839031337-80">
         <addForeignKeyConstraint baseColumnNames="p1_id" baseTableName="undirected_edge" constraintName="fk8sqyicdi1e8n3neu2kueocol3" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-68">
+    <changeSet author="alex (generated)" id="1646839031337-81">
         <addForeignKeyConstraint baseColumnNames="issue_id" baseTableName="issue_comment" constraintName="fk8wy5rxggrte2ntcq80g7o7210" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="issue" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-69">
+    <changeSet author="alex (generated)" id="1646839031337-82">
+        <addForeignKeyConstraint baseColumnNames="roles_id" baseTableName="role_privileges" constraintName="fk9n2w8s3aw0yk00s4nmqvucw6b" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="role" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-83">
+        <addForeignKeyConstraint baseColumnNames="privileges_id" baseTableName="role_privileges" constraintName="fkas5s9i1itvr8tgocse4xmtwox" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="privilege" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-84">
+        <addForeignKeyConstraint baseColumnNames="candidate_id" baseTableName="candidate_author" constraintName="fkbfl3nsrdehhb6w8j80hl4ut9n" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="candidate" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-85">
         <addForeignKeyConstraint baseColumnNames="design_model_id" baseTableName="design_model_undirected_edge" constraintName="fkbu6vgj31dog8bhcfbhyw3dydq" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="design_model" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-70">
+    <changeSet author="alex (generated)" id="1646839031337-86">
+        <addForeignKeyConstraint baseColumnNames="issue_id" baseTableName="issue_evidence" constraintName="fkcfioos21i8bvst7iu09ah1tw0" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="issue" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-87">
         <addForeignKeyConstraint baseColumnNames="pattern_view_id" baseTableName="pattern_view_undirected_edge" constraintName="fkd1qjwyn88gn4jtpygu1kna7ht" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_view" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-71">
+    <changeSet author="alex (generated)" id="1646839031337-88">
         <addForeignKeyConstraint baseColumnNames="issue_comment_id" baseTableName="issue_comment_rating" constraintName="fkdpod2iog9jj6y5mitrw318sqj" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="issue_comment" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-72">
+    <changeSet author="alex (generated)" id="1646839031337-89">
         <addForeignKeyConstraint baseColumnNames="source_id" baseTableName="directed_edge" constraintName="fkdvt319vj8sqqs5q8cxa2mqam2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-73">
+    <changeSet author="alex (generated)" id="1646839031337-90">
         <addForeignKeyConstraint baseColumnNames="pattern_id" baseTableName="pattern_view_pattern" constraintName="fke118qe89rm1swbs0f6ffs3wo8" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-74">
+    <changeSet author="alex (generated)" id="1646839031337-91">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="issue_evidence" constraintName="fkecntesg5pf5cfhkg1ceyjprfn" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-92">
         <addForeignKeyConstraint baseColumnNames="pattern_sections_id" baseTableName="pattern_section_schema_pattern_sections" constraintName="fkegwj4doqcp1wipgwb2l3komdn" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_section" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-75">
+    <changeSet author="alex (generated)" id="1646839031337-93">
+        <addForeignKeyConstraint baseColumnNames="roles_id" baseTableName="user_entity_roles" constraintName="fkejo1ln9l1vbw4nhk416jjfc0d" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="role" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-94">
         <addForeignKeyConstraint baseColumnNames="pattern_language_id" baseTableName="directed_edge" constraintName="fken29l6v8wmkqxaiaks7pe8rwu" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_language" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-76">
+    <changeSet author="alex (generated)" id="1646839031337-95">
         <addForeignKeyConstraint baseColumnNames="pattern_section_schema_id" baseTableName="pattern_section_schema_pattern_sections" constraintName="fkfafffrkwjwkpm4rus99ao5gvm" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_section_schema" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-77">
+    <changeSet author="alex (generated)" id="1646839031337-96">
         <addForeignKeyConstraint baseColumnNames="pattern_language_id" baseTableName="pattern_schema" constraintName="fkfuru8632bnda9yj6he9aqffme" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_language" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-78">
+    <changeSet author="alex (generated)" id="1646839031337-97">
         <addForeignKeyConstraint baseColumnNames="candidate_comment_id" baseTableName="candidate_comment_rating" constraintName="fkg7qo3nvneqg1ivvlt50123ss2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="candidate_comment" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-79">
+    <changeSet author="alex (generated)" id="1646839031337-98">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="candidate_comment_rating" constraintName="fkg8j63smj6n8rh6kr8tp3nfdix" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-80">
+    <changeSet author="alex (generated)" id="1646839031337-99">
         <addForeignKeyConstraint baseColumnNames="candidate_id" baseTableName="candidate_comment" constraintName="fkgl0y3i6y5dd9c8psdu7mp7xqy" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="candidate" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-81">
+    <changeSet author="alex (generated)" id="1646839031337-100">
         <addForeignKeyConstraint baseColumnNames="target_set_id" baseTableName="directed_hyperedge_target_set" constraintName="fkhl9yorn5wev3m5ooqrlq3ufxg" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-82">
+    <changeSet author="alex (generated)" id="1646839031337-101">
         <addForeignKeyConstraint baseColumnNames="pattern_instance1_pattern_instance_id" baseTableName="design_model_pattern_edge" constraintName="fkhx1ynl2ovjddccjvxnjytl2n9" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="pattern_instance_id" referencedTableName="design_model_pattern_instance" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-83">
+    <changeSet author="alex (generated)" id="1646839031337-102">
         <addForeignKeyConstraint baseColumnNames="undirected_edge_id" baseTableName="pattern_view_undirected_edge" constraintName="fki4vnsjoalbiwx4yr4thn4ya87" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="undirected_edge" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-84">
+    <changeSet author="alex (generated)" id="1646839031337-103">
+        <addForeignKeyConstraint baseColumnNames="candidate_id" baseTableName="candidate_evidence" constraintName="fkis7bj3j03jdbb39017ecvgm7x" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="candidate" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-104">
+        <addForeignKeyConstraint baseColumnNames="issue_evidence_id" baseTableName="issue_evidence_rating" constraintName="fkisufpmc8wbnifd1vbawqsqnqk" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="issue_evidence" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-105">
         <addForeignKeyConstraint baseColumnNames="directed_hyperedge_id" baseTableName="directed_hyperedge_target_set" constraintName="fkjoimrxph588139toilxf57uy2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="directed_hyperedge" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-85">
+    <changeSet author="alex (generated)" id="1646839031337-106">
         <addForeignKeyConstraint baseColumnNames="p2_id" baseTableName="undirected_edge" constraintName="fkjos3a1eebvu6hbrbls6wpoygt" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-86">
-        <addForeignKeyConstraint baseColumnNames="user_entity_id" baseTableName="user_entity_roles" constraintName="fkjvvinok3stf32dvgie3vr73s0" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
+    <changeSet author="alex (generated)" id="1646839031337-107">
+        <addForeignKeyConstraint baseColumnNames="users_id" baseTableName="user_entity_roles" constraintName="fkjvvinok3stf32dvgie3vr73s0" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-87">
+    <changeSet author="alex (generated)" id="1646839031337-108">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="candidate_comment" constraintName="fkjwq8pmpyru6a87cukgmvo0q93" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-88">
+    <changeSet author="alex (generated)" id="1646839031337-109">
         <addForeignKeyConstraint baseColumnNames="issue_id" baseTableName="issue_rating" constraintName="fkky82wgp632e04u03hksxeg1ww" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="issue" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-89">
+    <changeSet author="alex (generated)" id="1646839031337-110">
         <addForeignKeyConstraint baseColumnNames="pattern_view_id" baseTableName="pattern_view_directed_edge" constraintName="fkl97vn4so04u3ab22i5nv72q6e" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_view" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-90">
+    <changeSet author="alex (generated)" id="1646839031337-111">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="candidate_evidence" constraintName="fkmmqb3cbkh76kkqagse54w8pjg" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-112">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="candidate_author" constraintName="fkomnh9dj5oi403hegu6aoh4l09" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-113">
         <addForeignKeyConstraint baseColumnNames="pattern_instance2_pattern_instance_id" baseTableName="design_model_pattern_edge" constraintName="fkoy98b1qvknikypxgc0jcj0xtc" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="pattern_instance_id" referencedTableName="design_model_pattern_instance" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-91">
+    <changeSet author="alex (generated)" id="1646839031337-114">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="candidate_rating" constraintName="fkp3b3ukrra2u0sysqcwlv4klkn" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-92">
+    <changeSet author="alex (generated)" id="1646839031337-115">
         <addForeignKeyConstraint baseColumnNames="target_id" baseTableName="directed_edge" constraintName="fkq14jnn8mw3w8t1qo9lgtcpk9e" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-93">
+    <changeSet author="alex (generated)" id="1646839031337-116">
         <addForeignKeyConstraint baseColumnNames="candidate_id" baseTableName="candidate_rating" constraintName="fkqbpga562vdylosfny7pjviddq" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="candidate" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-94">
+    <changeSet author="alex (generated)" id="1646839031337-117">
+        <addForeignKeyConstraint baseColumnNames="candidate_evidence_id" baseTableName="candidate_evidence_rating" constraintName="fkreuu2xhi0twx00r3umc2ydem0" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="candidate_evidence" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-118">
         <addForeignKeyConstraint baseColumnNames="pattern_schema_pattern_language_id" baseTableName="pattern_section_schema" constraintName="fkrie76ldgkhkbs3cug3kkvmkcd" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="pattern_language_id" referencedTableName="pattern_schema" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-95">
+    <changeSet author="alex (generated)" id="1646839031337-119">
+        <addForeignKeyConstraint baseColumnNames="issue_id" baseTableName="issue_author" constraintName="fksb3voy79n2pxtey1bx4jw64bt" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="issue" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-120">
         <addForeignKeyConstraint baseColumnNames="undirected_hyperedge_id" baseTableName="undirected_hyperedge_patterns" constraintName="fksv0r49fdkcsiv4gg4qgg5t6w0" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="undirected_hyperedge" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-96">
+    <changeSet author="alex (generated)" id="1646839031337-121">
         <addForeignKeyConstraint baseColumnNames="directed_hyperedge_id" baseTableName="directed_hyperedge_source_set" constraintName="fksyqyvo4dr6pj2mdofd5drosdm" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="directed_hyperedge" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-97">
+    <changeSet author="alex (generated)" id="1646839031337-122">
         <addForeignKeyConstraint baseColumnNames="patterns_id" baseTableName="undirected_hyperedge_patterns" constraintName="fkt25wk8gkit4hr7oyee2prm48" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-98">
+    <changeSet author="alex (generated)" id="1646839031337-123">
         <addForeignKeyConstraint baseColumnNames="pattern_language_id" baseTableName="undirected_edge" constraintName="fkt73wgqcqh5u6ro109oq15dh9v" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_language" validate="true"/>
     </changeSet>
-    <changeSet author="alex (generated)" id="1646123382978-99">
+    <changeSet author="alex (generated)" id="1646839031337-124">
         <addForeignKeyConstraint baseColumnNames="design_model_id" baseTableName="design_model_pattern_edge" constraintName="fktmrf8lhrt4fpnh9jwdlpk1iae" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="design_model" validate="true"/>
     </changeSet>
 </databaseChangeLog>
