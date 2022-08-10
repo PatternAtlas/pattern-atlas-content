@@ -3,4 +3,5 @@
 	<include file="file:patternatlas_schema.xml"/>
     <include file="file:patternatlas_data.xml"/>
 	<include file="file:patternatlas_constraints.xml"/>
+	<include file="file:patternatlas_qc_schema_extension.xml"/>
 </databaseChangeLog>
