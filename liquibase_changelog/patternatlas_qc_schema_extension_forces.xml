@@ -1,0 +1,42 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.6.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet author="alex" id="1662389281-1">
+        <insert tableName="pattern_section_schema">
+            <column name="id" value="8f113746-4d8b-484c-829d-682416eb7185"/>
+            <column name="label" value="Forces"/>
+            <column name="name" value="Forces"/>
+            <column name="position" valueNumeric="3"/>
+            <column name="type" value="any"/>
+            <column name="pattern_schema_pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+        </insert>
+        <update tableName="pattern_section_schema">
+            <column name="position" value="4"/>
+            <where>id='6f28f031-36ef-415a-9854-b088093f419b'</where>
+        </update>
+
+        <update tableName="pattern_section_schema">
+            <column name="position" value="5"/>
+            <where>id='2f2845d2-89d2-482d-81b9-8bd9e0074da3'</where>
+        </update>
+
+        <update tableName="pattern_section_schema">
+            <column name="position" value="6"/>
+            <where>id='6b175642-437f-4430-9a63-383862f6a505'</where>
+        </update>
+
+        <update tableName="pattern_section_schema">
+            <column name="position" value="7"/>
+            <where>id='15392092-3e5b-4e90-8994-5924da1c42ff'</where>
+        </update>
+        <update tableName="pattern_section_schema">
+            <column name="position" value="8"/>
+            <where>id='2545d861-de4f-495f-a1bc-89ccd8e311a0'</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>
