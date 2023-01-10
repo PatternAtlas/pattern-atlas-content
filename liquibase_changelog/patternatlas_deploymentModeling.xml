@@ -1,0 +1,302 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+                        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="lharzenetter" id="1673270991264-1">
+        <addColumn tableName="pattern">
+            <column defaultValueBoolean="false" name="deployment_modeling_behavior_pattern"
+                type="bool" />
+        </addColumn>
+    </changeSet>
+    <changeSet author="lharzenetter" id="1673270991264-2">
+        <addColumn tableName="pattern">
+            <column defaultValueBoolean="false" name="deployment_modeling_structure_pattern"
+                type="bool" />
+        </addColumn>
+    </changeSet>
+    <changeSet id="1673270991264-3" author="lharzenetter">
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='2ee3eb24-165d-46d5-976c-9eb052a1912b'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='0a4ffca5-3b28-4897-9842-295f9bb6bea8'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='d285eda8-41ee-4ba2-879d-52acec6a1416'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <column
+                name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='d8c99d65-8950-4b83-aa1d-549a88e28339'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column
+                name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='9fee292c-8c59-4a99-a3c2-467717a22c70'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <column
+                name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='94331ad5-4f67-4183-8fbe-55fe9c542789'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='4710c428-a004-4da1-98a8-58205e051ec2'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='0b5ba218-dcb1-4841-a517-b6010b8a2951'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='9bcced52-edb3-44a2-a86d-43499ea61289'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='7d2e969e-c266-4a83-85a5-5a07d528c6ef'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='87ae00d9-3fc7-4b9b-ac8b-48b79cbf8f65'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='35de7456-fced-4c23-bca5-8777984bf731'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='10a46ac6-1420-41ad-9d3a-ab244d959062'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='d53673f0-fc52-48c8-8893-f8f244cf6ee3'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='45fdc628-1914-4b2c-92c4-38f7be3c622a'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='b228d692-009d-4122-b617-1a3799a68766'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='a6e349c7-d5c0-42a7-bd78-21e4b2738fa7'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='4d153210-05d9-43f0-8560-3c3bd722d8bd'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='0145a85e-3b00-4e64-9e20-bdaf77d2fc86'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='407ae0d5-e5be-4151-900b-041ed5dfcdbe'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='e6106e4d-46a4-4557-8c2d-009ff7159464'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='5d7a8af7-94fb-4c63-958c-403d845d4107'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='ce95634f-69e0-4f97-a9b6-10bc8364849f'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <column
+                name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='50d0b397-d2df-4797-8975-d2526c8cdd63'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <column
+                name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='cd686d46-c77f-4c35-8016-f9819282f8a5'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='b6436fe2-9e3f-49ac-9e09-5cce86e480e1'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='bace6e02-1e3f-4ddc-9e9a-eb04933fa226'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='ecb7d0a0-72d0-44c3-90dd-5b9af536ebca'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='81dba31f-e19a-4a8b-a07f-e1561fc2ce06'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='3baad63c-42d2-46cb-b7a5-ab394b4e012c'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='7116be12-b724-456f-ac3d-0a1ab6e85b9a'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='801d44ab-fc18-4cc0-8e10-49f2e73b229a'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='7f488cff-525f-4e50-a6c6-219b4ab4854d'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='e35d735c-f724-4946-aad9-7fa520d5a843'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='b8e826e0-dc07-4515-ae10-87b402e3d52c'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='358bf776-378f-465e-a9e6-e8a1c7716825'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='3b090377-8703-4cf7-9ce8-a432dce76335'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='f69638dc-6844-415c-a679-d3982c691f38'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='34b02438-ceaf-4177-9a3e-74f907cfd63d'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='b7602673-7825-48e2-829e-b9df269071fc'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='9b50b4bf-4b5c-4d52-a7d3-1b0e6a0f53f9'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='1dafcbc7-f048-4867-ad7f-2d0b40e096e1'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <column
+                name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='6d763f90-d7d4-4d58-a82c-09bb68ac6b82'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='68a4bbc9-2535-4cfc-a4f4-b149adfb674a'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='3a1fb1cd-1078-4616-b603-a22c8f9449b2'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='80d829b6-d1ed-40a3-95ea-7e0b34de8eba'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <column
+                name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='b9484449-18bd-4667-a9e5-1f6bf66d442d'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='a81eb2c5-84ce-4a14-8242-e9ce19532423'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='15da23b4-5ad5-44ff-8936-140dd98935df'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='599e5d49-ede8-489b-bb72-3e41c288ae89'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='e6e239af-3d3a-4dfb-8c84-cbe268ca90d4'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='b86f6da4-3c9e-4146-8161-9c806b50b923'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='c12b3086-5fa4-4140-915b-330fbffdfc43'</where>
+        </update>
+
+
+    </changeSet>
+</databaseChangeLog>
