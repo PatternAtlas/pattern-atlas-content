@@ -3,11 +3,11 @@
                    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
                    xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.6.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
-    <include file="patternatlas_schema.xml"/>
-    <include file="patternatlas_data.xml"/>
-    <include file="patternatlas_constraints.xml"/>
-    <include file="patternatlas_qc_schema_extension.xml"/>
-    <include file="patternatlas_qc_schema_extension_forces.xml"/>
-    <include file="patternatlas_ec_patterns.xml"/>
-    <include file="patternatlas_deploymentModeling.xml" />
+    <include file="file:patternatlas_schema.xml"/>
+    <include file="file:patternatlas_data.xml"/>
+    <include file="file:patternatlas_constraints.xml"/>
+    <include file="file:patternatlas_qc_schema_extension.xml"/>
+    <include file="file:patternatlas_qc_schema_extension_forces.xml"/>
+    <include file="file:patternatlas_ec_patterns.xml"/>
+    <include file="file:patternatlas_deploymentModeling.xml" />
 </databaseChangeLog>
