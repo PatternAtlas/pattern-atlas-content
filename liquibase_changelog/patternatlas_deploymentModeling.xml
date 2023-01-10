@@ -42,6 +42,12 @@
         </update>
 
         <update tableName="pattern">
+            <column
+                name="deployment_modeling_structure_pattern" value="true" />
+            <where>id='9fee292c-8c59-4a99-a3c2-467717a22c70'</where>
+        </update>
+
+        <update tableName="pattern">
             <column name="deployment_modeling_behavior_pattern" value="true" />
             <column
                 name="deployment_modeling_structure_pattern" value="true" />
@@ -66,6 +72,11 @@
         <update tableName="pattern">
             <column name="deployment_modeling_behavior_pattern" value="true" />
             <where>id='7d2e969e-c266-4a83-85a5-5a07d528c6ef'</where>
+        </update>
+
+        <update tableName="pattern">
+            <column name="deployment_modeling_behavior_pattern" value="true" />
+            <where>id='87ae00d9-3fc7-4b9b-ac8b-48b79cbf8f65'</where>
         </update>
 
         <update tableName="pattern">
