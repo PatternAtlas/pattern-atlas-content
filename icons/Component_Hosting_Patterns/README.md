@@ -13,6 +13,9 @@ The single patterns have been published in various publications which are listed
 
 The following papers were first published in Proceedings of the 11th International Conference on Cloud Computing and Services Science - CLOSER, pages 268-279, 2021 by SciTePress.
 The publication and the patterns are licensed under the [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) license:
+
+[![](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
 - The [Serverful Hosting](serverful.svg) pattern
 - The [Serverless Hosting](serverless.svg) pattern
 - The [Provider-managed Container Hosting](container-serverless.svg) pattern

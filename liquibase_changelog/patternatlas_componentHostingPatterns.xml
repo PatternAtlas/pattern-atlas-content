@@ -1,0 +1,70 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+                        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="lharzenetter" id="1674138915768-1">
+        <insert tableName="pattern_language">
+            <column name="id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="name" value="Component Hosting Patterns"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/componentHostingPatterns"/>
+        </insert>
+    </changeSet>
+    <changeSet author="lharzenetter" id="1674138915768-2">
+        <insert tableName="pattern_language">
+            <column name="id" value="6df1cc70-9fe1-46f3-9e2c-2d0068a30029"/>
+            <column name="label" value="Icon"/>
+            <column name="name" value="Icon"/>
+            <column name="position" value="0"/>
+            <column name="type" value="any"/>
+            <column name="pattern_schema_pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+        </insert>
+        <insert tableName="pattern_language">
+            <column name="id" value="f868462b-67c6-4cbc-a0fe-50ca2a29ca24"/>
+            <column name="label" value="Problem"/>
+            <column name="name" value="Problem"/>
+            <column name="position" value="1"/>
+            <column name="type" value="any"/>
+            <column name="pattern_schema_pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+        </insert>
+        <insert tableName="pattern_language">
+            <column name="id" value="6a174dcc-ae29-4964-a70d-0e2d12dd6bb0"/>
+            <column name="label" value="Context"/>
+            <column name="name" value="Context"/>
+            <column name="position" value="2"/>
+            <column name="type" value="any"/>
+            <column name="pattern_schema_pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+        </insert>
+        <insert tableName="pattern_language">
+            <column name="id" value="e32e9fb8-2c0c-4d2b-b398-3db40090015a"/>
+            <column name="label" value="Forces"/>
+            <column name="name" value="Forces"/>
+            <column name="position" value="3"/>
+            <column name="type" value="any"/>
+            <column name="pattern_schema_pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+        </insert>
+        <insert tableName="pattern_language">
+            <column name="id" value="82d8e696-a828-4346-a236-cced4542bc08"/>
+            <column name="label" value="Solution"/>
+            <column name="name" value="Solution"/>
+            <column name="position" value="4"/>
+            <column name="type" value="any"/>
+            <column name="pattern_schema_pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+        </insert>
+        <insert tableName="pattern_language">
+            <column name="id" value="12d8e696-aef8-1246-ae32-405687d5a2ce"/>
+            <column name="label" value="License"/>
+            <column name="name" value="License"/>
+            <column name="position" value="5"/>
+            <column name="type" value="any"/>
+            <column name="pattern_schema_pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+        </insert>
+    </changeSet>
+
+    <!-- TDOD -->
+
+    
+</databaseChangeLog>
