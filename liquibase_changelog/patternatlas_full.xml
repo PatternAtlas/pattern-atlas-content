@@ -10,4 +10,5 @@
     <include file="file:patternatlas_qc_schema_extension_forces.xml"/>
     <include file="file:patternatlas_ec_patterns.xml"/>
     <include file="file:patternatlas_deploymentModeling.xml" />
+    <include file="file:patternatlas_componentHostingPatterns.xml" />
 </databaseChangeLog>
