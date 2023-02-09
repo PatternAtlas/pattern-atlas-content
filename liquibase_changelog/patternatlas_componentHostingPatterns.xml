@@ -11,7 +11,7 @@
             <column name="id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
             <column name="name" value="Component Hosting Patterns"/>
             <column name="uri" value="https://patternpedia.org/patternLanguages/componentHostingPatterns"/>
-            <column name="logo" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/main/icons/Component_Hosting_Patterns/component-hosting-patterns.svg"/>
+            <column name="logo" value="https://github.com/PatternAtlas/pattern-atlas-content/blob/13b224c8eea70a2c06b567cdd8a8308c373e07d9/icons/component-hosting-patterns.svg"/>
         </insert>
     </changeSet>
     <changeSet author="lharzenetter" id="1674138915768-2">
