@@ -62,7 +62,7 @@
         </insert>
     </changeSet>
 
-    <changeSet author="lharzenetter" id="1674138915768-4">
+    <changeSet author="v-yussupov" id="1674138915768-4">
         <insert tableName="pattern">
             <column name="id" value="78b1fe35-9739-46b3-8baf-21731d886913"/>
             <column name="name" value="Fixed Deployment Stack"/>
@@ -162,6 +162,33 @@
             <column name="paper_ref" value="https://www.scitepress.org/PublicationsDetail.aspx?ID=yzuOAgEvhvk="/>
             <column name="deployment_modeling_behavior_pattern" value="false"/>
             <column name="deployment_modeling_structure_pattern" value="true"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="v-yussupov" id="1674138915768-5">
+        <insert tableName="directed_edge">
+            <column name="id" value="a83c40d6-c36a-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="cdbd8bf8-84ac-49f6-a58e-e7414333947c"/>
+            <column name="target_id" value="ebc49a18-4a96-416c-9dd6-5de89d0d1b89"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="a83c40d6-c36a-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="cdbd8bf8-84ac-49f6-a58e-e7414333947c"/>
+            <column name="target_id" value="5651c09a-634c-4ca1-a5cb-d38ce946c60a"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="a83c40d6-c36a-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="cdbd8bf8-84ac-49f6-a58e-e7414333947c"/>
+            <column name="target_id" value="b8785a66-2805-4559-8332-dd348ace3afc"/>
         </insert>
     </changeSet>
 </databaseChangeLog>
