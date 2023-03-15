@@ -21,14 +21,6 @@
     </changeSet>
     <changeSet author="lharzenetter" id="1674138915768-3">
         <insert tableName="pattern_section_schema">
-            <column name="id" value="6df1cc70-9fe1-46f3-9e2c-2d0068a30029"/>
-            <column name="label" value="Icon"/>
-            <column name="name" value="Icon"/>
-            <column name="position" value="0"/>
-            <column name="type" value="any"/>
-            <column name="pattern_schema_pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
-        </insert>
-        <insert tableName="pattern_section_schema">
             <column name="id" value="f868462b-67c6-4cbc-a0fe-50ca2a29ca24"/>
             <column name="label" value="Problem"/>
             <column name="name" value="Problem"/>
