@@ -256,5 +256,45 @@
             <column name="source_id" value="92dddd27-4627-42aa-b667-a9c9d805e475"/>
             <column name="target_id" value="aab9d0f8-2c0b-4ed8-8a82-1b4e91358854"/>
         </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="91d637a4-c36d-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="92dddd27-4627-42aa-b667-a9c9d805e475"/>
+            <column name="target_id" value="b8785a66-2805-4559-8332-dd348ace3afc"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="b36dc076-c36d-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="92dddd27-4627-42aa-b667-a9c9d805e475"/>
+            <column name="target_id" value="e316884d-c2c6-453f-a08b-372167957277"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="d3f09ac6-c36d-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="aab9d0f8-2c0b-4ed8-8a82-1b4e91358854"/>
+            <column name="target_id" value="ebc49a18-4a96-416c-9dd6-5de89d0d1b89"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="ed6462ee-c36d-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="aab9d0f8-2c0b-4ed8-8a82-1b4e91358854"/>
+            <column name="target_id" value="5651c09a-634c-4ca1-a5cb-d38ce946c60a"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="0552f4e2-c36e-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="aab9d0f8-2c0b-4ed8-8a82-1b4e91358854"/>
+            <column name="target_id" value="8f497741-928c-480c-9085-1036b2e24051"/>
+        </insert>
     </changeSet>
 </databaseChangeLog>
