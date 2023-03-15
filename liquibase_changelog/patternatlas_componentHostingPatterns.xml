@@ -175,7 +175,7 @@
             <column name="target_id" value="ebc49a18-4a96-416c-9dd6-5de89d0d1b89"/>
         </insert>
         <insert tableName="directed_edge">
-            <column name="id" value="a83c40d6-c36a-11ed-afa1-0242ac120002"/>
+            <column name="id" value="d2229566-c36b-11ed-afa1-0242ac120002"/>
             <column name="description" value="null"/>
             <column name="type" value="isRefinedBy"/>
             <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
@@ -183,7 +183,7 @@
             <column name="target_id" value="5651c09a-634c-4ca1-a5cb-d38ce946c60a"/>
         </insert>
         <insert tableName="directed_edge">
-            <column name="id" value="a83c40d6-c36a-11ed-afa1-0242ac120002"/>
+            <column name="id" value="db96b8d4-c36b-11ed-afa1-0242ac120002"/>
             <column name="description" value="null"/>
             <column name="type" value="isRefinedBy"/>
             <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
