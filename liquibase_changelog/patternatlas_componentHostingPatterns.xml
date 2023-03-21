@@ -1,0 +1,300 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+                        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="lharzenetter" id="1674138915768-1">
+        <insert tableName="pattern_language">
+            <column name="id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="name" value="Component Hosting Patterns"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/componentHostingPatterns"/>
+            <column name="logo" value="https://github.com/PatternAtlas/pattern-atlas-content/raw/13b224c8eea70a2c06b567cdd8a8308c373e07d9/icons/component-hosting-patterns.svg"/>
+        </insert>
+    </changeSet>
+    <changeSet author="lharzenetter" id="1674138915768-2">
+        <insert tableName="pattern_schema">
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f" />
+        </insert>
+    </changeSet>
+    <changeSet author="lharzenetter" id="1674138915768-3">
+        <insert tableName="pattern_section_schema">
+            <column name="id" value="f868462b-67c6-4cbc-a0fe-50ca2a29ca24"/>
+            <column name="label" value="Problem"/>
+            <column name="name" value="Problem"/>
+            <column name="position" value="1"/>
+            <column name="type" value="any"/>
+            <column name="pattern_schema_pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+        </insert>
+        <insert tableName="pattern_section_schema">
+            <column name="id" value="6a174dcc-ae29-4964-a70d-0e2d12dd6bb0"/>
+            <column name="label" value="Context"/>
+            <column name="name" value="Context"/>
+            <column name="position" value="2"/>
+            <column name="type" value="any"/>
+            <column name="pattern_schema_pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+        </insert>
+        <insert tableName="pattern_section_schema">
+            <column name="id" value="e32e9fb8-2c0c-4d2b-b398-3db40090015a"/>
+            <column name="label" value="Forces"/>
+            <column name="name" value="Forces"/>
+            <column name="position" value="3"/>
+            <column name="type" value="any"/>
+            <column name="pattern_schema_pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+        </insert>
+        <insert tableName="pattern_section_schema">
+            <column name="id" value="82d8e696-a828-4346-a236-cced4542bc08"/>
+            <column name="label" value="Solution"/>
+            <column name="name" value="Solution"/>
+            <column name="position" value="4"/>
+            <column name="type" value="any"/>
+            <column name="pattern_schema_pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+        </insert>
+        <insert tableName="pattern_section_schema">
+            <column name="id" value="12d8e696-aef8-1246-ae32-405687d5a2ce"/>
+            <column name="label" value="License"/>
+            <column name="name" value="License"/>
+            <column name="position" value="5"/>
+            <column name="type" value="any"/>
+            <column name="pattern_schema_pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="v-yussupov" id="1674138915768-4">
+        <insert tableName="pattern">
+            <column name="id" value="78b1fe35-9739-46b3-8baf-21731d886913"/>
+            <column name="name" value="Fixed Deployment Stack"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/componentHostingPatterns/fixedDeploymentStackPattern"/>
+            <column name="content" value="{&quot;Problem&quot;: &quot;How to host a software component that requires no special underlying infrastructure or customization of the host environment it is running on?&quot;, &quot;Context&quot;: &quot;A software component needs to be hosted on a deployment stack, but there is no need for special customization of the stack by adding, removing, or changing components in it or configuring it in a special way.&quot;, &quot;Forces&quot;: &quot;Cloud service models require different management efforts for the underlying deployment stack, e.g., hosting a component on a FaaS platform requires less management efforts than hosting it on a consumer-managed virtual machine on IaaS where the consumer has to take care of installing patches. Frequently, only the common dependencies are needed for to-be-deployed components, e.g., a Java application without specific customization requirements or a standard relational database.&quot;, &quot;License&quot;: &quot;This pattern was first published in *Service-Oriented Computing. SummerSOC 2022. Communications in Computer and Information Science*, vol 1603, pp. 45-67, 2022 by Springer Nature.\n\nYussupov, V., Breitenbücher, U., Brogi, A., Harzenetter, L., Leymann, F., Soldani, J., **\&quot;Serverless or Serverful? A Pattern-Based Approach for Exploring Hosting Alternatives\&quot;**. In: Service-Oriented Computing. SummerSOC 2022. Communications in Computer and Information Science, vol 1603, pages 45-67. Springer, Cham. 2022, DOI: [10.1007/978-3-031-18304-1_3](https://link.springer.com/chapter/10.1007/978-3-031-18304-1_3)&quot;, &quot;Solution&quot;: &quot;Host a software component on a Fixed Deployment Stack for which the cloud provider is responsible for setting up, configuring, and maintaining all infrastructure, execution environment, and middleware components needed to host and execute the given component. For instance, PaaS offerings can be used to host components on provider-defined deployment stacks, e.g., by providing a Java runtime of a specific version. Also serverless Database-as-a-Service offerings are examples for this pattern since they can provide a specific version of the database without the need for the consumer to manage the underlying software dependencies. Hence, consumers can directly host software components on chosen provider-managed offerings without the need to configure or customize any components in the underlying stack. The solution sketch below illustrates how a to-be-hosted software component is hosted on a compatible deployment stack defined by a cloud provider. \n![](https://github.com/PatternAtlas/pattern-atlas-content/raw/dde2bdb8172ed6a24d1e1fd4a8d72ff7e16bba43/icons/Component_Hosting_Patterns/fixed-stack-sketch.png)&quot;}"/>
+            <column name="icon_url" value="https://github.com/PatternAtlas/pattern-atlas-content/raw/13b224c8eea70a2c06b567cdd8a8308c373e07d9/icons/Component_Hosting_Patterns/fixed-stack.png"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="paper_ref" value="https://link.springer.com/chapter/10.1007/978-3-031-18304-1_3"/>
+            <column name="deployment_modeling_behavior_pattern" value="false"/>
+            <column name="deployment_modeling_structure_pattern" value="true"/>
+        </insert>
+        <insert tableName="pattern">
+            <column name="id" value="cdbd8bf8-84ac-49f6-a58e-e7414333947c"/>
+            <column name="name" value="Customizable Deployment Stack"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/componentHostingPatterns/customizableDeploymentStackPattern"/>
+            <column name="content" value="{&quot;Problem&quot;: &quot;How to host a software component when it requires customization of the underlying infrastructure or the host environment it is running on?&quot;, &quot;Context&quot;: &quot;A software component needs to be hosted such that cloud consumers are able to customize the underlying deployment stack with possibly nested software layers by adding, removing, or changing components in it or configuring the stack in a special way.&quot;, &quot;Forces&quot;: &quot;Cloud service models vary in modifiability of the underlying deployment stack, e.g., it is possible to install additional software on a virtual machine hosted using IaaS offerings, whereas FaaS offerings hide the underlying deployment stack to enable consumers deploying their applications without the need for technical expertise about underlying components. However, customization requirements for hosting a component can arise due to various reasons, e.g., legacy applications that have special dependencies to other software components that need to run in the same operating system.&quot;, &quot;License&quot;: &quot;This pattern was first published in *Service-Oriented Computing. SummerSOC 2022. Communications in Computer and Information Science*, vol 1603, pp. 45-67, 2022 by Springer Nature.\n\nYussupov, V., Breitenbücher, U., Brogi, A., Harzenetter, L., Leymann, F., Soldani, J., **\&quot;Serverless or Serverful? A Pattern-Based Approach for Exploring Hosting Alternatives\&quot;**. In: Service-Oriented Computing. SummerSOC 2022. Communications in Computer and Information Science, vol 1603, pages 45-67. Springer, Cham. 2022, DOI: [10.1007/978-3-031-18304-1_3](https://link.springer.com/chapter/10.1007/978-3-031-18304-1_3)&quot;, &quot;Solution&quot;: &quot;Host software components on a Customizable Deployment Stack in which the cloud consumer is responsible for setting up and configuring the infrastructure,execution environment, and middleware components needed to host the given software component. Hence, for a given software component, the cloud consumer can install and configure hosting components with required dependencies completely as required by the component to be deployed. The Customizable Deployment Stack has two variants shown on the solution sketch below: the first variant supports customizing the physical or virtual machine the component is running on. For example, software can be deployed on a physical machine, thus, enabling full customization of all infrastructure components. However, especially in the cloud, provisioning virtual machines and installing software on top of them with all required dependencies is a more common example for this variant. The second variant is based on containers, which can be customized regarding the software and its dependencies that must be installed. \n![](https://github.com/PatternAtlas/pattern-atlas-content/raw/dde2bdb8172ed6a24d1e1fd4a8d72ff7e16bba43/icons/Component_Hosting_Patterns/cust-stack-sketch.png)&quot;}"/>
+            <column name="icon_url" value="https://github.com/PatternAtlas/pattern-atlas-content/raw/13b224c8eea70a2c06b567cdd8a8308c373e07d9/icons/Component_Hosting_Patterns/customizable-stack.png"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="paper_ref" value="https://link.springer.com/chapter/10.1007/978-3-031-18304-1_3"/>
+            <column name="deployment_modeling_behavior_pattern" value="false"/>
+            <column name="deployment_modeling_structure_pattern" value="true"/>
+        </insert>
+        <insert tableName="pattern">
+            <column name="id" value="92dddd27-4627-42aa-b667-a9c9d805e475"/>
+            <column name="name" value="Provider-managed Scaling Configuration"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/componentHostingPatterns/provider-managedScalingConfiguration"/>
+            <column name="content" value="{&quot;Problem&quot;: &quot;How to host a software component that needs to be scaled horizontally but requires no special scaling configuration?&quot;, &quot;Context&quot;: &quot;A software component needs to be hosted on a deployment stack for which cloud consumers do not have special requirements regarding the horizontal scaling behavior, i.e., they want to rely on the provider's default autoscaling mechanism.&quot;, &quot;Forces&quot;: &quot;Cloud offerings vary in degrees of control cloud consumers have over the underlying scaling configuration. For instance, many offerings only require specifying the underlying infrastructure resources in virtual memory and CPU values, without the need to know how many virtual machines are needed in advance, while other offerings may require managing scaling configuration explicitly. Often, more provider-managed services do not require manual specification of scaling configuration at all, e.g., AWS Lambda or AWS S3 are auto-scaled by default. Moreover, the underlying offerings often do not incur extra licensing costs, e.g., purchasing a number of licenses for a messaging middleware, which makes reduced scaling configuration management more favorable.&quot;, &quot;License&quot;: &quot;This pattern was first published in *Service-Oriented Computing. SummerSOC 2022. Communications in Computer and Information Science*, vol 1603, pp. 45-67, 2022 by Springer Nature.\n\nYussupov, V., Breitenbücher, U., Brogi, A., Harzenetter, L., Leymann, F., Soldani, J., **\&quot;Serverless or Serverful? A Pattern-Based Approach for Exploring Hosting Alternatives\&quot;**. In: Service-Oriented Computing. SummerSOC 2022. Communications in Computer and Information Science, vol 1603, pages 45-67. Springer, Cham. 2022, DOI: [10.1007/978-3-031-18304-1_3](https://link.springer.com/chapter/10.1007/978-3-031-18304-1_3)&quot;, &quot;Solution&quot;: &quot;Host software components on a deployment stack that supports Provider-Managed Scaling Configuration, which means that the cloud providers are mainly responsible for the specification of the underlying infrastructure resources and scaling rules. The solution sketch below shows the high-level idea of the pattern: A software component is hosted on a deployment stack with blurred infrastructure boundaries represented using virtual resource values. Furthermore, horizontal scaling rules are mainly managed by providers and are not intended to be changed by cloud consumers, therefore, enabling only few or no customization at all. \n![](https://github.com/PatternAtlas/pattern-atlas-content/raw/dde2bdb8172ed6a24d1e1fd4a8d72ff7e16bba43/icons/Component_Hosting_Patterns/provider-scaling-sketch.png)&quot;}"/>
+            <column name="icon_url" value="https://github.com/PatternAtlas/pattern-atlas-content/raw/13b224c8eea70a2c06b567cdd8a8308c373e07d9/icons/Component_Hosting_Patterns/provider-scaling.png"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="paper_ref" value="https://link.springer.com/chapter/10.1007/978-3-031-18304-1_3"/>
+            <column name="deployment_modeling_behavior_pattern" value="true"/>
+            <column name="deployment_modeling_structure_pattern" value="false"/>
+        </insert>
+        <insert tableName="pattern">
+            <column name="id" value="aab9d0f8-2c0b-4ed8-8a82-1b4e91358854"/>
+            <column name="name" value="Consumer-Managed Scaling Configuration"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/componentHostingPatterns/consumer-managedScalingConfigurationPattern"/>
+            <column name="content" value="{&quot;Problem&quot;: &quot;How to host a software component that needs to be scaled horizontally while also requiring a tailored scaling configuration?&quot;, &quot;Context&quot;: &quot;A software component needs to be hosted on a deployment stack for which cloud consumers can explicitly specify the underlying infrastructure resources and retain a high level of control over the horizontal scaling rules, e.g., the size of virtual machine clusters and the desired autoscaling rules for it.&quot;, &quot;Forces&quot;: &quot;Cloud service offerings differ in how scaling configuration is managed. For instance, some services require specifying the infrastructure resources, i.e., decide on virtual machine images and number of instances, whereas more provider-managed services abstract away resources to memory and virtual CPU values. The configuration of horizontal scaling behavior also differs. More provider-managed services, e.g., AWS Lambda or AWS S3, are often auto-scaled and require no manual specification of scaling rules. In contrast, more consumer-managed services, e.g., AWS EC2 or Azure EKS, are more customizable. In addition, consumers may only have a limited number of available licenses for a software, hence requiring to manage that exact number of instances.&quot;, &quot;License&quot;: &quot;This pattern was first published in *Service-Oriented Computing. SummerSOC 2022. Communications in Computer and Information Science*, vol 1603, pp. 45-67, 2022 by Springer Nature.\n\nYussupov, V., Breitenbücher, U., Brogi, A., Harzenetter, L., Leymann, F., Soldani, J., **\&quot;Serverless or Serverful? A Pattern-Based Approach for Exploring Hosting Alternatives\&quot;**. In: Service-Oriented Computing. SummerSOC 2022. Communications in Computer and Information Science, vol 1603, pages 45-67. Springer, Cham. 2022, DOI: [10.1007/978-3-031-18304-1_3](https://link.springer.com/chapter/10.1007/978-3-031-18304-1_3)&quot;, &quot;Solution&quot;: &quot;Host software components on a deployment stack that supports Consumer-Managed Scaling Configuration, which means that cloud consumers retain more control over the specification of the underlying infrastructure resources and horizontal scaling rules. The solution sketch below shows a high-level view of the Consumer-Managed Scaling Configuration pattern: a software component is hosted on a deployment stack with explicitly defined infrastructure boundaries and consumer-managed horizontal scaling rules. If this pattern is applied, the corresponding deployment stacks  provide more transparency for cloud consumers with regard to specific aspects of scaling configuration such as explicitly defining the desired infrastructure boundaries and having more control over the horizontal scaling rules. \n![](https://github.com/PatternAtlas/pattern-atlas-content/raw/dde2bdb8172ed6a24d1e1fd4a8d72ff7e16bba43/icons/Component_Hosting_Patterns/consumer-scaling-sketch.png)&quot;}"/>
+            <column name="icon_url" value="https://github.com/PatternAtlas/pattern-atlas-content/raw/13b224c8eea70a2c06b567cdd8a8308c373e07d9/icons/Component_Hosting_Patterns/consumer-scaling.png"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="paper_ref" value="https://link.springer.com/chapter/10.1007/978-3-031-18304-1_3"/>
+            <column name="deployment_modeling_behavior_pattern" value="true"/>
+            <column name="deployment_modeling_structure_pattern" value="false"/>
+        </insert>        
+
+        <insert tableName="pattern">
+            <column name="id" value="ebc49a18-4a96-416c-9dd6-5de89d0d1b89"/>
+            <column name="name" value="Serverful Hosting"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/componentHostingPatterns/serverfulHostingPattern"/>
+            <column name="content" value="{&quot;Problem&quot;: &quot;How to host a software component while retaining control over all deployment stack components and the scaling configuration?&quot;, &quot;Context&quot;: &quot;A software component needs to be hosted on a custom deployment stack with possibly nested software layers such that the cloud consumer is able to define the infrastructure resources and scaling rules.&quot;, &quot;Forces&quot;: &quot;To choose the right deployment stack for a software component, cloud consumers need to understand the advantages and drawbacks of cloud service models and the corresponding management efforts. Other factors such as the chosen architectural style also affect the suitability of deployment stacks, e.g., hosting a monolith with many custom requirements vs. hosting a fine-grained microservice.&quot;, &quot;License&quot;: &quot;Yussupov, V.; Soldani, J.; Breitenbücher, U.; Brogi, A. and Leymann, F.  **\&quot;From Serverful to Serverless: A Spectrum of Patterns for Hosting Application Components\&quot;**. In: Proceedings of the 11th International Conference on Cloud Computing and Services Science - CLOSER, pages 268-279. SciTePress, 2021. DOI: [10.5220/0010481002680279](https://www.scitepress.org/PublicationsDetail.aspx?ID=yzuOAgEvhvk=)\n\n[![](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)&quot;, &quot;Solution&quot;: &quot;Host software components on a deployment stack primarily managed by cloud consumers which enables hosting all required components, e.g., an operating system and a web server on top of it. Hence, for a given deployment artifact type, the cloud consumer is responsible for installing an appropriate operating system and runtime environment. The chosen operating system either runs on a virtual machine, e.g., using IaaS offerings, or on a physical server, e.g., on premises or using bare metal cloud offerings. A solution sketch below shows a software component hosted on a deployment stack in which the cloud consumer is responsible for hosting the infrastructure components and managing scaling configuration. Hence, in the presented solution sketch the user is responsible for keeping track of all components in the stack to successfully complete the deployment, e.g., installing and running required dependencies. \n![](https://github.com/PatternAtlas/pattern-atlas-content/raw/dde2bdb8172ed6a24d1e1fd4a8d72ff7e16bba43/icons/Component_Hosting_Patterns/serverful-sketch.png)&quot;}"/>
+            <column name="icon_url" value="https://github.com/PatternAtlas/pattern-atlas-content/raw/13b224c8eea70a2c06b567cdd8a8308c373e07d9/icons/Component_Hosting_Patterns/serverful.png"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="paper_ref" value="https://www.scitepress.org/PublicationsDetail.aspx?ID=yzuOAgEvhvk="/>
+            <column name="deployment_modeling_behavior_pattern" value="false"/>
+            <column name="deployment_modeling_structure_pattern" value="true"/>
+        </insert>
+        <insert tableName="pattern">
+            <column name="id" value="5651c09a-634c-4ca1-a5cb-d38ce946c60a"/>
+            <column name="name" value="Consumer-managed Container Hosting"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/componentHostingPatterns/consumer-managedContainerPattern"/>
+            <column name="content" value="{&quot;Problem&quot;: &quot;How to host a software component while managing only the runtime environment it runs on and the scaling configuration?&quot;, &quot;Context&quot;: &quot;A software component needs to be hosted such that its runtime environment is customizable, and the cloud consumer is responsible for managing the component's scaling configuration.&quot;, &quot;Forces&quot;: &quot;Containers help reducing the infrastructure costs and simplify software deployment. Moreover, provisioning tasks require additional technical expertise, e.g., network configuration, shifting the focus from business logic to infrastructure. At the same time, managing the component's runtime environment and scaling configuration might still be desired, e.g., add pre-installed proprietary libraries and fine-tune scaling rules for container instances.&quot;, &quot;License&quot;: &quot;Yussupov, V.; Soldani, J.; Breitenbücher, U.; Brogi, A. and Leymann, F.  **\&quot;From Serverful to Serverless: A Spectrum of Patterns for Hosting Application Components\&quot;**. In: Proceedings of the 11th International Conference on Cloud Computing and Services Science - CLOSER, pages 268-279. SciTePress, 2021. DOI: [10.5220/0010481002680279](https://www.scitepress.org/PublicationsDetail.aspx?ID=yzuOAgEvhvk=)\n\n[![CC BY-NC-ND 4.0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)&quot;, &quot;Solution&quot;: &quot;Host software components on a deployment stack with provider-managed container engines or container orchestrators that allow managing scaling configuration. The solution sketch below shows a containerized software component hosted on a provider-managed container engine. Here, providers are responsible for deploying and managing the infrastructure for running containers, e.g., container orchestrator such as Kubernetes offered as a service. The cloud consumer must provide a container image encompassing the application component and its dependencies. Moreover, the cloud consumer is responsible for the scaling configuration including allocation of infrastructure resources used by container engine and the definition of scaling rules. \n![](https://github.com/PatternAtlas/pattern-atlas-content/raw/dde2bdb8172ed6a24d1e1fd4a8d72ff7e16bba43/icons/Component_Hosting_Patterns/container-serverful-sketch.png)&quot;}"/>
+            <column name="icon_url" value="https://github.com/PatternAtlas/pattern-atlas-content/raw/13b224c8eea70a2c06b567cdd8a8308c373e07d9/icons/Component_Hosting_Patterns/container-serverful.png"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="paper_ref" value="https://www.scitepress.org/PublicationsDetail.aspx?ID=yzuOAgEvhvk="/>
+            <column name="deployment_modeling_behavior_pattern" value="false"/>
+            <column name="deployment_modeling_structure_pattern" value="true"/>
+        </insert>
+        <insert tableName="pattern">
+            <column name="id" value="8f497741-928c-480c-9085-1036b2e24051"/>
+            <column name="name" value="Provider-defined Stack Hosting"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/componentHostingPatterns/patternName"/>
+            <column name="content" value="{&quot;Problem&quot;: &quot;How to host a software component without managing the deployment stack while retaining control over the scaling configuration?&quot;, &quot;Context&quot;: &quot;A software component needs to be hosted on any compatible deployment stack without other stack management requirements, but with cloud consumers managing the scaling configuration.&quot;, &quot;Forces&quot;: &quot;Often, software components are ready to be hosted on a standard platform without additional modifications, e.g., a Java WAR file or a database schema. Provisioning a virtual machine and installing Java individually would then be an overhead. However, for availability requirements it can be beneficial to control the scaling configuration, e.g., to fine-tune scaling rules. This also applies to products such as databases or message queues for hosting database schemas and topics, where the underlying infrastructure resources can be configured manually.&quot;, &quot;License&quot;: &quot;Yussupov, V.; Soldani, J.; Breitenbücher, U.; Brogi, A. and Leymann, F.  **\&quot;From Serverful to Serverless: A Spectrum of Patterns for Hosting Application Components\&quot;**. In: Proceedings of the 11th International Conference on Cloud Computing and Services Science - CLOSER, pages 268-279. SciTePress, 2021. DOI: [10.5220/0010481002680279](https://www.scitepress.org/PublicationsDetail.aspx?ID=yzuOAgEvhvk=)\n\n[![](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)&quot;, &quot;Solution&quot;: &quot;Host software components on a provider-defined deployment stack which is compatible with the given deployment artifact type and enables cloud consumers to manage the scaling configuration as shown in the solution sketch below. For example, PaaS offerings allow hosting compatible deployment artifacts on provider-defined deployment stacks, e.g., a deployment stack required to run a Java8 application. In such cases, the deployment stack management is reduced to the point of selecting a desired option, whereas the scaling configuration is still consumer-managed, e.g., selecting the amount of virtual machines and managing component's scaling rules. Another example is related to certain Database-as-a-Service offerings such as AWS DocumentDB, which allow allocating infrastructure resources for database-specific deployment artifacts. \n![](https://github.com/PatternAtlas/pattern-atlas-content/raw/6d45f8392889995416f9d274daea229e9164c378/icons/Component_Hosting_Patterns/platform-sketch.png)&quot;}"/>
+            <column name="icon_url" value="https://github.com/PatternAtlas/pattern-atlas-content/raw/13b224c8eea70a2c06b567cdd8a8308c373e07d9/icons/Component_Hosting_Patterns/platform.png"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="paper_ref" value="https://www.scitepress.org/PublicationsDetail.aspx?ID=yzuOAgEvhvk="/>
+            <column name="deployment_modeling_behavior_pattern" value="false"/>
+            <column name="deployment_modeling_structure_pattern" value="true"/>
+        </insert>
+        <insert tableName="pattern">
+            <column name="id" value="b8785a66-2805-4559-8332-dd348ace3afc"/>
+            <column name="name" value="Provider-managed Container Hosting"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/componentHostingPatterns/provider-managedContainerHostingPattern"/>
+            <column name="content" value="{&quot;Problem&quot;: &quot;How to host a software component while managing only the runtime environment it runs on?&quot;, &quot;Context&quot;: &quot;A software component needs to be hosted such that its runtime environment is customizable.&quot;, &quot;Forces&quot;: &quot;Managing the entire deployment stack might not be necessary for cases without specific customization requirements. Instead, cloud consumers might want to focus on managing only the runtime environment, e.g., when proprietary libraries are required to run the software component. In such cases, cloud consumers can also benefit from provider-managed scaling configuration, e.g., infrastructure resources management and scaling container instances.&quot;, &quot;License&quot;: &quot;Yussupov, V.; Soldani, J.; Breitenbücher, U.; Brogi, A. and Leymann, F.  **\&quot;From Serverful to Serverless: A Spectrum of Patterns for Hosting Application Components\&quot;**. In: Proceedings of the 11th International Conference on Cloud Computing and Services Science - CLOSER, pages 268-279. SciTePress, 2021. DOI: [10.5220/0010481002680279](https://www.scitepress.org/PublicationsDetail.aspx?ID=yzuOAgEvhvk=)\n\n[![CC BY-NC-ND 4.0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)&quot;, &quot;Solution&quot;: &quot;Host software components on a deployment stack with provider-managed container engines that do not require managing scaling configuration. The solution sketch below shows a containerized software component hosted on a provider-managed container engine. Management of runtime environment remains possible via container images, but the scaling configuration is now provider's responsibility. \n![](https://github.com/PatternAtlas/pattern-atlas-content/raw/2eac234cffa684de0ea6ce7763a9243c089defdf/icons/Component_Hosting_Patterns/container-serverless-sketch.png)&quot;}"/>
+            <column name="icon_url" value="https://github.com/PatternAtlas/pattern-atlas-content/raw/13b224c8eea70a2c06b567cdd8a8308c373e07d9/icons/Component_Hosting_Patterns/container-serverless.png"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="paper_ref" value="https://www.scitepress.org/PublicationsDetail.aspx?ID=yzuOAgEvhvk="/>
+            <column name="deployment_modeling_behavior_pattern" value="false"/>
+            <column name="deployment_modeling_structure_pattern" value="true"/>
+        </insert>
+        <insert tableName="pattern">
+            <column name="id" value="e316884d-c2c6-453f-a08b-372167957277"/>
+            <column name="name" value="Serverless Hosting"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/componentHostingPatterns/serverlessHostingPattern"/>
+            <column name="content" value="{&quot;Problem&quot;: &quot;How to host a software component without managing its deployment stack or scaling configuration?&quot;, &quot;Context&quot;: &quot;A software component needs to be hosted on a compatible deployment stack without further deployment stack or scaling configuration management.&quot;, &quot;Forces&quot;: &quot;In certain cases, it is preferable to simply select a pre-defined runtime environment without managing the deployment stack components and scaling configuration. For instance, defining a runtime and managing the scaling configuration might be an overhead when only a small code snippet needs to be hosted. Tighter coupling with providers can also simplify integration with other provider-specific services.&quot;, &quot;License&quot;: &quot;Yussupov, V.; Soldani, J.; Breitenbücher, U.; Brogi, A. and Leymann, F.  **\&quot;From Serverful to Serverless: A Spectrum of Patterns for Hosting Application Components\&quot;**. In: Proceedings of the 11th International Conference on Cloud Computing and Services Science - CLOSER, pages 268-279. SciTePress, 2021. DOI: [10.5220/0010481002680279](https://www.scitepress.org/PublicationsDetail.aspx?ID=yzuOAgEvhvk=)\n\n[![CC BY-NC-ND 4.0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)&quot;, &quot;Solution&quot;: &quot;Host software components on a provider-defined deployment stack which is compatible with the given deployment artifact type and does not require cloud consumers to manage the scaling configuration. The solution sketch below shows a software component hosted on a provider-defined stack which does not require cloud consumers to manage scaling configuration. For example, using public Function-as-a-Service platforms one can host source code snippets and configure them to be invoked when specific cloud events occur. Many products such as databases and message queues are also offered as services that do not require managing underlying infrastructure resources, e.g., serverless DBaaS offerings. Another example is Software-as-a-Service~(SaaS) offerings, in which components typically require minor configuration efforts to allow using them, whereas users are not aware which deployment stacks are used in the background. For example, consumers can host static web pages via GitHub Pages by configuring a repository in a specific way. \n![](https://github.com/PatternAtlas/pattern-atlas-content/raw/76090f1eb5b7fca072b4ce9316bcf9db39d67e38/icons/Component_Hosting_Patterns/serverless-sketch.png)&quot;}"/>
+            <column name="icon_url" value="https://github.com/PatternAtlas/pattern-atlas-content/raw/13b224c8eea70a2c06b567cdd8a8308c373e07d9/icons/Component_Hosting_Patterns/serverless.png"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="paper_ref" value="https://www.scitepress.org/PublicationsDetail.aspx?ID=yzuOAgEvhvk="/>
+            <column name="deployment_modeling_behavior_pattern" value="false"/>
+            <column name="deployment_modeling_structure_pattern" value="true"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="v-yussupov" id="1674138915768-5">
+        <insert tableName="directed_edge">
+            <column name="id" value="a83c40d6-c36a-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="cdbd8bf8-84ac-49f6-a58e-e7414333947c"/>
+            <column name="target_id" value="ebc49a18-4a96-416c-9dd6-5de89d0d1b89"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="d2229566-c36b-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="cdbd8bf8-84ac-49f6-a58e-e7414333947c"/>
+            <column name="target_id" value="5651c09a-634c-4ca1-a5cb-d38ce946c60a"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="db96b8d4-c36b-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="cdbd8bf8-84ac-49f6-a58e-e7414333947c"/>
+            <column name="target_id" value="b8785a66-2805-4559-8332-dd348ace3afc"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="42c404f8-c36c-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isCombinedWith"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="cdbd8bf8-84ac-49f6-a58e-e7414333947c"/>
+            <column name="target_id" value="92dddd27-4627-42aa-b667-a9c9d805e475"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="47b5b75e-c36c-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isCombinedWith"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="cdbd8bf8-84ac-49f6-a58e-e7414333947c"/>
+            <column name="target_id" value="aab9d0f8-2c0b-4ed8-8a82-1b4e91358854"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="8c6fd014-c36c-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="conflictsWith"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="cdbd8bf8-84ac-49f6-a58e-e7414333947c"/>
+            <column name="target_id" value="78b1fe35-9739-46b3-8baf-21731d886913"/>
+        </insert>
+
+        <insert tableName="directed_edge">
+            <column name="id" value="931d54a4-c36c-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="78b1fe35-9739-46b3-8baf-21731d886913"/>
+            <column name="target_id" value="8f497741-928c-480c-9085-1036b2e24051"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="b615a664-c36c-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="78b1fe35-9739-46b3-8baf-21731d886913"/>
+            <column name="target_id" value="e316884d-c2c6-453f-a08b-372167957277"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="d9927d74-c36c-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isCombinedWith"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="78b1fe35-9739-46b3-8baf-21731d886913"/>
+            <column name="target_id" value="92dddd27-4627-42aa-b667-a9c9d805e475"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="ee009d68-c36c-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isCombinedWith"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="78b1fe35-9739-46b3-8baf-21731d886913"/>
+            <column name="target_id" value="aab9d0f8-2c0b-4ed8-8a82-1b4e91358854"/>
+        </insert>
+
+        <insert tableName="directed_edge">
+            <column name="id" value="0791ed22-c36d-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="conflictsWith"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="92dddd27-4627-42aa-b667-a9c9d805e475"/>
+            <column name="target_id" value="aab9d0f8-2c0b-4ed8-8a82-1b4e91358854"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="91d637a4-c36d-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="92dddd27-4627-42aa-b667-a9c9d805e475"/>
+            <column name="target_id" value="b8785a66-2805-4559-8332-dd348ace3afc"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="b36dc076-c36d-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="92dddd27-4627-42aa-b667-a9c9d805e475"/>
+            <column name="target_id" value="e316884d-c2c6-453f-a08b-372167957277"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="d3f09ac6-c36d-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="aab9d0f8-2c0b-4ed8-8a82-1b4e91358854"/>
+            <column name="target_id" value="ebc49a18-4a96-416c-9dd6-5de89d0d1b89"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="ed6462ee-c36d-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="aab9d0f8-2c0b-4ed8-8a82-1b4e91358854"/>
+            <column name="target_id" value="5651c09a-634c-4ca1-a5cb-d38ce946c60a"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="0552f4e2-c36e-11ed-afa1-0242ac120002"/>
+            <column name="description" value="null"/>
+            <column name="type" value="isRefinedBy"/>
+            <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
+            <column name="source_id" value="aab9d0f8-2c0b-4ed8-8a82-1b4e91358854"/>
+            <column name="target_id" value="8f497741-928c-480c-9085-1036b2e24051"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
