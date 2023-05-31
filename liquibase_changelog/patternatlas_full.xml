@@ -11,5 +11,7 @@
     <include file="file:patternatlas_ec_patterns.xml"/>
     <include file="file:patternatlas_deploymentModeling.xml" />
     <include file="file:patternatlas_componentHostingPatterns.xml" />
-	<include file="file:patternatlas_qse-patterns.xml" />
+    <include file="file:patternatlas_componentHostingPatterns.xml" />
+    <include file="file:patternatlas_known_uses_planqk.xml" />
+    <include file="file:patternatlas_qse-patterns.xml" />
 </databaseChangeLog>
