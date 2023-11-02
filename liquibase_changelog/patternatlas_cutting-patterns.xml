@@ -1,5 +1,46 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="marvin (generated)" id="1698913867280-3"> 
+        <insert tableName="pattern">
+            <column name="id" value="3d9bca6e-5fca-40c5-b005-8a794958f3aa"/>
+            <column name="name" value="Circuit Cutting"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/quantumAlgorithmPatterns/circuitCutting"/>
+            <column name="content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
+            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/main/icons/quantum_computing_patterns/circuit-cutting-icon-thin.svg"/>
+            <column name="rendered_content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="paper_ref"/>
+            <column name="deployment_modeling_behavior_pattern"/>
+            <column name="deployment_modeling_structure_pattern"/>
+            <column name="tags"/>
+        </insert>
+        <insert tableName="pattern">
+            <column name="id" value="28c99b35-98ce-4bfe-bb6d-94a65207258a"/>
+            <column name="name" value="Wire Cut"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/quantumAlgorithmPatterns/wireCut"/>
+            <column name="content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
+            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/main/icons/quantum_computing_patterns/wire-cut-icon-thin.svg"/>
+            <column name="rendered_content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="paper_ref"/>
+            <column name="deployment_modeling_behavior_pattern"/>
+            <column name="deployment_modeling_structure_pattern"/>
+            <column name="tags"/>
+        </insert>
+        <insert tableName="pattern">
+            <column name="id" value="7821a1f9-02a0-4833-a048-3bf184b1c6fe"/>
+            <column name="name" value="Gate Cut"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/quantumAlgorithmPatterns/gateCut"/>
+            <column name="content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
+            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/main/icons/quantum_computing_patterns/gate-cut-icon-thin.svg"/>
+            <column name="rendered_content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="paper_ref"/>
+            <column name="deployment_modeling_behavior_pattern"/>
+            <column name="deployment_modeling_structure_pattern"/>
+            <column name="tags"/>
+        </insert>
+    </changeSet>
     <changeSet author="Marvin Bechtold" id="1698913867280-1">
         <insert tableName="directed_edge">
             <column name="id" value="aa4c88fc-f8f4-459a-b354-1262f3fe4dce"/>
@@ -152,47 +193,6 @@
             <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
             <column name="source_id" value="7821a1f9-02a0-4833-a048-3bf184b1c6fe"/>
             <column name="target_id" value="da93f915-7f4c-49df-99d0-80d91f26a337"/>
-        </insert>
-    </changeSet>
-    <changeSet author="marvin (generated)" id="1698913867280-3"> 
-        <insert tableName="pattern">
-            <column name="id" value="3d9bca6e-5fca-40c5-b005-8a794958f3aa"/>
-            <column name="name" value="Circuit Cutting"/>
-            <column name="uri" value="https://patternpedia.org/patternLanguages/quantumAlgorithmPatterns/circuitCutting"/>
-            <column name="content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
-            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/main/icons/quantum_computing_patterns/circuit-cutting-icon-thin.svg"/>
-            <column name="rendered_content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
-            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
-            <column name="paper_ref"/>
-            <column name="deployment_modeling_behavior_pattern"/>
-            <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags"/>
-        </insert>
-        <insert tableName="pattern">
-            <column name="id" value="28c99b35-98ce-4bfe-bb6d-94a65207258a"/>
-            <column name="name" value="Wire Cut"/>
-            <column name="uri" value="https://patternpedia.org/patternLanguages/quantumAlgorithmPatterns/wireCut"/>
-            <column name="content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
-            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/main/icons/quantum_computing_patterns/wire-cut-icon-thin.svg"/>
-            <column name="rendered_content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
-            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
-            <column name="paper_ref"/>
-            <column name="deployment_modeling_behavior_pattern"/>
-            <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags"/>
-        </insert>
-        <insert tableName="pattern">
-            <column name="id" value="7821a1f9-02a0-4833-a048-3bf184b1c6fe"/>
-            <column name="name" value="Gate Cut"/>
-            <column name="uri" value="https://patternpedia.org/patternLanguages/quantumAlgorithmPatterns/gateCut"/>
-            <column name="content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
-            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/main/icons/quantum_computing_patterns/gate-cut-icon-thin.svg"/>
-            <column name="rendered_content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
-            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
-            <column name="paper_ref"/>
-            <column name="deployment_modeling_behavior_pattern"/>
-            <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags"/>
         </insert>
     </changeSet>
     
