@@ -16,4 +16,5 @@
     <include file="file:patternatlas_qse-patterns.xml" />
     <include file="file:patternatlas_quantum-execution-patterns.xml" />
     <include file="file:patternatlas_pattern_tags.xml" />
+    <include file="file:patternatlas_cutting-patterns.xml" />
 </databaseChangeLog>
