@@ -1,0 +1,199 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="marvin (generated)" id="1698913867280-3"> 
+        <insert tableName="pattern">
+            <column name="id" value="3d9bca6e-5fca-40c5-b005-8a794958f3aa"/>
+            <column name="name" value="Circuit Cutting"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/quantumAlgorithmPatterns/circuitCutting"/>
+            <column name="content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
+            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/main/icons/quantum_computing_patterns/circuit-cutting-icon-thin.svg"/>
+            <column name="rendered_content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="paper_ref"/>
+            <column name="deployment_modeling_behavior_pattern"/>
+            <column name="deployment_modeling_structure_pattern"/>
+            <column name="tags"/>
+        </insert>
+        <insert tableName="pattern">
+            <column name="id" value="28c99b35-98ce-4bfe-bb6d-94a65207258a"/>
+            <column name="name" value="Wire Cut"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/quantumAlgorithmPatterns/wireCut"/>
+            <column name="content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
+            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/main/icons/quantum_computing_patterns/wire-cut-icon-thin.svg"/>
+            <column name="rendered_content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="paper_ref"/>
+            <column name="deployment_modeling_behavior_pattern"/>
+            <column name="deployment_modeling_structure_pattern"/>
+            <column name="tags"/>
+        </insert>
+        <insert tableName="pattern">
+            <column name="id" value="7821a1f9-02a0-4833-a048-3bf184b1c6fe"/>
+            <column name="name" value="Gate Cut"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/quantumAlgorithmPatterns/gateCut"/>
+            <column name="content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
+            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/main/icons/quantum_computing_patterns/gate-cut-icon-thin.svg"/>
+            <column name="rendered_content" value="{&quot;Alias&quot;: &quot;Enter your input for this section here.&quot;, &quot;Forces&quot;: &quot;Enter your input for this section here.&quot;, &quot;Intent&quot;: &quot;Enter your input for this section here.&quot;, &quot;Result&quot;: &quot;Enter your input for this section here.&quot;, &quot;Context&quot;: &quot;Enter your input for this section here.&quot;, &quot;Examples&quot;: &quot;Enter your input for this section here.&quot;, &quot;Solution&quot;: &quot;Enter your input for this section here.&quot;, &quot;Known Uses&quot;: &quot;Enter your input for this section here.&quot;, &quot;Related Pattern&quot;: &quot;Enter your input for this section here.&quot;}"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="paper_ref"/>
+            <column name="deployment_modeling_behavior_pattern"/>
+            <column name="deployment_modeling_structure_pattern"/>
+            <column name="tags"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Marvin Bechtold" id="1698913867280-1">
+        <insert tableName="directed_edge">
+            <column name="id" value="aa4c88fc-f8f4-459a-b354-1262f3fe4dce"/>
+            <column name="description" value="null"/>
+            <column name="type" value="uses"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="3d9bca6e-5fca-40c5-b005-8a794958f3aa"/>
+            <column name="target_id" value="28c99b35-98ce-4bfe-bb6d-94a65207258a"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="9d6469cb-8d8f-4fc1-a023-62c21cde7d15"/>
+            <column name="description" value="null"/>
+            <column name="type" value="uses"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="3d9bca6e-5fca-40c5-b005-8a794958f3aa"/>
+            <column name="target_id" value="7821a1f9-02a0-4833-a048-3bf184b1c6fe"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="c2b5cd1c-7158-45f8-bd36-31d61c8daa71"/>
+            <column name="description" value="&quot;to manage the control and data flow.&quot;"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="3d9bca6e-5fca-40c5-b005-8a794958f3aa"/>
+            <column name="target_id" value="3f3d5582-1af9-4a23-93f5-5d0474b2b42c"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="d8251e12-b552-4224-ab9b-0c5b58492b38"/>
+            <column name="description" value="&quot;to speed up subcircuit execution.&quot;"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="3d9bca6e-5fca-40c5-b005-8a794958f3aa"/>
+            <column name="target_id" value="70adfd6f-0648-47cf-88ff-0212b882a262"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="a8d61e2a-aa28-4376-8a77-882ee9a6e236"/>
+            <column name="description" value="null"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="3d9bca6e-5fca-40c5-b005-8a794958f3aa"/>
+            <column name="target_id" value="bc795a9b-7977-4e01-b513-f9f5aba38aa7"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="89a8511f-9cf0-442c-bcc5-75a0177558dc"/>
+            <column name="description" value="null"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="3d9bca6e-5fca-40c5-b005-8a794958f3aa"/>
+            <column name="target_id" value="27a5d147-a323-4c6a-84ef-45d80cae923d"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="09d4e1af-08e4-4833-a7a1-dc281b8a96c4"/>
+            <column name="description" value="null"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="3d9bca6e-5fca-40c5-b005-8a794958f3aa"/>
+            <column name="target_id" value="da93f915-7f4c-49df-99d0-80d91f26a337"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="8d035cc5-9eec-434f-8a98-131bdef34709"/>
+            <column name="description" value="null"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="3d9bca6e-5fca-40c5-b005-8a794958f3aa"/>
+            <column name="target_id" value="b6788c99-24f5-496b-a30c-fc0dd7bb3e96"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="3d988f63-1bdb-4c6c-9777-f340df50a0ae"/>
+            <column name="description" value="null"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="3d9bca6e-5fca-40c5-b005-8a794958f3aa"/>
+            <column name="target_id" value="ed3af509-904e-4732-8113-215d65a7d53d"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="7f6e3284-2a54-4e23-bf8c-f31d37e83279"/>
+            <column name="description" value="null"/>
+            <column name="type" value="uses"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="28c99b35-98ce-4bfe-bb6d-94a65207258a"/>
+            <column name="target_id" value="312bc9d3-26c0-40ae-b90b-56effd136c0d"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="cd78399c-fc7f-47dd-a3db-de047ca8f80c"/>
+            <column name="description" value="null"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="28c99b35-98ce-4bfe-bb6d-94a65207258a"/>
+            <column name="target_id" value="bc795a9b-7977-4e01-b513-f9f5aba38aa7"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="335492f7-ab3f-4d3f-a1b6-706148c4c780"/>
+            <column name="description" value="null"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="28c99b35-98ce-4bfe-bb6d-94a65207258a"/>
+            <column name="target_id" value="27a5d147-a323-4c6a-84ef-45d80cae923d"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="96b8e0e6-0bae-41f1-92a0-cb4a37861e73"/>
+            <column name="description" value="null"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="28c99b35-98ce-4bfe-bb6d-94a65207258a"/>
+            <column name="target_id" value="da93f915-7f4c-49df-99d0-80d91f26a337"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="3f019489-0924-4970-b889-949824f276e1"/>
+            <column name="description" value="&quot;to speed up subcircuit execution.&quot;"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="28c99b35-98ce-4bfe-bb6d-94a65207258a"/>
+            <column name="target_id" value="70adfd6f-0648-47cf-88ff-0212b882a262"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="b2cf9308-c1a3-48fa-9d3b-be408e9eff9f"/>
+            <column name="description" value="&quot;to speed up subcircuit execution.&quot;"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="7821a1f9-02a0-4833-a048-3bf184b1c6fe"/>
+            <column name="target_id" value="70adfd6f-0648-47cf-88ff-0212b882a262"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="0847a532-250b-410b-ac31-5d4b86a8b897"/>
+            <column name="description" value="&quot;to handle local projective measurements.&quot;"/>
+            <column name="type" value="uses"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="7821a1f9-02a0-4833-a048-3bf184b1c6fe"/>
+            <column name="target_id" value="1c95912a-128b-44e7-b2d4-930f7ba11060"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="92013359-ab60-4a50-a1c9-769b44bd1a8a"/>
+            <column name="description" value="&quot;to reduce ansatz connectivity.&quot;"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="7821a1f9-02a0-4833-a048-3bf184b1c6fe"/>
+            <column name="target_id" value="bc795a9b-7977-4e01-b513-f9f5aba38aa7"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="0a17ef22-e0ad-41de-b123-888e5e919d79"/>
+            <column name="description" value="&quot;to reduce ansatz connectivity.&quot;"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="7821a1f9-02a0-4833-a048-3bf184b1c6fe"/>
+            <column name="target_id" value="27a5d147-a323-4c6a-84ef-45d80cae923d"/>
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="1104d21d-ad67-412d-8250-8fb5dde24787"/>
+            <column name="description" value="&quot;to reduce ansatz connectivity.&quot;"/>
+            <column name="type" value="canBeUsedWith"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="source_id" value="7821a1f9-02a0-4833-a048-3bf184b1c6fe"/>
+            <column name="target_id" value="da93f915-7f4c-49df-99d0-80d91f26a337"/>
+        </insert>
+    </changeSet>
+    
+</databaseChangeLog>
