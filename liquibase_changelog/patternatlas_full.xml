@@ -18,4 +18,5 @@
     <include file="file:patternatlas_pattern_tags.xml" />
     <include file="file:patternatlas_cutting-patterns.xml" />
     <include file="file:patternatlas_cutting-patterns-tags.xml" />
+    <include file="file:patternatlas_warm-starting-patterns.xml" />
 </databaseChangeLog>
