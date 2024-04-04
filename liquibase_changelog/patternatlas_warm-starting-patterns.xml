@@ -12,7 +12,7 @@
             <column name="paper_ref" value="F. Truger et al.: Warm-Starting Patterns for Quantum Algorithms. The Sixteenth International Conference on Pervasive Patterns and Applications (PATTERNS), 2024 [in press]"/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags" value="augmentation"/>
+            <column name="tags"/>
         </insert>
         <insert tableName="pattern">
             <column name="id" value="8c893b97-5980-4c81-870a-1cb4917dc33f"/>
@@ -25,7 +25,7 @@
             <column name="paper_ref" value="F. Truger et al.: Warm-Starting Patterns for Quantum Algorithms. The Sixteenth International Conference on Pervasive Patterns and Applications (PATTERNS), 2024 [in press]"/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags" value="augmentation"/>
+            <column name="tags"/>
         </insert>
         <insert tableName="pattern">
             <column name="id" value="f417a855-4d52-4a30-b88a-e34a7eaebe86"/>
@@ -38,7 +38,7 @@
             <column name="paper_ref" value="F. Truger et al.: Warm-Starting Patterns for Quantum Algorithms. The Sixteenth International Conference on Pervasive Patterns and Applications (PATTERNS), 2024 [in press]"/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags" value="augmentation"/>
+            <column name="tags"/>
         </insert>
         <insert tableName="pattern">
             <column name="id" value="b92daa20-265c-4276-b138-3aa5a7bbc37f"/>
@@ -51,7 +51,7 @@
             <column name="paper_ref" value="F. Truger et al.: Warm-Starting Patterns for Quantum Algorithms. The Sixteenth International Conference on Pervasive Patterns and Applications (PATTERNS), 2024 [in press]"/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags" value="augmentation"/>
+            <column name="tags"/>
         </insert>
         <insert tableName="undirected_edge">
             <column name="id" value="25db1f21-831d-4715-ba52-a69c7c114288"/>
