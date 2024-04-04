@@ -1,0 +1,21 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.6.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <changeSet author="Felix Truger" id="1710330017868-3">
+        <update tableName="pattern">
+            <column name="tags" value="augmentation" />
+            <where>id = 'd3f6b18a-c8c1-4010-b750-b71d95eb5f5e'</where>
+        </update>
+        <update tableName="pattern">
+            <column name="tags" value="augmentation" />
+            <where>id = '8c893b97-5980-4c81-870a-1cb4917dc33f'</where>
+        </update>
+        <update tableName="pattern">
+            <column name="tags" value="augmentation" />
+            <where>id = 'f417a855-4d52-4a30-b88a-e34a7eaebe86'</where>
+        </update>
+        <update tableName="pattern">
+            <column name="tags" value="augmentation" />
+            <where>id = 'b92daa20-265c-4276-b138-3aa5a7bbc37f'</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>
