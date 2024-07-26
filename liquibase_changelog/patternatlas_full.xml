@@ -22,4 +22,5 @@
     <include file="file:patternatlas_warm-starting-patterns-tags.xml" />
     <include file="file:patternatlas_fix_pattern_tag.xml" />
     <include file="file:patternatlas_remove_tag_add_new_patterns.xml" />
+    <include file="file:patternatlas_qpe_abbreviation.xml" />
 </databaseChangeLog>
