@@ -1,0 +1,18 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.6.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <changeSet author="PhilWun" id="1896454976142-1">
+        <insert tableName="pattern">
+            <column name="id" value="b8c2dca0-563a-432d-adfd-8bd15ef0dfb8"/>
+            <column name="name" value="Grover"/>
+            <column name="uri" value="https://patternpedia.org/patternLanguages/reformulatedQuantumComputingPatterns/grover"/>
+            <column name="content" value="{&quot;Alias&quot;:&quot;&quot;,&quot;Intent&quot;:&quot;&quot;,&quot;Result&quot;:&quot;&quot;,&quot;Context&quot;:&quot;&quot;,&quot;Solution&quot;:&quot;&quot;,&quot;Variants&quot;:&quot;&quot;,&quot;Known Uses&quot;:&quot;&quot;,&quot;Related Patterns&quot;:&quot;&quot;}"/>
+            <column name="icon_url" value=""/>
+            <column name="rendered_content" value="{&quot;Alias&quot;:&quot;&quot;,&quot;Intent&quot;:&quot;&quot;,&quot;Result&quot;:&quot;&quot;,&quot;Context&quot;:&quot;&quot;,&quot;Solution&quot;:&quot;&quot;,&quot;Variants&quot;:&quot;&quot;,&quot;Known Uses&quot;:&quot;&quot;,&quot;Related Patterns&quot;:&quot;&quot;}"/>
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
+            <column name="paper_ref" value=""/>
+            <column name="deployment_modeling_behavior_pattern"/>
+            <column name="deployment_modeling_structure_pattern"/>
+            <column name="tags" value="algorithm"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
