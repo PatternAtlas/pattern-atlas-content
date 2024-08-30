@@ -1,0 +1,29 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.6.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <changeSet author="PhilWun" id="1896454976143-1">
+        <insert tableName="directed_edge">
+            <column name="id" value="e72bab1c-0349-4d99-b8cf-cb370f6ef577" />
+            <column name="description" />
+            <column name="type" value="uses" />
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d" />
+            <column name="source_id" value="b8c2dca0-563a-432d-adfd-8bd15ef0dfb8" />
+            <column name="target_id" value="312bc9d3-26c0-40ae-b90b-56effd136c0d" />
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="2f8680b5-5f20-42e6-9093-4cbebec390af" />
+            <column name="description" />
+            <column name="type" value="uses" />
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d" />
+            <column name="source_id" value="b8c2dca0-563a-432d-adfd-8bd15ef0dfb8" />
+            <column name="target_id" value="96b4d28a-a5ce-4c96-85df-d42587b13c57" />
+        </insert>
+        <insert tableName="directed_edge">
+            <column name="id" value="a9f7fa01-6f5d-41fe-91e3-c3bf1ba3ece3" />
+            <column name="description" />
+            <column name="type" value="uses" />
+            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d" />
+            <column name="source_id" value="b8c2dca0-563a-432d-adfd-8bd15ef0dfb8" />
+            <column name="target_id" value="1cc7e9d6-ab37-412e-8afa-604a25de296e" />
+        </insert>
+    </changeSet>
+</databaseChangeLog>
