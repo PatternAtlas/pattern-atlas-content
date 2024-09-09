@@ -27,4 +27,5 @@
     <include file="file:patternatlas_grover.xml" />
     <include file="file:patternatlas_grover_relations.xml" />
     <include file="file:patternatlas_cutting-patterns-content.xml" />
+    <include file="file:patternatlas_icon-update.xml" />
 </databaseChangeLog>
