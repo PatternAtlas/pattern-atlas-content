@@ -6,14 +6,6 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
                         http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd
                         http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
-    <changeSet author="lharzenetter" id="1674138915768-1">
-        <insert tableName="pattern_language">
-            <column name="id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f"/>
-            <column name="name" value="Component Hosting Patterns"/>
-            <column name="uri" value="https://patternpedia.org/patternLanguages/componentHostingPatterns"/>
-            <column name="logo" value="https://github.com/PatternAtlas/pattern-atlas-content/raw/13b224c8eea70a2c06b567cdd8a8308c373e07d9/icons/component-hosting-patterns.svg"/>
-        </insert>
-    </changeSet>
     <changeSet author="lharzenetter" id="1674138915768-2">
         <insert tableName="pattern_schema">
             <column name="pattern_language_id" value="ddbd6d47-6a71-4e41-8704-8c313f3e819f" />
