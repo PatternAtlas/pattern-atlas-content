@@ -221,6 +221,9 @@
     <changeSet author="alex (generated)" id="1646839031337-72">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="issue_author" constraintName="fk54ek3qt42c6okrhfyn363haxo" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_entity" validate="true"/>
     </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-73">
+        <addForeignKeyConstraint baseColumnNames="pattern_language_id" baseTableName="pattern" constraintName="fk77ttqbiemowpyaxy1cc5k9is5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_language" validate="true"/>
+    </changeSet>
     <changeSet author="alex (generated)" id="1646839031337-74">
         <addForeignKeyConstraint baseColumnNames="pattern_view_id" baseTableName="pattern_view_pattern" constraintName="fk7gjr0y7vsqmnnsgohqgb5l7ac" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_view" validate="true"/>
     </changeSet>
@@ -235,6 +238,9 @@
     </changeSet>
     <changeSet author="alex (generated)" id="1646839031337-78">
         <addForeignKeyConstraint baseColumnNames="source_set_id" baseTableName="directed_hyperedge_source_set" constraintName="fk8guwfrj62or1u8rwdwtf7y5yn" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-79">
+        <addForeignKeyConstraint baseColumnNames="pattern_language_id" baseTableName="candidate" constraintName="fk8s7x8de0d0upup60hkuggb86q" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_language" validate="true"/>
     </changeSet>
     <changeSet author="alex (generated)" id="1646839031337-80">
         <addForeignKeyConstraint baseColumnNames="p1_id" baseTableName="undirected_edge" constraintName="fk8sqyicdi1e8n3neu2kueocol3" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern" validate="true"/>
@@ -278,8 +284,14 @@
     <changeSet author="alex (generated)" id="1646839031337-93">
         <addForeignKeyConstraint baseColumnNames="roles_id" baseTableName="user_entity_roles" constraintName="fkejo1ln9l1vbw4nhk416jjfc0d" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="role" validate="true"/>
     </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-94">
+        <addForeignKeyConstraint baseColumnNames="pattern_language_id" baseTableName="directed_edge" constraintName="fken29l6v8wmkqxaiaks7pe8rwu" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_language" validate="true"/>
+    </changeSet>
     <changeSet author="alex (generated)" id="1646839031337-95">
         <addForeignKeyConstraint baseColumnNames="pattern_section_schema_id" baseTableName="pattern_section_schema_pattern_sections" constraintName="fkfafffrkwjwkpm4rus99ao5gvm" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_section_schema" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-96">
+        <addForeignKeyConstraint baseColumnNames="pattern_language_id" baseTableName="pattern_schema" constraintName="fkfuru8632bnda9yj6he9aqffme" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_language" validate="true"/>
     </changeSet>
     <changeSet author="alex (generated)" id="1646839031337-97">
         <addForeignKeyConstraint baseColumnNames="candidate_comment_id" baseTableName="candidate_comment_rating" constraintName="fkg7qo3nvneqg1ivvlt50123ss2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="candidate_comment" validate="true"/>
@@ -358,6 +370,9 @@
     </changeSet>
     <changeSet author="alex (generated)" id="1646839031337-122">
         <addForeignKeyConstraint baseColumnNames="patterns_id" baseTableName="undirected_hyperedge_patterns" constraintName="fkt25wk8gkit4hr7oyee2prm48" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern" validate="true"/>
+    </changeSet>
+    <changeSet author="alex (generated)" id="1646839031337-123">
+        <addForeignKeyConstraint baseColumnNames="pattern_language_id" baseTableName="undirected_edge" constraintName="fkt73wgqcqh5u6ro109oq15dh9v" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="pattern_language" validate="true"/>
     </changeSet>
     <changeSet author="alex (generated)" id="1646839031337-124">
         <addForeignKeyConstraint baseColumnNames="design_model_id" baseTableName="design_model_pattern_edge" constraintName="fktmrf8lhrt4fpnh9jwdlpk1iae" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="design_model" validate="true"/>
