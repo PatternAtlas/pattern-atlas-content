@@ -25,37 +25,21 @@
             <column name="source_id" value="b8c2dca0-563a-432d-adfd-8bd15ef0dfb8" />
             <column name="target_id" value="1cc7e9d6-ab37-412e-8afa-604a25de296e" />
         </insert>
-        <insert tableName="undirected_edge">
+        <insert tableName="directed_edge">
             <column name="id" value="a9f7fa01-6f5d-41fe-91e3-c8aa1ba4ec34" />
             <column name="description" />
             <column name="type" value="canNotBeCombined" />
             <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d" />
-            <column name="p1_id" value="1a5e3708-da39-4356-ab3f-115264da6390" />  
-            <column name="p2_id" value="b6788c99-24f5-496b-a30c-fc0dd7bb3e96" />  
+            <column name="source_id" value="1a5e3708-da39-4356-ab3f-115264da6390" />  
+            <column name="target_id" value="b6788c99-24f5-496b-a30c-fc0dd7bb3e96" />  
         </insert>
-        <insert tableName="undirected_edge">
+        <insert tableName="directed_edge">
             <column name="id" value="a9f7fa01-6f5d-41fe-87c1-c3bf1ba4ec34" />
             <column name="description" />
             <column name="type" value="canNotBeCombined" />
             <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d" />
-            <column name="p1_id" value="ed3af509-904e-4732-8113-215d65a7d53d" />  
-            <column name="p2_id" value="1a5e3708-da39-4356-ab3f-115264da6390" />  
-        </insert>
-        <insert tableName="undirected_edge">
-            <column name="id" value="a9f7fa01-6f5d-41fe-91e3-c8aa1ba4ec77" />
-            <column name="description" />
-            <column name="type" value="canNotBeCombined" />
-            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d" />
-            <column name="p1_id" value="b6788c99-24f5-496b-a30c-fc0dd7bb3e96" />  
-            <column name="p2_id" value="1a5e3708-da39-4356-ab3f-115264da6390" />  
-        </insert>
-        <insert tableName="undirected_edge">
-            <column name="id" value="a9f7fa01-6f5d-41fe-87c1-c3bf1ba4ec88" />
-            <column name="description" />
-            <column name="type" value="canNotBeCombined" />
-            <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d" />
-            <column name="p1_id" value="1a5e3708-da39-4356-ab3f-115264da6390" />  
-            <column name="p2_id" value="ed3af509-904e-4732-8113-215d65a7d53d" />  
+            <column name="source_id" value="ed3af509-904e-4732-8113-215d65a7d53d" />  
+            <column name="target_id" value="1a5e3708-da39-4356-ab3f-115264da6390" />  
         </insert>
     </changeSet>
 </databaseChangeLog>
