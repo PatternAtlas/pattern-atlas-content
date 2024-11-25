@@ -5,9 +5,9 @@
             <column name="id" value="0ad210d4-18ad-4803-ba6b-536af0fab317"/>
             <column name="name" value="Quantum Hardware Selection"/>
             <column name="uri" value="https://patternpedia.org/patternLanguages/reformulatedQuantumComputingPatterns/quantum-hardware-selection"/>
-            <column name="content" value=""/>
+            <column name="content" value="{&quot;Alias&quot;: &quot;&quot;, &quot;Forces&quot;: &quot;&quot;, &quot;Intent&quot;: &quot;&quot;, &quot;Result&quot;: &quot;&quot;, &quot;Context&quot;: &quot;&quot;, &quot;Examples&quot;: &quot;&quot;, &quot;Solution&quot;: &quot;&quot;, &quot;Known Uses&quot;: &quot;&quot;, &quot;Related Pattern&quot;: &quot;&quot;}"/>
             <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/refs/heads/main/icons/quantum_computing_patterns/quantum_hardware_selection_icon.svg"/>
-            <column name="rendered_content" value=""/>
+            <column name="rendered_content" value="{&quot;Alias&quot;: &quot;&quot;, &quot;Forces&quot;: &quot;&quot;, &quot;Intent&quot;: &quot;&quot;, &quot;Result&quot;: &quot;&quot;, &quot;Context&quot;: &quot;&quot;, &quot;Examples&quot;: &quot;&quot;, &quot;Solution&quot;: &quot;&quot;, &quot;Known Uses&quot;: &quot;&quot;, &quot;Related Pattern&quot;: &quot;&quot;}"/>
             <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
             <column name="paper_ref" value=""/>
             <column name="deployment_modeling_behavior_pattern"/>
