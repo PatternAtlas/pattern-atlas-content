@@ -29,4 +29,6 @@
     <include file="file:patternatlas_cutting-patterns-content.xml" />
     <include file="file:patternatlas_icon-update.xml" />
     <include file="file:patternatlas_operations-patterns.xml" />
+    <include file="file:patternatlas_quantum_clustering_classification.xml" />
+    <include file="file:patternatlas_quantum_neural_network.xml" />
 </databaseChangeLog>
