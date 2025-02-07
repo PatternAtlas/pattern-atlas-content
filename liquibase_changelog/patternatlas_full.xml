@@ -28,6 +28,5 @@
     <include file="file:patternatlas_grover_relations.xml" />
     <include file="file:patternatlas_cutting-patterns-content.xml" />
     <include file="file:patternatlas_icon-update.xml" />
-    <include file="file:patternatlas_quantum_hardware_selection.xml" />
     <include file="file:patternatlas_operations-patterns.xml" />
 </databaseChangeLog>
