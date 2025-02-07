@@ -6,7 +6,7 @@
             <column name="name" value="Quantum Neural Network (QNN)"/>
             <column name="uri" value="https://patternpedia.org/patternLanguages/quantumAlgorithmPatterns/quantumNeuralNetwork"/>
             <column name="content" value="{}"/>
-            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/refs/heads/main/icons/quantum_computing_patterns/quantum_neural_network.svg"/>
+            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/refs/heads/main/icons/quantum_computing_patterns/quantum_neural_network-thin.svg"/>
             <column name="rendered_content" value="{}"/>
             <column name="pattern_language_id" value="af7780d5-1f97-4536-8da7-4194b093ab1d"/>
             <column name="paper_ref" value=""/>
