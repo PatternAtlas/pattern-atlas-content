@@ -3,7 +3,7 @@
     <changeSet author="Philipp Wundrack" id="1710330017870-1">
         <insert tableName="pattern">
             <column name="id" value="726ead05-e582-4704-904b-6ce2174399d8"/>
-            <column name="name" value="Quantum Neural Network"/>
+            <column name="name" value="Quantum Neural Network (QNN)"/>
             <column name="uri" value="https://patternpedia.org/patternLanguages/quantumAlgorithmPatterns/quantumNeuralNetwork"/>
             <column name="content" value="{}"/>
             <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/refs/heads/main/icons/quantum_computing_patterns/quantum_neural_network.svg"/>
