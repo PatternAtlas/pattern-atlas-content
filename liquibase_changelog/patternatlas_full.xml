@@ -30,4 +30,5 @@
     <include file="file:patternatlas_icon-update.xml" />
     <include file="file:patternatlas_quantum_hardware_selection.xml" />
     <include file="file:patternatlas_quantum_clustering_classification.xml" />
+    <include file="file:patternatlas_quantum_neural_network.xml" />
 </databaseChangeLog>
