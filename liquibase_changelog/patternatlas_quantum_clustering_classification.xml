@@ -3,7 +3,7 @@
     <changeSet id="1696952262336-1" author="philipp">
         <update tableName="pattern">
             <column name="name" value="Quantum Clustering" />
-            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/refs/heads/fix/clustering-icon/icons/quantum_computing_patterns/quantum_clustering-thin.svg" />
+            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/refs/heads/main/icons/quantum_computing_patterns/quantum_clustering-thin.svg" />
             <where>id = '7294c3f2-cb67-492a-8a16-c7384eb9bac2'</where>
         </update>
         <update tableName="pattern">
