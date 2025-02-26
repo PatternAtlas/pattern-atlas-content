@@ -4,9 +4,9 @@
 <svg
    version="1.1"
    id="svg1"
-   width="223.03999"
-   height="223.03999"
-   viewBox="0 0 223.03999 223.03999"
+   width="217.19598"
+   height="213.87944"
+   viewBox="0 0 217.19598 213.87944"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
@@ -98,10 +98,12 @@
     </clipPath>
   </defs>
   <g
-     id="g1">
+     id="g1"
+     transform="translate(0,6.1090664e-5)">
     <g
        id="g2"
-       style="fill:none">
+       style="fill:none"
+       transform="matrix(0.94422792,0,0,0.94298853,6.6331597,3.5929611)">
       <path
          id="path2"
          d="M 0,0.030014 H 167.25 V 167.28001 H 0 Z"
@@ -114,7 +116,7 @@
       <path
          id="path3"
          d="m 7.3231,136.74 c 0,14.09 11.4219,25.51 25.5119,25.51 H 134.88 c 14.09,0 25.51,-11.42 25.51,-25.51 V 34.694 c 0,-14.09 -11.42,-25.5119 -25.51,-25.5119 H 32.835 C 18.745,9.1821 7.3231,20.604 7.3231,34.694 Z"
-         style="fill:#f2f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.67500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#f2f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.675;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
          transform="matrix(1.3333333,0,0,-1.3333333,0,223.04)" />
     </g>
     <g
