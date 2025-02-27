@@ -30,4 +30,5 @@
     <include file="file:patternatlas_icon-update.xml" />
     <include file="file:patternatlas_operations-patterns.xml" />
     <include file="file:patternatlas_qml-patterns.xml" />
+    <include file="file:patternatlas_circuit-composing-patterns.xml" />
 </databaseChangeLog>
