@@ -1,0 +1,15 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.6.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <changeSet id="1696952262336-1" author="philipp">
+        <update tableName="pattern">
+            <column name="name" value="Quantum Clustering" />
+            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/refs/heads/main/icons/quantum_computing_patterns/quantum_clustering-thin.svg" />
+            <where>id = '7294c3f2-cb67-492a-8a16-c7384eb9bac2'</where>
+        </update>
+        <update tableName="pattern">
+            <column name="name" value="Quantum Classification" />
+            <column name="icon_url" value="https://raw.githubusercontent.com/PatternAtlas/pattern-atlas-content/refs/heads/main/icons/quantum_computing_patterns/quantum_classification-thin.svg" />
+            <where>id = 'cc3731cf-ecbb-490f-b996-525c8f60d8a9'</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>
