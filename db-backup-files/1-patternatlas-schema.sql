@@ -438,7 +438,7 @@ CREATE TABLE public.pattern (
     icon_url character varying(255),
     rendered_content jsonb,
     pattern_language_id uuid,
-    paper_ref character varying(255)
+    paper_ref character varying(300)
 );
 
 
