@@ -81,7 +81,7 @@
             <column name="icon_url" type="VARCHAR(255)"/>
             <column name="rendered_content" type="JSONB"/>
             <column name="pattern_language_id" type="UUID"/>
-            <column name="paper_ref" type="VARCHAR(255)"/>
+            <column name="paper_ref" type="VARCHAR(300)"/>
         </createTable>
     </changeSet>
     <changeSet author="alex (generated)" id="1646838986180-6">
