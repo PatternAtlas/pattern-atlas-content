@@ -12,7 +12,7 @@
             <column name="paper_ref"/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags"/>
+            <column name="tags" value="cat:circuitcutting"/>
         </insert>
         <insert tableName="pattern">
             <column name="id" value="28c99b35-98ce-4bfe-bb6d-94a65207258a"/>
@@ -25,7 +25,7 @@
             <column name="paper_ref"/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags"/>
+            <column name="tags" value="cat:circuitcutting"/>
         </insert>
         <insert tableName="pattern">
             <column name="id" value="7821a1f9-02a0-4833-a048-3bf184b1c6fe"/>
@@ -38,7 +38,7 @@
             <column name="paper_ref"/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags"/>
+            <column name="tags" value="cat:circuitcutting"/>
         </insert>
     </changeSet>
     <changeSet author="Marvin Bechtold" id="1698913867280-1">

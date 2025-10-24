@@ -12,7 +12,7 @@
             <column name="paper_ref" value="M. Beisel, J. Barzen, F. Leymann, and B. Weder, Operations Patterns for Hybrid Quantum Applications, in Proceedings of the 15th International Conference on Cloud Computing and Services Science (CLOSER). SciTePress, 2025."/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags"/>
+            <column name="tags" value="cat:operations"/>
         </insert>
     <insert tableName="pattern">
             <column name="id" value="59389814-01e0-4422-8012-a298940064aa"/>
@@ -25,7 +25,7 @@
             <column name="paper_ref" value="M. Beisel, J. Barzen, F. Leymann, and B. Weder, Operations Patterns for Hybrid Quantum Applications, in Proceedings of the 15th International Conference on Cloud Computing and Services Science (CLOSER). SciTePress, 2025."/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags"/>
+            <column name="tags" value="cat:operations"/>
         </insert>
         <insert tableName="pattern">
             <column name="id" value="60736854-6eb4-47b5-9619-2370825a34e9"/>
@@ -38,7 +38,7 @@
             <column name="paper_ref" value="M. Beisel, J. Barzen, F. Leymann, and B. Weder, Operations Patterns for Hybrid Quantum Applications, in Proceedings of the 15th International Conference on Cloud Computing and Services Science (CLOSER). SciTePress, 2025."/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags"/>
+            <column name="tags" value="cat:operations"/>
         </insert>
         <insert tableName="pattern">
             <column name="id" value="456d4450-9ba7-4e43-8cb7-03ae01936fc4"/>
@@ -51,7 +51,7 @@
             <column name="paper_ref" value="M. Beisel, J. Barzen, F. Leymann, and B. Weder, Operations Patterns for Hybrid Quantum Applications, in Proceedings of the 15th International Conference on Cloud Computing and Services Science (CLOSER). SciTePress, 2025."/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags"/>
+            <column name="tags" value="cat:operations"/>
         </insert>
         <insert tableName="pattern">
             <column name="id" value="0ad210d4-18ad-4803-ba6b-536af0fab317"/>
@@ -64,7 +64,7 @@
             <column name="paper_ref" value="M. Beisel, J. Barzen, F. Leymann, and B. Weder, Operations Patterns for Hybrid Quantum Applications, in Proceedings of the 15th International Conference on Cloud Computing and Services Science (CLOSER). SciTePress, 2025."/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags" value="behavioral"/>
+            <column name="tags" value="behavioral cat:operations"/>
         </insert>
 
         <insert tableName="directed_edge">
