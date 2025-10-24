@@ -47,7 +47,7 @@
             <where>id = '3f3fabf0-7fa7-4b43-a74a-46a7ac2c55ee'</where>
         </update>
         <update tableName="pattern">
-            <column name="tags" value="augmentation, cat:errorhandling" />
+            <column name="tags" value="augmentation cat:errorhandling" />
             <where>id = 'b6788c99-24f5-496b-a30c-fc0dd7bb3e96'</where>
         </update>
         <update tableName="pattern">
@@ -123,7 +123,7 @@
             <where>id = 'd9c57511-1101-4707-99bf-36f43a12cb13'</where>
         </update>
         <update tableName="pattern">
-            <column name="tags" value="augmentation, cat:errorhandling" />
+            <column name="tags" value="augmentation cat:errorhandling" />
             <where>id = 'ed3af509-904e-4732-8113-215d65a7d53d'</where>
         </update>
         <update tableName="pattern">
