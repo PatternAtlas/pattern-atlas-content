@@ -11,7 +11,7 @@
             <where>id = 'c450e0ce-c55f-4b72-afe9-e9e2c7e4c091'</where>
         </update>
         <update tableName="pattern">
-            <column name="tags" value="algortihm cat:programflow" />
+            <column name="tags" value="algorithm cat:programflow" />
             <where>id = 'b657ea73-63c0-4800-a69d-a91925e19ac6'</where>
         </update>
         <update tableName="pattern">
@@ -151,7 +151,7 @@
             <where>id = 'bc795a9b-7977-4e01-b513-f9f5aba38aa7'</where>
         </update>
         <update tableName="pattern">
-            <column name="tags" value="algortihm cat:programflow" />
+            <column name="tags" value="algorithm cat:programflow" />
             <where>id = '27a5d147-a323-4c6a-84ef-45d80cae923d'</where>
         </update>
         <update tableName="pattern">
