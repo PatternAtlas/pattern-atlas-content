@@ -238,5 +238,9 @@
             <column name="tags" value="cat:quantummachinelearning" />
             <where>id = '726ead05-e582-4704-904b-6ce2174399d8'</where>
         </update>
+        <update tableName="pattern">
+            <column name="tags" value="hidden" />
+            <where>id = 'b8c2dca0-563a-432d-adfd-8bd15ef0dfb8'</where>
+        </update>
     </changeSet>
 </databaseChangeLog>
