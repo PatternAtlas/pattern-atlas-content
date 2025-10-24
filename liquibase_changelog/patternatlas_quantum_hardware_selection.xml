@@ -12,7 +12,7 @@
             <column name="paper_ref" value=""/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags" value="behavioral"/>
+            <column name="tags" value="behavioral cat:operations"/>
         </insert>
     </changeSet>
 </databaseChangeLog>

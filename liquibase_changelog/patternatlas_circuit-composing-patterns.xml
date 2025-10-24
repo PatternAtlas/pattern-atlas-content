@@ -12,7 +12,7 @@
             <column name="paper_ref" value="This pattern is originally published in L. Stiliadou, J. Barzen, M. Beisel, F. Leymann, and B. Weder, &quot;Fundamental Patterns for Quantum Algorithms&quot;, in Proceedings of the 1st International Conference on Quantum Software (IQSOFT), Xpert Publishing Services (XPS), 2025."/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags" value="circuit-level"/>
+            <column name="tags" value="circuit-level cat:unitaryTransformations"/>
         </insert>
         <insert tableName="pattern">
             <column name="id" value="fd2bb9f3-b04a-4645-a2d0-ffa4d986db83"/>
@@ -25,7 +25,7 @@
             <column name="paper_ref" value="This pattern is originally published in L. Stiliadou, J. Barzen, M. Beisel, F. Leymann, and B. Weder, &quot;Fundamental Patterns for Quantum Algorithms&quot;, in Proceedings of the 1st International Conference on Quantum Software (IQSOFT), Xpert Publishing Services (XPS), 2025."/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags" value="circuit-level"/>
+            <column name="tags" value="circuit-level cat:unitaryTransformations"/>
         </insert>
         <insert tableName="pattern">
             <column name="id" value="12d260d0-08e3-483e-900e-fbe21db10cac"/>
@@ -38,7 +38,7 @@
             <column name="paper_ref" value="This pattern is originally published in L. Stiliadou, J. Barzen, M. Beisel, F. Leymann, and B. Weder, &quot;Fundamental Patterns for Quantum Algorithms&quot;, in Proceedings of the 1st International Conference on Quantum Software (IQSOFT), Xpert Publishing Services (XPS), 2025."/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags" value="circuit-level"/>
+            <column name="tags" value="circuit-level cat:unitaryTransformations"/>
         </insert>
         <insert tableName="pattern">
             <column name="id" value="ae3d4ca7-9503-463a-b0fc-eabed85b83e0"/>
@@ -51,7 +51,7 @@
             <column name="paper_ref" value="This pattern is originally published in L. Stiliadou, J. Barzen, M. Beisel, F. Leymann, and B. Weder, &quot;Fundamental Patterns for Quantum Algorithms&quot;, in Proceedings of the 1st International Conference on Quantum Software (IQSOFT), Xpert Publishing Services (XPS), 2025."/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags" value="circuit-level"/>
+            <column name="tags" value="circuit-level cat:measurement"/>
         </insert>
         <insert tableName="pattern">
             <column name="id" value="88d3e6f5-c75f-42aa-b665-2ba79746222e"/>
@@ -64,7 +64,7 @@
             <column name="paper_ref" value="This pattern is originally published in L. Stiliadou, J. Barzen, M. Beisel, F. Leymann, and B. Weder, &quot;Fundamental Patterns for Quantum Algorithms&quot;, in Proceedings of the 1st International Conference on Quantum Software (IQSOFT), Xpert Publishing Services (XPS), 2025."/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags" value="circuit-level"/>
+            <column name="tags" value="circuit-level cat:programflow"/>
         </insert>
     </changeSet>
 </databaseChangeLog>

@@ -11,7 +11,7 @@
             <column name="paper_ref" value="L. Stiliadou, J. Barzen, M. Beisel, F. Leymann, and B. Weder, Patterns for Quantum Machine Learning, in Proceedings of the 17th International Conference on Pervasive Patterns and Applications (PATTERNS), Xpert Publishing Services (XPS), 2025."/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags" value="algorithm"/>
+            <column name="tags" value="algorithm cat:qml"/>
             <where>id = '7294c3f2-cb67-492a-8a16-c7384eb9bac2'</where>
         </update>
         <update tableName="pattern">
@@ -24,7 +24,7 @@
             <column name="paper_ref" value="L. Stiliadou, J. Barzen, M. Beisel, F. Leymann, and B. Weder, Patterns for Quantum Machine Learning, in Proceedings of the 17th International Conference on Pervasive Patterns and Applications (PATTERNS), Xpert Publishing Services (XPS), 2025."/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags" value="algorithm"/>            
+            <column name="tags" value="algorithm cat:qml"/>            
             <where>id = 'cc3731cf-ecbb-490f-b996-525c8f60d8a9'</where>
         </update>
         <insert tableName="pattern">
@@ -38,7 +38,7 @@
             <column name="paper_ref" value="L. Stiliadou, J. Barzen, M. Beisel, F. Leymann, and B. Weder, Patterns for Quantum Machine Learning, in Proceedings of the 17th International Conference on Pervasive Patterns and Applications (PATTERNS), Xpert Publishing Services (XPS), 2025."/>
             <column name="deployment_modeling_behavior_pattern"/>
             <column name="deployment_modeling_structure_pattern"/>
-            <column name="tags" value="algorithm"/>
+            <column name="tags" value="algorithm cat:qml"/>
         </insert>
         <insert tableName="undirected_edge">
             <column name="id" value="185e580a-5eb4-4658-bb4d-ed832f8484ae"/>
